@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/ecao
+
+idspace: ECAO
+base_url: /obo/ecao
+
+products:
+- ecao.owl: https://raw.githubusercontent.com/seger/ecao/main/ecao.owl
+- ecao.obo: https://raw.githubusercontent.com/seger/ecao/main/ecao.obo
+
+term_browser: ontobee
+example_terms:
+- ECAO_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/seger/ecao/v
+
+- prefix: /tracker/
+  replacement: https://github.com/seger/ecao/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/ECAO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/seger/ecao/main/
+

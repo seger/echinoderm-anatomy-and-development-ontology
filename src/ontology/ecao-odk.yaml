@@ -1,0 +1,8 @@
+id: ecao
+title: Echinoderm Anatomy and Development Ontology
+github_org: seger
+repo: ecao
+import_group:
+  products:
+    - id: ro
+    - id: bfo
