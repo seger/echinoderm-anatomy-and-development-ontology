@@ -29,6 +29,7 @@ src/ontology/ontologyterms.txt
 src/ontology/simple_seed.txt
 src/ontology/patterns
 src/ontology/merged-ecao-edit.owl
+src/ontology/catalog-v001.xml
 
 src/ontology/target/
 src/ontology/tmp/*
