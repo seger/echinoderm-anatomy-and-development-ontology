@@ -1,49 +1,931 @@
-
 Prefix(:=<http://purl.obolibrary.org/obo/ecao.owl#>)
-Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/ecao.owl>
-
-
-Import(<http://purl.obolibrary.org/obo/ecao/imports/ro_import.owl>)
-
+Import(<http://purl.obolibrary.org/obo/ecao_taxslim.obo.owl>)
 Import(<http://purl.obolibrary.org/obo/ecao/imports/bfo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecao/imports/ro_import.owl>)
+Annotation(dc:title "Echinoderm Anatomy and Development Ontology")
+Annotation(terms:license <https://creativecommons.org/licenses/by/3.0/>)
+Annotation(oboInOwl:hasOBOFormatVersion "1.2")
 
-
-
-Annotation(dcterms:description "None")
-Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
-Annotation(dcterms:title "Echinoderm Anatomy and Development Ontology")
-
-
-Declaration(Class(<http://purl.obolibrary.org/obo/ECAO_0000000>))
-Declaration(AnnotationProperty(dcterms:description))
-Declaration(AnnotationProperty(dcterms:license))
-Declaration(AnnotationProperty(dcterms:title))
-
+Declaration(Class(obo:ECAO_1000001))
+Declaration(Class(obo:ECAO_1000002))
+Declaration(Class(obo:ECAO_1000003))
+Declaration(Class(obo:ECAO_1000004))
+Declaration(Class(obo:ECAO_1000005))
+Declaration(Class(obo:ECAO_1000006))
+Declaration(Class(obo:ECAO_1000007))
+Declaration(Class(obo:ECAO_1000008))
+Declaration(Class(obo:ECAO_1000009))
+Declaration(Class(obo:ECAO_1000010))
+Declaration(Class(obo:ECAO_1000011))
+Declaration(Class(obo:ECAO_1000012))
+Declaration(Class(obo:ECAO_1000013))
+Declaration(Class(obo:ECAO_1000014))
+Declaration(Class(obo:ECAO_1000015))
+Declaration(Class(obo:ECAO_1000016))
+Declaration(Class(obo:ECAO_1000017))
+Declaration(Class(obo:ECAO_1000018))
+Declaration(Class(obo:ECAO_1000019))
+Declaration(Class(obo:ECAO_1000020))
+Declaration(Class(obo:ECAO_1000021))
+Declaration(Class(obo:ECAO_1000022))
+Declaration(Class(obo:ECAO_1000023))
+Declaration(Class(obo:ECAO_1000024))
+Declaration(Class(obo:ECAO_1000025))
+Declaration(Class(obo:ECAO_1000026))
+Declaration(Class(obo:ECAO_1000027))
+Declaration(Class(obo:ECAO_1000028))
+Declaration(Class(obo:ECAO_1000029))
+Declaration(Class(obo:ECAO_1000030))
+Declaration(Class(obo:ECAO_1000031))
+Declaration(Class(obo:ECAO_1000032))
+Declaration(Class(obo:ECAO_1000033))
+Declaration(Class(obo:ECAO_1000034))
+Declaration(Class(obo:ECAO_1000035))
+Declaration(Class(obo:ECAO_1000036))
+Declaration(Class(obo:ECAO_1000037))
+Declaration(Class(obo:ECAO_1000038))
+Declaration(Class(obo:ECAO_1000039))
+Declaration(Class(obo:ECAO_1000040))
+Declaration(Class(obo:ECAO_1000041))
+Declaration(Class(obo:ECAO_1000042))
+Declaration(Class(obo:ECAO_1000043))
+Declaration(Class(obo:ECAO_1000044))
+Declaration(Class(obo:ECAO_1000045))
+Declaration(Class(obo:ECAO_1000046))
+Declaration(Class(obo:ECAO_1000047))
+Declaration(Class(obo:ECAO_1000048))
+Declaration(Class(obo:ECAO_1000049))
+Declaration(Class(obo:ECAO_1000050))
+Declaration(Class(obo:ECAO_1000051))
+Declaration(Class(obo:ECAO_1000052))
+Declaration(Class(obo:ECAO_1000053))
+Declaration(Class(obo:ECAO_1000054))
+Declaration(Class(obo:ECAO_1000055))
+Declaration(Class(obo:ECAO_1000056))
+Declaration(Class(obo:ECAO_1000057))
+Declaration(Class(obo:ECAO_1000058))
+Declaration(Class(obo:ECAO_1000059))
+Declaration(Class(obo:ECAO_1000060))
+Declaration(Class(obo:ECAO_1000061))
+Declaration(Class(obo:ECAO_1000062))
+Declaration(Class(obo:ECAO_1000063))
+Declaration(Class(obo:ECAO_1000064))
+Declaration(Class(obo:ECAO_1000065))
+Declaration(Class(obo:ECAO_1000066))
+Declaration(Class(obo:ECAO_1000067))
+Declaration(Class(obo:ECAO_1000068))
+Declaration(Class(obo:ECAO_1000069))
+Declaration(Class(obo:ECAO_1000070))
+Declaration(Class(obo:ECAO_1000071))
+Declaration(Class(obo:ECAO_1000072))
+Declaration(Class(obo:ECAO_1000073))
+Declaration(Class(obo:ECAO_1000074))
+Declaration(Class(obo:ECAO_1000075))
+Declaration(Class(obo:ECAO_1000076))
+Declaration(Class(obo:ECAO_1000077))
+Declaration(Class(obo:ECAO_1000078))
+Declaration(Class(obo:ECAO_1000079))
+Declaration(Class(obo:ECAO_1000080))
+Declaration(Class(obo:ECAO_1000081))
+Declaration(Class(obo:ECAO_1000082))
+Declaration(Class(obo:ECAO_1000083))
+Declaration(Class(obo:ECAO_1000084))
+Declaration(Class(obo:ECAO_1000085))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:BFO_0000062))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:RO_0002175))
+Declaration(AnnotationProperty(dc:title))
+Declaration(AnnotationProperty(terms:license))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
+Declaration(AnnotationProperty(oboInOwl:id))
+Declaration(AnnotationProperty(rdfs:label))
 ############################
 #   Annotation Properties
 ############################
 
-AnnotationAssertion(rdfs:label dcterms:description "description")
-AnnotationAssertion(rdfs:label dcterms:license "license")
-AnnotationAssertion(rdfs:label dcterms:title "title")
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: obo:RO_0002175 (present in taxon)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:RO_0002175 "RO:0002175")
+AnnotationAssertion(oboInOwl:id obo:RO_0002175 "present_in_taxon")
+AnnotationAssertion(rdfs:label obo:RO_0002175 "present in taxon"@en)
+
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
+
+# Annotation Property: oboInOwl:hasOBOFormatVersion (has_obo_format_version)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_version")
+
+
+
 
 ############################
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/ECAO_0000000> (root node)
+# Class: obo:ECAO_1000001 (developmental stage)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_0000000> "root node"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000001 "A temporal interval that defines echinoderm life from unfertilized egg to adult stage.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000001 "ECAO:1000001")
+AnnotationAssertion(rdfs:label obo:ECAO_1000001 "developmental stage")
+
+# Class: obo:ECAO_1000002 (life cycle)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000002 "The entire span of an organism's life.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000002 "ECAO:1000002")
+AnnotationAssertion(rdfs:label obo:ECAO_1000002 "life cycle")
+SubClassOf(obo:ECAO_1000002 obo:ECAO_1000001)
+
+# Class: obo:ECAO_1000003 (life cycle phase)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000003 "A temporal phase encompassing some part of the life cycle of an organism.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000003 "ECAO:1000003")
+AnnotationAssertion(rdfs:label obo:ECAO_1000003 "life cycle phase")
+SubClassOf(obo:ECAO_1000003 obo:ECAO_1000001)
+SubClassOf(obo:ECAO_1000003 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000002))
+
+# Class: obo:ECAO_1000004 (life cycle period)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000004 "A temporal period included in a life cycle phase.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000004 "ECAO:1000004")
+AnnotationAssertion(rdfs:label obo:ECAO_1000004 "life cycle period")
+SubClassOf(obo:ECAO_1000004 obo:ECAO_1000001)
+SubClassOf(obo:ECAO_1000004 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000003))
+
+# Class: obo:ECAO_1000005 (life cycle episode)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000005 "A temporal episode encompassing some part of a life cycle period.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000005 "ECAO:1000005")
+AnnotationAssertion(rdfs:label obo:ECAO_1000005 "life cycle episode")
+SubClassOf(obo:ECAO_1000005 obo:ECAO_1000001)
+SubClassOf(obo:ECAO_1000005 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000004))
+
+# Class: obo:ECAO_1000006 (life cycle stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000006 "A spatiotemporal region encompassing some part of the life cycle of an organism.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000006 "ECAO:1000006")
+AnnotationAssertion(rdfs:label obo:ECAO_1000006 "life cycle stage")
+SubClassOf(obo:ECAO_1000006 obo:ECAO_1000001)
+
+# Class: obo:ECAO_1000007 (gametogenesis phase)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000007 "The phase of the life cycle characterized by the biological process in which certain cells of a female or male individual (parent) are transformed into specialized reproductive cells (gametes) that will initiate development of a progeny individual (offspring) upon fertilization.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000007 "ECAO:1000007")
+AnnotationAssertion(rdfs:label obo:ECAO_1000007 "gametogenesis phase")
+SubClassOf(obo:ECAO_1000007 obo:ECAO_1000003)
+
+# Class: obo:ECAO_1000008 (embryogenesis phase)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000008 "The phase of the life cycle that begins with fertilization, continues with the formation and maturation of the embryo, and ends with the opening of the mouth, the onset of feeding, and the beginning of the growth of the organism.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000008 "ECAO:1000008")
+AnnotationAssertion(rdfs:label obo:ECAO_1000008 "embryogenesis phase")
+SubClassOf(obo:ECAO_1000008 obo:ECAO_1000003)
+SubClassOf(obo:ECAO_1000008 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000007))
+
+# Class: obo:ECAO_1000009 (larval development phase)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000009 "The phase of the life cycle that begins when the mouth opens and the larva starts to feed, continues through the growth and maturation of the larva, and ends with metamorphosis.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000009 "ECAO:1000009")
+AnnotationAssertion(rdfs:label obo:ECAO_1000009 "larval development phase")
+SubClassOf(obo:ECAO_1000009 obo:ECAO_1000003)
+SubClassOf(obo:ECAO_1000009 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000008))
+
+# Class: obo:ECAO_1000010 (adulthood phase)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000010 "The phase of the life cycle that begins after metamorphosis, continues through the growth and maturation of the juvenile, and culminates in the formation of a sexually mature adult that produces functional gametes.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000010 "ECAO:1000010")
+AnnotationAssertion(rdfs:label obo:ECAO_1000010 "adulthood phase")
+SubClassOf(obo:ECAO_1000010 obo:ECAO_1000003)
+SubClassOf(obo:ECAO_1000010 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000009))
+
+# Class: obo:ECAO_1000011 (cleavage period)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000011 "The period that immediately follows fertilization. It is characterized by rapid, synchronous mitotic cell divisions in the absence of cell growth. This period culminates in the formation of a hollow, spherical, multicellular, monolayered embryo (a blastula) with a hollow cavity (the blastocoel) in the center.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000011 "ECAO:1000011")
+AnnotationAssertion(rdfs:label obo:ECAO_1000011 "cleavage period")
+SubClassOf(obo:ECAO_1000011 obo:ECAO_1000004)
+SubClassOf(obo:ECAO_1000011 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000008))
+SubClassOf(obo:ECAO_1000011 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000017))
+
+# Class: obo:ECAO_1000012 (blastula period)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000012 "The period that immediately follows cleavage and precedes gastrulation. It is characterized by the progressive maturation of the embryo into a hollow sphere, which is one cell layer thick and encompasses a central, fluid-filled cavity (the blastocoel). This period culminates in the formation of the vegetal plate, a placode of elongated, presumptive endomesoderm cells.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000012 "ECAO:1000012")
+AnnotationAssertion(rdfs:label obo:ECAO_1000012 "blastula period")
+SubClassOf(obo:ECAO_1000012 obo:ECAO_1000004)
+SubClassOf(obo:ECAO_1000012 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000008))
+SubClassOf(obo:ECAO_1000012 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000011))
+
+# Class: obo:ECAO_1000013 (gastrula period)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000013 "The period that immediately follows the blastula period and precedes organogenesis. It is characterized by extensive movements of cells in the vegetal region of the embryo. This period culminates in the formation of a multilayered embryo composed of three primary germ layers (ectoderm, mesoderm, and endoderm).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000013 "ECAO:1000013")
+AnnotationAssertion(rdfs:label obo:ECAO_1000013 "gastrula period")
+SubClassOf(obo:ECAO_1000013 obo:ECAO_1000004)
+SubClassOf(obo:ECAO_1000013 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000008))
+SubClassOf(obo:ECAO_1000013 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000012))
+
+# Class: obo:ECAO_1000014 (organogenesis period)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000014 "The period that immediately follows the gastrula period. It is characterized by the progressive maturation of tissues and organs. This period culminates in the opening of the mouth.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000014 "ECAO:1000014")
+AnnotationAssertion(rdfs:label obo:ECAO_1000014 "organogenesis period")
+SubClassOf(obo:ECAO_1000014 obo:ECAO_1000004)
+SubClassOf(obo:ECAO_1000014 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000008))
+SubClassOf(obo:ECAO_1000014 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000013))
+
+# Class: obo:ECAO_1000015 (mesenchyme blastula episode)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000015 "The first episode of the gastrulation period, characterized by the ingression into the blastocoel of the skeletogenic primary mesenchyme cells (PMCs), prior to the invagination of the vegetal plate.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000015 "ECAO:1000015")
+AnnotationAssertion(rdfs:label obo:ECAO_1000015 "mesenchyme blastula episode")
+SubClassOf(obo:ECAO_1000015 obo:ECAO_1000005)
+SubClassOf(obo:ECAO_1000015 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000013))
+SubClassOf(obo:ECAO_1000015 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000031))
+
+# Class: obo:ECAO_1000016 (invagination episode)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000016 "The second episode of the gastrulation period, characterized by the invagination of the vegetal plate into the blastocoel to form the primitive digestive tract (archenteron).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000016 "ECAO:1000016")
+AnnotationAssertion(rdfs:label obo:ECAO_1000016 "invagination episode")
+SubClassOf(obo:ECAO_1000016 obo:ECAO_1000005)
+SubClassOf(obo:ECAO_1000016 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000013))
+SubClassOf(obo:ECAO_1000016 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000015))
+SubClassOf(obo:ECAO_1000016 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000031))
+
+# Class: obo:ECAO_1000017 (1-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000017 "Stage at which fertilization has occurred, but the zygote has not undergone cell division. The embryo is a single diploid cell surrounded by a fertilization envelope.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000017 "ECAO:1000017")
+AnnotationAssertion(rdfs:label obo:ECAO_1000017 "1-cell stage")
+SubClassOf(obo:ECAO_1000017 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000017 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000008))
+SubClassOf(obo:ECAO_1000017 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000047))
+SubClassOf(obo:ECAO_1000017 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000007))
+
+# Class: obo:ECAO_1000018 (2-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000018 "Stage at which the embryo is composed of two cells and is surrounded by a fertilization envelope. The first cleavage division has taken place meridionally (i.e. along the animal-vegetal axis), thereby generating two blastomeres of equal size, each containing both animal and vegetal cytoplasm.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000018 "ECAO:1000018")
+AnnotationAssertion(rdfs:label obo:ECAO_1000018 "2-cell stage")
+SubClassOf(obo:ECAO_1000018 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000018 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000018 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000048))
+SubClassOf(obo:ECAO_1000018 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000017))
+
+# Class: obo:ECAO_1000019 (4-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000019 "Stage at which the embryo is composed of four cells and is surrounded by a fertilization envelope. The second cleavage division has taken place meridional and perpendicular to the first cleavage division. This has produced four blastomeres of equal size, all of which contain both animal and vegetal cytoplasm.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000019 "ECAO:1000019")
+AnnotationAssertion(rdfs:label obo:ECAO_1000019 "4-cell stage")
+SubClassOf(obo:ECAO_1000019 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000019 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000019 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000049))
+SubClassOf(obo:ECAO_1000019 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000018))
+
+# Class: obo:ECAO_1000020 (8-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000020 "Stage at which the embryo is composed of eight cells and is surrounded by a fertilization envelope. The third cleavage division has taken place equatorial and perpendicular to the first two cleavage divisions.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000020 "ECAO:1000020")
+AnnotationAssertion(rdfs:label obo:ECAO_1000020 "8-cell stage")
+SubClassOf(obo:ECAO_1000020 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000020 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000020 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000050))
+SubClassOf(obo:ECAO_1000020 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000019))
+
+# Class: obo:ECAO_1000021 (16-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000021 "Stage at which the embryo is composed of 16 cells and is surrounded by a fertilization envelope.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000021 "ECAO:1000021")
+AnnotationAssertion(rdfs:label obo:ECAO_1000021 "16-cell stage")
+SubClassOf(obo:ECAO_1000021 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000021 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000021 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000051))
+SubClassOf(obo:ECAO_1000021 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000020))
+
+# Class: obo:ECAO_1000022 (28-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000022 "Stage at which the embryo is composed of 28 cells and is surrounded by a fertilization envelope.")
+AnnotationAssertion(obo:RO_0002161 obo:ECAO_1000022 obo:NCBITaxon_46514)
+AnnotationAssertion(obo:RO_0002161 obo:ECAO_1000022 obo:NCBITaxon_7632)
+AnnotationAssertion(obo:RO_0002175 obo:ECAO_1000022 obo:NCBITaxon_7654)
+AnnotationAssertion(obo:RO_0002175 obo:ECAO_1000022 obo:NCBITaxon_7656)
+AnnotationAssertion(obo:RO_0002175 obo:ECAO_1000022 obo:NCBITaxon_7668)
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000022 "ECAO:1000022")
+AnnotationAssertion(rdfs:label obo:ECAO_1000022 "28-cell stage")
+SubClassOf(obo:ECAO_1000022 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000022 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000022 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000052))
+SubClassOf(obo:ECAO_1000022 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000021))
+
+# Class: obo:ECAO_1000023 (32-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000023 "Stage at which the embryo is composed of 32 cells and is surrounded by a fertilization envelope.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000023 "ECAO:1000023")
+AnnotationAssertion(rdfs:label obo:ECAO_1000023 "32-cell stage")
+SubClassOf(obo:ECAO_1000023 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000023 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000023 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000052))
+SubClassOf(obo:ECAO_1000023 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000021))
+SubClassOf(obo:ECAO_1000023 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000022))
+
+# Class: obo:ECAO_1000024 (56-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000024 "Stage at which the embryo is composed of 56 cells and is surrounded by a fertilization envelope.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000024 "ECAO:1000024")
+AnnotationAssertion(rdfs:label obo:ECAO_1000024 "56-cell stage")
+SubClassOf(obo:ECAO_1000024 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000024 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000024 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000053))
+SubClassOf(obo:ECAO_1000024 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000023))
+
+# Class: obo:ECAO_1000025 (60-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000025 "Stage at which the embryo is composed of 60 cells and is surrounded by a fertilization envelope.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000025 "ECAO:1000025")
+AnnotationAssertion(rdfs:label obo:ECAO_1000025 "60-cell stage")
+SubClassOf(obo:ECAO_1000025 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000025 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000025 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000053))
+SubClassOf(obo:ECAO_1000025 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000024))
+
+# Class: obo:ECAO_1000026 (64-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000026 "Stage at which the embryo is composed of 64 cells and is surrounded by a fertilization envelope.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000026 "ECAO:1000026")
+AnnotationAssertion(rdfs:label obo:ECAO_1000026 "64-cell stage")
+SubClassOf(obo:ECAO_1000026 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000026 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000026 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000053))
+SubClassOf(obo:ECAO_1000026 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000023))
+
+# Class: obo:ECAO_1000027 (early blastula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000027 "Stage at which the embryo is composed of about 100-200 cells and is surrounded by a fertilization envelope. Most blastomeres have completed at least one additional mitotic division since the 60- or 64-cell stage. All cells are approximately the same size and there are no obvious morphological indications of the primary or secondary embryonic axes. All cells have begun to acquire an apical-basal polarity and the embryo is beginning to transform into a hollow sphere with a monolayered epithelial wall and a fluid-filled cavity (the blastocoel) in the center.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000027 "ECAO:1000027")
+AnnotationAssertion(rdfs:label obo:ECAO_1000027 "early blastula stage")
+SubClassOf(obo:ECAO_1000027 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000027 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000012))
+SubClassOf(obo:ECAO_1000027 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000054))
+SubClassOf(obo:ECAO_1000027 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000025))
+SubClassOf(obo:ECAO_1000027 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000026))
+
+# Class: obo:ECAO_1000028 (mid-blastula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000028 "Stage at which the embryo is composed of about 200-500 cells and is surrounded by a fertilization envelope. Most cells have completed at least one additional mitotic division since the early blastula stage. The cell divisions are now less synchronous than at earlier stages. The embryo remains spherical in shape and one cell layer thick. It does not display any morphological indications of the embryonic axes or of the vegetal plate. The cells have started to flatten on their inner (basal) surface, further contributing to the enlargement of the blastocoel, which has expanded since the early blastula stage.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000028 "ECAO:1000028")
+AnnotationAssertion(rdfs:label obo:ECAO_1000028 "mid-blastula stage")
+SubClassOf(obo:ECAO_1000028 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000028 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000012))
+SubClassOf(obo:ECAO_1000028 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000055))
+SubClassOf(obo:ECAO_1000028 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000027))
+
+# Class: obo:ECAO_1000029 (motile blastula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000029 "Stage at which the embryo is composed of 400-500 cells and is no longer surrounded by a fertilization envelope. Most cells have completed at least one additional mitotic division after the early blastula stage and the cell divisions are now less synchronous than at earlier stages. The embryo remains spherical in shape and one cell layer thick. It does not display any morphological indications of the embryonic axes or of the vegetal plate. The cells have started to flatten on their inner (basal) surface, further contributing to the enlargement of the blastocoel, which has expanded since the early blastula stage.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000029 "ECAO:1000029")
+AnnotationAssertion(rdfs:label obo:ECAO_1000029 "motile blastula stage")
+SubClassOf(obo:ECAO_1000029 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000029 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000012))
+SubClassOf(obo:ECAO_1000029 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000055))
+SubClassOf(obo:ECAO_1000029 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000027))
+
+# Class: obo:ECAO_1000030 (late blastula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000030 "Stage at which the embryo is composed of about 600-1000 cells. Most cells have completed at least one additional mitotic division since the mid-blastula stage and developed an apical cilium. The embryo is still spherical in shape and one cell layer thick. It still lacks obvious morphological landmarks of the embryonic axes and of the vegetal plate. Cells have further continued to flatten along the apical-basal axis, accentuating the enlargement of the blastocoel. They are also now joined to one another apically by septate and adherens junctions and laterally by desmosomes.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000030 "ECAO:1000030")
+AnnotationAssertion(rdfs:label obo:ECAO_1000030 "late blastula stage")
+SubClassOf(obo:ECAO_1000030 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000030 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000012))
+SubClassOf(obo:ECAO_1000030 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000056))
+SubClassOf(obo:ECAO_1000030 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000028))
+SubClassOf(obo:ECAO_1000030 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000029))
+
+# Class: obo:ECAO_1000031 (vegetal plate stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000031 "Stage at which the embryo displays a vegetal epithelial placode, the vegetal plate, that formed at the vegetal pole and thereby provides the first morphological indication of the animal-vegetal axis of the blastula. All cells have developed an apical cilium, although the embryo may or may not have hatched from the fertilization envelope.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000031 "ECAO:1000031")
+AnnotationAssertion(rdfs:label obo:ECAO_1000031 "vegetal plate stage")
+SubClassOf(obo:ECAO_1000031 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000031 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000012))
+SubClassOf(obo:ECAO_1000031 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000057))
+SubClassOf(obo:ECAO_1000031 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000030))
+
+# Class: obo:ECAO_1000032 (early mesenchyme blastula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000032 "Stage at which skeletogenic primary mesenchyme cells (PMCs) are starting to ingress from the vegetal plate into the blastocoel through an epithelial–to-mesenchymal transition (EMT).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000032 "ECAO:1000032")
+AnnotationAssertion(rdfs:label obo:ECAO_1000032 "early mesenchyme blastula stage")
+SubClassOf(obo:ECAO_1000032 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000032 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000015))
+SubClassOf(obo:ECAO_1000032 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000058))
+SubClassOf(obo:ECAO_1000032 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000031))
+
+# Class: obo:ECAO_1000033 (mid-mesenchyme blastula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000033 "Stage at which almost all skeletogenic primary mesenchyme cells (PMCs) have ingressed into the blastocoel and remain in a mound on the vegetal plate.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000033 "ECAO:1000033")
+AnnotationAssertion(rdfs:label obo:ECAO_1000033 "mid-mesenchyme blastula stage")
+SubClassOf(obo:ECAO_1000033 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000033 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000015))
+SubClassOf(obo:ECAO_1000033 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000058))
+SubClassOf(obo:ECAO_1000033 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000032))
+
+# Class: obo:ECAO_1000034 (late mesenchyme blastula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000034 "Stage at which all skeletogenic primary mesenchyme cells (PMCs) have ingressed into the blastocoel. Many of these cells have extended filopodia and migrated away from the vegetal plate. The cells are found along the blastocoel wall, although they remain concentrated in the vegetal hemisphere of the embryo. The vegetal plate has flattened following the ingression of the PMCs. However, it has not started to invaginate. It is now composed at its center of the 8 small micromere descendants (the germ line) surrounded by non-skeletogenic mesoderm (NSM).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000034 "ECAO:1000034")
+AnnotationAssertion(rdfs:label obo:ECAO_1000034 "late mesenchyme blastula stage")
+SubClassOf(obo:ECAO_1000034 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000034 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000015))
+SubClassOf(obo:ECAO_1000034 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000058))
+SubClassOf(obo:ECAO_1000034 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000033))
+
+# Class: obo:ECAO_1000035 (blastopore formation stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000035 "Stage at which the embryo is characterized morphologically by a slight invagination of the vegetal plate. This invagination has generated the anterior portion of the archenteron (primitive digestive tract) and the blastopore, an opening that will persist as the larval anus.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000035 "ECAO:1000035")
+AnnotationAssertion(rdfs:label obo:ECAO_1000035 "blastopore formation stage")
+SubClassOf(obo:ECAO_1000035 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000035 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000016))
+SubClassOf(obo:ECAO_1000035 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000058))
+SubClassOf(obo:ECAO_1000035 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000031))
+SubClassOf(obo:ECAO_1000035 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000034))
+
+# Class: obo:ECAO_1000036 (early gastrula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000036 "Stage at which the archenteron (primitive digestive tract) has elongated up to 1/3 of its final length. This elongation has occurred through the inward movement of all non-skeletogenic mesoderm (NSM) cells and part of the endoderm.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000036 "ECAO:1000036")
+AnnotationAssertion(rdfs:label obo:ECAO_1000036 "early gastrula stage")
+SubClassOf(obo:ECAO_1000036 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000036 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000016))
+SubClassOf(obo:ECAO_1000036 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000059))
+SubClassOf(obo:ECAO_1000036 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000035))
+
+# Class: obo:ECAO_1000037 (mid-gastrula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000037 "Stage at which the archenteron (primitive digestive tract) has elongated to about half (1/3-2/3) of its final length.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000037 "ECAO:1000037")
+AnnotationAssertion(rdfs:label obo:ECAO_1000037 "mid-gastrula stage")
+SubClassOf(obo:ECAO_1000037 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000037 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000016))
+SubClassOf(obo:ECAO_1000037 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000060))
+SubClassOf(obo:ECAO_1000037 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000036))
+
+# Class: obo:ECAO_1000038 (late gastrula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000038 "Stage at which the archenteron (primitive digestive tract) has elongated up to more than 2/3 of its maximal length.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000038 "ECAO:1000038")
+AnnotationAssertion(rdfs:label obo:ECAO_1000038 "late gastrula stage")
+SubClassOf(obo:ECAO_1000038 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000038 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000016))
+SubClassOf(obo:ECAO_1000038 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000061))
+SubClassOf(obo:ECAO_1000038 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000037))
+
+# Class: obo:ECAO_1000039 (early prism stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000039 "Stage at which the embryo has a distinctive, angular shape due to the elongation of the skeletal rods. The body rods have elongated toward the apex (posterior end) of the embryo. The dorsoventral connecting rods are elongated, and the postoral rods are still very short although they already support thickened regions of ectoderm that will later form the distal tip of the postoral arms. The archenteron tip is slightly expanded, and its oral surface is directed toward the oral ectoderm. Ingression of secondary mesenchyme cells (SMCs) is complete. The embryo is reddish in color due to the presence of pigment cells within the aboral ectoderm. The animal pole domain (or apical plate) is prominent and the lateral walls of the embryo have thinned. The coelomic pouches and gut constrictions have not yet appeared.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000039 "ECAO:1000039")
+AnnotationAssertion(rdfs:label obo:ECAO_1000039 "early prism stage")
+SubClassOf(obo:ECAO_1000039 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000039 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000014))
+SubClassOf(obo:ECAO_1000039 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000062))
+SubClassOf(obo:ECAO_1000039 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000038))
+
+# Class: obo:ECAO_1000040 (late prism stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000040 "Stage at which the embryo has a distinctive, angular shape due to the elongation of the skeletal rods. The body rods have expended even further compared to earlier stages and the postoral rods support short postoral arm buds. The anterior ends of the dorsoventral connecting rods are also now branched or bent. The archenteron tip is still bent toward the oral ectoderm. At the tip of the archenteron coelomic evaginations start to be apparent, although no gut constrictions are visible yet. The embryo is reddish in color due to the presence of pigment cells within the aboral ectoderm. The animal pole domain is prominent, and it still bears long, immotile cilia.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000040 "ECAO:1000040")
+AnnotationAssertion(rdfs:label obo:ECAO_1000040 "late prism stage")
+SubClassOf(obo:ECAO_1000040 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000040 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000014))
+SubClassOf(obo:ECAO_1000040 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000063))
+SubClassOf(obo:ECAO_1000040 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000039))
+
+# Class: obo:ECAO_1000041 (early organogenesis stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000041 "Stage at which the embryo is elongated along the animal-vegetal axis and has thus a characteristic oblong shape. The archenteron is fully extended, even though it still does not reach the blastocoel roof. The tip of the archenteron is enlarged, rounded, and smooth, and the archenteron has begun to deflect orally. Mesenchyme cell ingression is complete. However, paired coelomic pouches and gut constrictions have not yet formed.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000041 "ECAO:1000041")
+AnnotationAssertion(rdfs:label obo:ECAO_1000041 "early organogenesis stage")
+SubClassOf(obo:ECAO_1000041 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000041 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000014))
+SubClassOf(obo:ECAO_1000041 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000062))
+SubClassOf(obo:ECAO_1000041 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000038))
+
+# Class: obo:ECAO_1000042 (mid-organogenesis stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000042 "Stage at which the embryo is elongated along the animal-vegetal axis and has thus a characteristic oblong shape. The archenteron is overall deflected orally and its tip is enlarged, rounded, and smooth. The tip of the archenteron is further starting to display filopodia that interact with the ectoderm site where the mouth will form. At the tip of the archenteron, unpaired evaginations of the coelom are also now apparent, even though the stomodeal invagination, gut constrictions, and ciliary band(s) are still not discernable. Mesenchyme cells have dispersed through the blastocoel.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000042 "ECAO:1000042")
+AnnotationAssertion(rdfs:label obo:ECAO_1000042 "mid-organogenesis stage")
+SubClassOf(obo:ECAO_1000042 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000042 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000014))
+SubClassOf(obo:ECAO_1000042 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000063))
+SubClassOf(obo:ECAO_1000042 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000041))
+
+# Class: obo:ECAO_1000043 (late organogenesis stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000043 "Stage at which the embryo is characterized by the presence, at the tip of the archenteron, of two well-formed coelomic pouches, separated from the foregut by pronounced constrictions. The cardiac constriction, which separates the foregut and the midgut, has started to form. On the oral side of the embryo, the stomodeal invagination is visible, although the mouth has not yet opened. The ciliary band(s) is (are) not yet visible.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000043 "ECAO:1000043")
+AnnotationAssertion(rdfs:label obo:ECAO_1000043 "late organogenesis stage")
+SubClassOf(obo:ECAO_1000043 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000043 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000014))
+SubClassOf(obo:ECAO_1000043 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000064))
+SubClassOf(obo:ECAO_1000043 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000040))
+SubClassOf(obo:ECAO_1000043 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000042))
+
+# Class: obo:ECAO_1000044 (very late organogenesis stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000044 "Stage at which the embryo displays prominent right and left anterior coelomic pouches, and the posterior enterocoel has enlarged. Pronounced cardiac and developing pyloric constrictions (separating respectively the foregut and midgut, and the midgut and hindgut) are formed, and the gut is thus visibly tripartite, with the posterior enterocoel projecting from the developing stomach (former midgut). The wall of the left anterior coelom is distended at both its anterior and posterior margins, where strands of cells extend to the ectoderm. Muscle bands surrounding the esophagus are apparent. Ridges of thickened ectoderm mark the positions of the future ciliary bands.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000044 "ECAO:1000044")
+AnnotationAssertion(rdfs:label obo:ECAO_1000044 "very late organogenesis stage")
+SubClassOf(obo:ECAO_1000044 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000044 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000014))
+SubClassOf(obo:ECAO_1000044 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000064))
+SubClassOf(obo:ECAO_1000044 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000043))
+
+# Class: obo:ECAO_1000045 (open mouth stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000045 "Stage that is characterized by the opening of the mouth. The right and left coelomic pouches are prominent and well-separated from the foregut by narrow coelomic constrictions. Pronounced cardiac and developing pyloric constrictions (separating respectively the foregut and midgut, and the midgut and hindgut) are visible; the gut is thus visibly tripartite. The developing stomach (former midgut) is enlarged relative to the other segments of the gut and muscle bands surrounding the esophagus are apparent. The ciliary band(s) is (are) also discernable.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000045 "ECAO:1000045")
+AnnotationAssertion(rdfs:label obo:ECAO_1000045 "open mouth stage")
+SubClassOf(obo:ECAO_1000045 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000045 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000014))
+SubClassOf(obo:ECAO_1000045 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000065))
+SubClassOf(obo:ECAO_1000045 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000043))
+SubClassOf(obo:ECAO_1000045 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000044))
+
+# Class: obo:ECAO_1000046 (pan-echinoderm life cycle stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000046 "A specific developmental stage common to all echinoderms.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000046 "ECAO:1000046")
+AnnotationAssertion(rdfs:label obo:ECAO_1000046 "pan-echinoderm life cycle stage")
+SubClassOf(obo:ECAO_1000046 obo:ECAO_1000001)
+
+# Class: obo:ECAO_1000047 (stage 1)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000047 "Echinoderm developmental stage at which fertilization has occurred but the zygote has not divided (1-cell stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000047 "ECAO:1000047")
+AnnotationAssertion(rdfs:label obo:ECAO_1000047 "stage 1")
+SubClassOf(obo:ECAO_1000047 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000047 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000008))
+SubClassOf(obo:ECAO_1000047 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000007))
+
+# Class: obo:ECAO_1000048 (stage 2)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000048 "Echinoderm developmental stage at which the embryo is composed of 2 cells (2-cell stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000048 "ECAO:1000048")
+AnnotationAssertion(rdfs:label obo:ECAO_1000048 "stage 2")
+SubClassOf(obo:ECAO_1000048 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000048 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000048 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000047))
+
+# Class: obo:ECAO_1000049 (stage 3)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000049 "Echinoderm developmental stage at which the embryo is composed of 4 cells (4-cell stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000049 "ECAO:1000049")
+AnnotationAssertion(rdfs:label obo:ECAO_1000049 "stage 3")
+SubClassOf(obo:ECAO_1000049 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000049 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000049 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000048))
+
+# Class: obo:ECAO_1000050 (stage 4)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000050 "Echinoderm developmental stage at which the embryo is composed of 8 cells (8-cell stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000050 "ECAO:1000050")
+AnnotationAssertion(rdfs:label obo:ECAO_1000050 "stage 4")
+SubClassOf(obo:ECAO_1000050 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000050 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000050 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000049))
+
+# Class: obo:ECAO_1000051 (stage 5)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000051 "Echinoderm developmental stage at which the embryo is composed of 16 cells (16-cell stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000051 "ECAO:1000051")
+AnnotationAssertion(rdfs:label obo:ECAO_1000051 "stage 5")
+SubClassOf(obo:ECAO_1000051 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000051 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000051 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000050))
+
+# Class: obo:ECAO_1000052 (stage 6)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000052 "Echinoderm developmental stage at which the embryo is composed of 28-32 cells (includes 28- and 32-cell stages).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000052 "ECAO:1000052")
+AnnotationAssertion(rdfs:label obo:ECAO_1000052 "stage 6")
+SubClassOf(obo:ECAO_1000052 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000052 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000052 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000051))
+
+# Class: obo:ECAO_1000053 (stage 7)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000053 "Echinoderm developmental stage at which the embryo is composed of 56-64 cells (includes 56-, 60-, and 64-cell stages).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000053 "ECAO:1000053")
+AnnotationAssertion(rdfs:label obo:ECAO_1000053 "stage 7")
+SubClassOf(obo:ECAO_1000053 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000053 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000011))
+SubClassOf(obo:ECAO_1000053 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000052))
+
+# Class: obo:ECAO_1000054 (stage 8)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000054 "Echinoderm developmental stage at which the embryo is an early blastula (early blastula stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000054 "ECAO:1000054")
+AnnotationAssertion(rdfs:label obo:ECAO_1000054 "stage 8")
+SubClassOf(obo:ECAO_1000054 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000054 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000012))
+SubClassOf(obo:ECAO_1000054 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000053))
+
+# Class: obo:ECAO_1000055 (stage 9)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000055 "Echinoderm developmental stage at which the embryo is a mid-blastula (includes mid-blastula and motile blastula stages).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000055 "ECAO:1000055")
+AnnotationAssertion(rdfs:label obo:ECAO_1000055 "stage 9")
+SubClassOf(obo:ECAO_1000055 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000055 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000012))
+SubClassOf(obo:ECAO_1000055 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000054))
+
+# Class: obo:ECAO_1000056 (stage 10)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000056 "Echinoderm developmental stage at which the embryo is a late blastula, it is still spherical, and the vegetal plate has not formed (late blastula stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000056 "ECAO:1000056")
+AnnotationAssertion(rdfs:label obo:ECAO_1000056 "stage 10")
+SubClassOf(obo:ECAO_1000056 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000056 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000012))
+SubClassOf(obo:ECAO_1000056 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000055))
+
+# Class: obo:ECAO_1000057 (stage 11)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000057 "Echinoderm developmental stage at which the embryo, whether or not hatched from the fertilization envelope, has formed a vegetal plate but gastrulation has not begun (vegetal plate stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000057 "ECAO:1000057")
+AnnotationAssertion(rdfs:label obo:ECAO_1000057 "stage 11")
+SubClassOf(obo:ECAO_1000057 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000057 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000012))
+SubClassOf(obo:ECAO_1000057 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000056))
+
+# Class: obo:ECAO_1000058 (stage 12)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000058 "Echinoderm developmental stage at which the embryo has hatched from the fertilization envelope and is undergoing the earliest cell movements of gastrulation (includes early, mid-, and late mesenchyme blastula stages and blastopore formation stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000058 "ECAO:1000058")
+AnnotationAssertion(rdfs:label obo:ECAO_1000058 "stage 12")
+SubClassOf(obo:ECAO_1000058 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000058 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000013))
+SubClassOf(obo:ECAO_1000058 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000057))
+
+# Class: obo:ECAO_1000059 (stage 13)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000059 "Echinoderm developmental stage at which the embryo is undergoing the first phase of archenteron extension (early gastrula stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000059 "ECAO:1000059")
+AnnotationAssertion(rdfs:label obo:ECAO_1000059 "stage 13")
+SubClassOf(obo:ECAO_1000059 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000059 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000013))
+SubClassOf(obo:ECAO_1000059 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000058))
+
+# Class: obo:ECAO_1000060 (stage 14)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000060 "Echinoderm developmental stage at which the embryo is undergoing the middle phase of archenteron extension (mid-gastrula stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000060 "ECAO:1000060")
+AnnotationAssertion(rdfs:label obo:ECAO_1000060 "stage 14")
+SubClassOf(obo:ECAO_1000060 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000060 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000013))
+SubClassOf(obo:ECAO_1000060 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000059))
+
+# Class: obo:ECAO_1000061 (stage 15)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000061 "Echinoderm developmental stage at which the embryo is undergoing the last phase of archenteron extension (late gastrula stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000061 "ECAO:1000061")
+AnnotationAssertion(rdfs:label obo:ECAO_1000061 "stage 15")
+SubClassOf(obo:ECAO_1000061 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000061 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000013))
+SubClassOf(obo:ECAO_1000061 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000060))
+
+# Class: obo:ECAO_1000062 (stage 16)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000062 "Echinoderm developmental stage at which the embryo has completed archenteron elongation and mesenchyme cell ingression is complete (includes early prism and early organogenesis stages).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000062 "ECAO:1000062")
+AnnotationAssertion(rdfs:label obo:ECAO_1000062 "stage 16")
+SubClassOf(obo:ECAO_1000062 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000062 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000014))
+SubClassOf(obo:ECAO_1000062 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000061))
+
+# Class: obo:ECAO_1000063 (stage 17)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000063 "Echinoderm developmental stage at which the embryo has paired coelomic evaginations at the tip of the archenteron but lacks a stomodeal invagination and gut constrictions (includes late prism and mid-organogenesis stages).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000063 "ECAO:1000063")
+AnnotationAssertion(rdfs:label obo:ECAO_1000063 "stage 17")
+SubClassOf(obo:ECAO_1000063 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000063 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000014))
+SubClassOf(obo:ECAO_1000063 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000062))
+
+# Class: obo:ECAO_1000064 (stage 18)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000064 "Echinoderm developmental stage at which the embryo has paired coelomic pouches along with a stomodeal invagination and gut constrictions (includes late and very late organogenesis stages).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000064 "ECAO:1000064")
+AnnotationAssertion(rdfs:label obo:ECAO_1000064 "stage 18")
+SubClassOf(obo:ECAO_1000064 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000064 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000014))
+SubClassOf(obo:ECAO_1000064 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000063))
+
+# Class: obo:ECAO_1000065 (stage 19)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000065 "Echinoderm developmental stage at which the embryo has an open mouth (open mouth stage).")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000065 "ECAO:1000065")
+AnnotationAssertion(rdfs:label obo:ECAO_1000065 "stage 19")
+SubClassOf(obo:ECAO_1000065 obo:ECAO_1000046)
+SubClassOf(obo:ECAO_1000065 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000014))
+SubClassOf(obo:ECAO_1000065 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000064))
+
+# Class: obo:ECAO_1000066 (oogenesis period)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000066 "Period during which female gametes (or oocytes, or eggs) develop and mature from primordial female germ cells to generate cells competent to further development upon fertilization by a mature spermatozoid.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000066 "ECAO:1000066")
+AnnotationAssertion(rdfs:label obo:ECAO_1000066 "oogenesis period")
+SubClassOf(obo:ECAO_1000066 obo:ECAO_1000004)
+SubClassOf(obo:ECAO_1000066 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000007))
+
+# Class: obo:ECAO_1000067 (spermatogenesis period)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000067 "Period during which male gametes (or spermatozoa, or spermatozoid) develop and mature from primordial male germ cells to generate cells competent to further development upon fertilization of a mature oocyte.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000067 "ECAO:1000067")
+AnnotationAssertion(rdfs:label obo:ECAO_1000067 "spermatogenesis period")
+SubClassOf(obo:ECAO_1000067 obo:ECAO_1000004)
+SubClassOf(obo:ECAO_1000067 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000007))
+
+# Class: obo:ECAO_1000068 (previtellogenic primary oocyte stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000068 "Stage at which the female gamete is small in size, i.e. about 10 micrometer in diameter, and is in the previtellogenic state.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000068 "ECAO:1000068")
+AnnotationAssertion(rdfs:label obo:ECAO_1000068 "previtellogenic primary oocyte stage")
+SubClassOf(obo:ECAO_1000068 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000068 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000066))
+
+# Class: obo:ECAO_1000069 (not fully grown oocyte stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000069 "Stage at which the developing female gamete has started growing in size by accumulation of yolk proteins, and is characterized by the presence of a large nucleus, the germinal vesicle, which contains a prominent nucleolus and occupies most of the cytoplasm.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000069 "ECAO:1000069")
+AnnotationAssertion(rdfs:label obo:ECAO_1000069 "not fully grown oocyte stage")
+SubClassOf(obo:ECAO_1000069 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000069 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000066))
+SubClassOf(obo:ECAO_1000069 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000068))
+
+# Class: obo:ECAO_1000070 (fully grown oocyte with centered germinal vesicle stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000070 "Stage at which the developing female gamete has reached its full size. It has grown up to ten times its original size, i.e. 80 to 100 micrometers. It also displays a large germinal vesicle that is centered, but it is still not competent for fertilization.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000070 "ECAO:1000070")
+AnnotationAssertion(rdfs:label obo:ECAO_1000070 "fully grown oocyte with centered germinal vesicle stage")
+SubClassOf(obo:ECAO_1000070 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000070 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000066))
+SubClassOf(obo:ECAO_1000070 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000069))
+
+# Class: obo:ECAO_1000071 (fully grown oocyte with off-centered germinal vesicle stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000071 "Stage at which the developing female gamete has reached its full size and whose germinal vesicle has moved asymmetrically to the cell periphery. The germinal vesicle is now close to the animal pole.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000071 "ECAO:1000071")
+AnnotationAssertion(rdfs:label obo:ECAO_1000071 "fully grown oocyte with off-centered germinal vesicle stage")
+SubClassOf(obo:ECAO_1000071 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000071 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000066))
+SubClassOf(obo:ECAO_1000071 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000070))
+
+# Class: obo:ECAO_1000072 (fully grown oocyte with no nucleus stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000072 "Stage of the developing female gamete in which the germinal vesicle has broken down. The germinal vesicle is no longer visible. However, the female gamete is still not mature. It is undergoing meiotic maturation, extruding successively a first and a second polar body.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000072 "ECAO:1000072")
+AnnotationAssertion(rdfs:label obo:ECAO_1000072 "fully grown oocyte with no nucleus stage")
+SubClassOf(obo:ECAO_1000072 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000072 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000066))
+SubClassOf(obo:ECAO_1000072 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000071))
+
+# Class: obo:ECAO_1000073 (mature oocyte stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000073 "Stage at which the mature female gamete has achieved its meiotic maturation and whose female pronucleus is visible. The mature oocyte is arrested in G1 phase and its average size is 80 to 100 micrometers. It is surrounded by a transparent jelly coat that is about 30 micrometers thick. It is competent to fertilization and is located in the female gonad where it may be stored for weeks to months before its release in sea water by spawning. In the P. lividus species, the mature female gametes are characterized by the presence of pigment granules concentrated in a subequatorial band. This band is classically called the pigment band and allows visualization of the first embryonic axis, i.e. the animal-vegetal axis, which is perpendicular to the band.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000073 "ECAO:1000073")
+AnnotationAssertion(rdfs:label obo:ECAO_1000073 "mature oocyte stage")
+SubClassOf(obo:ECAO_1000073 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000073 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000066))
+SubClassOf(obo:ECAO_1000073 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000072))
+
+# Class: obo:ECAO_1000074 (developing spermatozoa stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000074 "Stage at which the developing, immature male gamete is undergoing mitosis and meiosis to ultimately produce mature spermatozoa.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000074 "ECAO:1000074")
+AnnotationAssertion(rdfs:label obo:ECAO_1000074 "developing spermatozoa stage")
+SubClassOf(obo:ECAO_1000074 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000074 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000067))
+
+# Class: obo:ECAO_1000075 (mature spermatozoid stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000075 "Stage at which the mature male gamete is composed of a head, encompassing a compact nucleus, a neck, a middle piece, and a tail (or flagellum) that propels it towards the oocyte upon spawning.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000075 "ECAO:1000075")
+AnnotationAssertion(rdfs:label obo:ECAO_1000075 "mature spermatozoid stage")
+SubClassOf(obo:ECAO_1000075 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000075 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000067))
+SubClassOf(obo:ECAO_1000075 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000074))
+
+# Class: obo:ECAO_1000076 (4-arm pluteus larva stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000076 "Stage at which the larva is characterized by the presence, on the ventral side, of four extended arms (two anterolateral arms at the level of the oral hood and two postoral arms) and on the dorsal side by a sleeked apex. The larva now possesses a completely tripartite and functional digestive tract composed of an esophagus, a stomach, and an intestine, respectively limited by a cardiac sphincter, a pyloric sphincter, and an anal sphincter.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000076 "ECAO:1000076")
+AnnotationAssertion(rdfs:label obo:ECAO_1000076 "4-arm pluteus larva stage")
+SubClassOf(obo:ECAO_1000076 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000076 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000009))
+SubClassOf(obo:ECAO_1000076 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000045))
+
+# Class: obo:ECAO_1000077 (6-arm pluteus larva stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000077 "Stage at which the larva is characterized by the presence on the ventral side of six arms, and by the development, on the anterior midline of the esophagus, of the dorsal arch.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000077 "ECAO:1000077")
+AnnotationAssertion(rdfs:label obo:ECAO_1000077 "6-arm pluteus larva stage")
+SubClassOf(obo:ECAO_1000077 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000077 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000009))
+SubClassOf(obo:ECAO_1000077 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000076))
+
+# Class: obo:ECAO_1000078 (8-arm pluteus larva stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000078 "Stage at which the larva is characterized by the presence on the ventral side of eight arms and by the development within the larva, on the left side of the stomach, of the adult rudiment. This stage is relatively long. It includes distinct changes occurring to the larva as well as within the larva, although the larva consistently exhibits 8 arms.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000078 "ECAO:1000078")
+AnnotationAssertion(rdfs:label obo:ECAO_1000078 "8-arm pluteus larva stage")
+SubClassOf(obo:ECAO_1000078 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000078 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000009))
+SubClassOf(obo:ECAO_1000078 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000077))
+
+# Class: obo:ECAO_1000079 (competent pluteus larva stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000079 "Stage at which the larva is characterized by the presence, within the larva, on the left side of its stomach, of the adult rudiment. The rudiment is now the size of or even bigger than the stomach and harbors five long primary podia (i.e. tube feet) and five quartets of definitive spines. Under the right environemental cue, the larva is competent to undergo metamorphosis.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000079 "ECAO:1000079")
+AnnotationAssertion(rdfs:label obo:ECAO_1000079 "competent pluteus larva stage")
+SubClassOf(obo:ECAO_1000079 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000079 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000009))
+SubClassOf(obo:ECAO_1000079 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000078))
+
+# Class: obo:ECAO_1000080 (metamorphic larva stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000080 "Stage at which the larva essentially undergoes metamorphsis. The larva goes through drastic morphological changes to transofrm the bilateral, planctonic larva into a benthic, pentaradial juvenile.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000080 "ECAO:1000080")
+AnnotationAssertion(rdfs:label obo:ECAO_1000080 "metamorphic larva stage")
+SubClassOf(obo:ECAO_1000080 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000080 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000009))
+SubClassOf(obo:ECAO_1000080 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000079))
+
+# Class: obo:ECAO_1000081 (juvenile period)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000081 "Period during which a young benthic individual, posing as a small adult, grows but remains unable to reproduce.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000081 "ECAO:1000081")
+AnnotationAssertion(rdfs:label obo:ECAO_1000081 "juvenile period")
+SubClassOf(obo:ECAO_1000081 obo:ECAO_1000004)
+SubClassOf(obo:ECAO_1000081 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000010))
+SubClassOf(obo:ECAO_1000081 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000009))
+
+# Class: obo:ECAO_1000082 (early juvenile stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000082 "Stage at which the animal is morphologically similar to a miniature sea urchin adult. It harbors primary podia (or tube feet) and definitive spines, along with other appendages (e.g., immature spines, pedicellariae). Compare to the adult, however, it is smaller in size, deprived of a functional digestive system, and is sexually immature.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000082 "ECAO:1000082")
+AnnotationAssertion(rdfs:label obo:ECAO_1000082 "early juvenile stage")
+SubClassOf(obo:ECAO_1000082 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000082 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000081))
+SubClassOf(obo:ECAO_1000082 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000080))
+
+# Class: obo:ECAO_1000083 (late juvenile stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000083 "Stage at which the animal still looks like a small adult. Its digestive tract is now functional. However, the late juvenile remains sexually immature.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000083 "ECAO:1000083")
+AnnotationAssertion(rdfs:label obo:ECAO_1000083 "late juvenile stage")
+SubClassOf(obo:ECAO_1000083 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000083 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000081))
+SubClassOf(obo:ECAO_1000083 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000082))
+
+# Class: obo:ECAO_1000084 (adult period)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000084 "Period during which the animal reaches sexual maturity.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000084 "ECAO:1000084")
+AnnotationAssertion(rdfs:label obo:ECAO_1000084 "adult period")
+SubClassOf(obo:ECAO_1000084 obo:ECAO_1000004)
+SubClassOf(obo:ECAO_1000084 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000010))
+SubClassOf(obo:ECAO_1000084 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000081))
+
+# Class: obo:ECAO_1000085 (adult stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000085 "Stage which corresponds to a fully formed pentaradial sea urchin individual that has reached sexual maturity. The gonads have developed within the perivisceral cavity and are connected to the outside by the genital pores pierced into the genital plates.")
+AnnotationAssertion(oboInOwl:id obo:ECAO_1000085 "ECAO:1000085")
+AnnotationAssertion(rdfs:label obo:ECAO_1000085 "adult stage")
+SubClassOf(obo:ECAO_1000085 obo:ECAO_1000006)
+SubClassOf(obo:ECAO_1000085 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000084))
+SubClassOf(obo:ECAO_1000085 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000083))
 
 
 )
-

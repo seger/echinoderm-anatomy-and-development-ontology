@@ -1,15 +1,758 @@
 format-version: 1.2
-data-version: ecao/releases/2025-04-07/ecao-base.owl
-idspace: dce http://purl.org/dc/elements/1.1/ 
-idspace: dcterms http://purl.org/dc/terms/ 
+data-version: ecao/releases/2025-04-08/ecao-base.owl
+idspace: dc http://purl.org/dc/elements/1.1/ 
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+idspace: terms http://purl.org/dc/terms/ 
 ontology: ecao/ecao-base
-property_value: dce:type IAO:8000001
-property_value: dcterms:description "None" xsd:string
-property_value: dcterms:license https://creativecommons.org/licenses/unspecified
-property_value: dcterms:title "Echinoderm Anatomy and Development Ontology" xsd:string
-property_value: owl:versionInfo "2025-04-07" xsd:string
+property_value: dc:title "Echinoderm Anatomy and Development Ontology" xsd:string
+property_value: dc:type IAO:8000001
+property_value: owl:versionInfo "2025-04-08" xsd:string
+property_value: terms:license https://creativecommons.org/licenses/by/3.0/
 
 [Term]
-id: ECAO:0000000
-name: root node
+id: ECAO:1000001
+name: developmental stage
+def: "A temporal interval that defines echinoderm life from unfertilized egg to adult stage." []
+
+[Term]
+id: ECAO:1000002
+name: life cycle
+def: "The entire span of an organism's life." []
+is_a: ECAO:1000001 ! developmental stage
+
+[Term]
+id: ECAO:1000003
+name: life cycle phase
+def: "A temporal phase encompassing some part of the life cycle of an organism." []
+is_a: ECAO:1000001 ! developmental stage
+relationship: BFO:0000050 ECAO:1000002 ! life cycle
+
+[Term]
+id: ECAO:1000004
+name: life cycle period
+def: "A temporal period included in a life cycle phase." []
+is_a: ECAO:1000001 ! developmental stage
+relationship: BFO:0000050 ECAO:1000003 ! life cycle phase
+
+[Term]
+id: ECAO:1000005
+name: life cycle episode
+def: "A temporal episode encompassing some part of a life cycle period." []
+is_a: ECAO:1000001 ! developmental stage
+relationship: BFO:0000050 ECAO:1000004 ! life cycle period
+
+[Term]
+id: ECAO:1000006
+name: life cycle stage
+def: "A spatiotemporal region encompassing some part of the life cycle of an organism." []
+is_a: ECAO:1000001 ! developmental stage
+
+[Term]
+id: ECAO:1000007
+name: gametogenesis phase
+def: "The phase of the life cycle characterized by the biological process in which certain cells of a female or male individual (parent) are transformed into specialized reproductive cells (gametes) that will initiate development of a progeny individual (offspring) upon fertilization." []
+is_a: ECAO:1000003 ! life cycle phase
+
+[Term]
+id: ECAO:1000008
+name: embryogenesis phase
+def: "The phase of the life cycle that begins with fertilization, continues with the formation and maturation of the embryo, and ends with the opening of the mouth, the onset of feeding, and the beginning of the growth of the organism." []
+is_a: BFO:0000003
+is_a: ECAO:1000003 ! life cycle phase
+relationship: BFO:0000062 ECAO:1000007 ! gametogenesis phase
+
+[Term]
+id: ECAO:1000009
+name: larval development phase
+def: "The phase of the life cycle that begins when the mouth opens and the larva starts to feed, continues through the growth and maturation of the larva, and ends with metamorphosis." []
+is_a: BFO:0000003
+is_a: ECAO:1000003 ! life cycle phase
+relationship: BFO:0000062 ECAO:1000008 ! embryogenesis phase
+
+[Term]
+id: ECAO:1000010
+name: adulthood phase
+def: "The phase of the life cycle that begins after metamorphosis, continues through the growth and maturation of the juvenile, and culminates in the formation of a sexually mature adult that produces functional gametes." []
+is_a: BFO:0000003
+is_a: ECAO:1000003 ! life cycle phase
+relationship: BFO:0000062 ECAO:1000009 ! larval development phase
+
+[Term]
+id: ECAO:1000011
+name: cleavage period
+def: "The period that immediately follows fertilization. It is characterized by rapid, synchronous mitotic cell divisions in the absence of cell growth. This period culminates in the formation of a hollow, spherical, multicellular, monolayered embryo (a blastula) with a hollow cavity (the blastocoel) in the center." []
+is_a: BFO:0000003
+is_a: ECAO:1000004 ! life cycle period
+relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
+relationship: BFO:0000062 ECAO:1000017 ! 1-cell stage
+
+[Term]
+id: ECAO:1000012
+name: blastula period
+def: "The period that immediately follows cleavage and precedes gastrulation. It is characterized by the progressive maturation of the embryo into a hollow sphere, which is one cell layer thick and encompasses a central, fluid-filled cavity (the blastocoel). This period culminates in the formation of the vegetal plate, a placode of elongated, presumptive endomesoderm cells." []
+is_a: BFO:0000003
+is_a: ECAO:1000004 ! life cycle period
+relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
+relationship: BFO:0000062 ECAO:1000011 ! cleavage period
+
+[Term]
+id: ECAO:1000013
+name: gastrula period
+def: "The period that immediately follows the blastula period and precedes organogenesis. It is characterized by extensive movements of cells in the vegetal region of the embryo. This period culminates in the formation of a multilayered embryo composed of three primary germ layers (ectoderm, mesoderm, and endoderm)." []
+is_a: BFO:0000003
+is_a: ECAO:1000004 ! life cycle period
+relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
+relationship: BFO:0000062 ECAO:1000012 ! blastula period
+
+[Term]
+id: ECAO:1000014
+name: organogenesis period
+def: "The period that immediately follows the gastrula period. It is characterized by the progressive maturation of tissues and organs. This period culminates in the opening of the mouth." []
+is_a: BFO:0000003
+is_a: ECAO:1000004 ! life cycle period
+relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
+relationship: BFO:0000062 ECAO:1000013 ! gastrula period
+
+[Term]
+id: ECAO:1000015
+name: mesenchyme blastula episode
+def: "The first episode of the gastrulation period, characterized by the ingression into the blastocoel of the skeletogenic primary mesenchyme cells (PMCs), prior to the invagination of the vegetal plate." []
+is_a: BFO:0000003
+is_a: ECAO:1000005 ! life cycle episode
+relationship: BFO:0000050 ECAO:1000013 ! gastrula period
+relationship: BFO:0000062 ECAO:1000031 ! vegetal plate stage
+
+[Term]
+id: ECAO:1000016
+name: invagination episode
+def: "The second episode of the gastrulation period, characterized by the invagination of the vegetal plate into the blastocoel to form the primitive digestive tract (archenteron)." []
+is_a: BFO:0000003
+is_a: ECAO:1000005 ! life cycle episode
+relationship: BFO:0000050 ECAO:1000013 ! gastrula period
+relationship: BFO:0000062 ECAO:1000015 ! mesenchyme blastula episode
+
+[Term]
+id: ECAO:1000017
+name: 1-cell stage
+def: "Stage at which fertilization has occurred, but the zygote has not undergone cell division. The embryo is a single diploid cell surrounded by a fertilization envelope." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000047 ! stage 1
+relationship: BFO:0000062 ECAO:1000007 ! gametogenesis phase
+
+[Term]
+id: ECAO:1000018
+name: 2-cell stage
+def: "Stage at which the embryo is composed of two cells and is surrounded by a fertilization envelope. The first cleavage division has taken place meridionally (i.e. along the animal-vegetal axis), thereby generating two blastomeres of equal size, each containing both animal and vegetal cytoplasm." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000048 ! stage 2
+relationship: BFO:0000062 ECAO:1000017 ! 1-cell stage
+
+[Term]
+id: ECAO:1000019
+name: 4-cell stage
+def: "Stage at which the embryo is composed of four cells and is surrounded by a fertilization envelope. The second cleavage division has taken place meridional and perpendicular to the first cleavage division. This has produced four blastomeres of equal size, all of which contain both animal and vegetal cytoplasm." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000049 ! stage 3
+relationship: BFO:0000062 ECAO:1000018 ! 2-cell stage
+
+[Term]
+id: ECAO:1000020
+name: 8-cell stage
+def: "Stage at which the embryo is composed of eight cells and is surrounded by a fertilization envelope. The third cleavage division has taken place equatorial and perpendicular to the first two cleavage divisions." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000050 ! stage 4
+relationship: BFO:0000062 ECAO:1000019 ! 4-cell stage
+
+[Term]
+id: ECAO:1000021
+name: 16-cell stage
+def: "Stage at which the embryo is composed of 16 cells and is surrounded by a fertilization envelope." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000051 ! stage 5
+relationship: BFO:0000062 ECAO:1000020 ! 8-cell stage
+
+[Term]
+id: ECAO:1000022
+name: 28-cell stage
+def: "Stage at which the embryo is composed of 28 cells and is surrounded by a fertilization envelope." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000052 ! stage 6
+relationship: BFO:0000062 ECAO:1000021 ! 16-cell stage
+property_value: RO:0002161 NCBITaxon:46514
+property_value: RO:0002161 NCBITaxon:7632
+property_value: RO:0002175 NCBITaxon:7654
+property_value: RO:0002175 NCBITaxon:7656
+property_value: RO:0002175 NCBITaxon:7668
+
+[Term]
+id: ECAO:1000023
+name: 32-cell stage
+def: "Stage at which the embryo is composed of 32 cells and is surrounded by a fertilization envelope." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000052 ! stage 6
+relationship: BFO:0000062 ECAO:1000022 ! 28-cell stage
+
+[Term]
+id: ECAO:1000024
+name: 56-cell stage
+def: "Stage at which the embryo is composed of 56 cells and is surrounded by a fertilization envelope." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000053 ! stage 7
+relationship: BFO:0000062 ECAO:1000023 ! 32-cell stage
+
+[Term]
+id: ECAO:1000025
+name: 60-cell stage
+def: "Stage at which the embryo is composed of 60 cells and is surrounded by a fertilization envelope." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000053 ! stage 7
+relationship: BFO:0000062 ECAO:1000024 ! 56-cell stage
+
+[Term]
+id: ECAO:1000026
+name: 64-cell stage
+def: "Stage at which the embryo is composed of 64 cells and is surrounded by a fertilization envelope." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000053 ! stage 7
+relationship: BFO:0000062 ECAO:1000023 ! 32-cell stage
+
+[Term]
+id: ECAO:1000027
+name: early blastula stage
+def: "Stage at which the embryo is composed of about 100-200 cells and is surrounded by a fertilization envelope. Most blastomeres have completed at least one additional mitotic division since the 60- or 64-cell stage. All cells are approximately the same size and there are no obvious morphological indications of the primary or secondary embryonic axes. All cells have begun to acquire an apical-basal polarity and the embryo is beginning to transform into a hollow sphere with a monolayered epithelial wall and a fluid-filled cavity (the blastocoel) in the center." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000054 ! stage 8
+relationship: BFO:0000062 ECAO:1000025 ! 60-cell stage
+relationship: BFO:0000062 ECAO:1000026 ! 64-cell stage
+
+[Term]
+id: ECAO:1000028
+name: mid-blastula stage
+def: "Stage at which the embryo is composed of about 200-500 cells and is surrounded by a fertilization envelope. Most cells have completed at least one additional mitotic division since the early blastula stage. The cell divisions are now less synchronous than at earlier stages. The embryo remains spherical in shape and one cell layer thick. It does not display any morphological indications of the embryonic axes or of the vegetal plate. The cells have started to flatten on their inner (basal) surface, further contributing to the enlargement of the blastocoel, which has expanded since the early blastula stage." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000055 ! stage 9
+relationship: BFO:0000062 ECAO:1000027 ! early blastula stage
+
+[Term]
+id: ECAO:1000029
+name: motile blastula stage
+def: "Stage at which the embryo is composed of 400-500 cells and is no longer surrounded by a fertilization envelope. Most cells have completed at least one additional mitotic division after the early blastula stage and the cell divisions are now less synchronous than at earlier stages. The embryo remains spherical in shape and one cell layer thick. It does not display any morphological indications of the embryonic axes or of the vegetal plate. The cells have started to flatten on their inner (basal) surface, further contributing to the enlargement of the blastocoel, which has expanded since the early blastula stage." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000055 ! stage 9
+relationship: BFO:0000062 ECAO:1000027 ! early blastula stage
+
+[Term]
+id: ECAO:1000030
+name: late blastula stage
+def: "Stage at which the embryo is composed of about 600-1000 cells. Most cells have completed at least one additional mitotic division since the mid-blastula stage and developed an apical cilium. The embryo is still spherical in shape and one cell layer thick. It still lacks obvious morphological landmarks of the embryonic axes and of the vegetal plate. Cells have further continued to flatten along the apical-basal axis, accentuating the enlargement of the blastocoel. They are also now joined to one another apically by septate and adherens junctions and laterally by desmosomes." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000056 ! stage 10
+relationship: BFO:0000062 ECAO:1000028 ! mid-blastula stage
+relationship: BFO:0000062 ECAO:1000029 ! motile blastula stage
+
+[Term]
+id: ECAO:1000031
+name: vegetal plate stage
+def: "Stage at which the embryo displays a vegetal epithelial placode, the vegetal plate, that formed at the vegetal pole and thereby provides the first morphological indication of the animal-vegetal axis of the blastula. All cells have developed an apical cilium, although the embryo may or may not have hatched from the fertilization envelope." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000057 ! stage 11
+relationship: BFO:0000062 ECAO:1000030 ! late blastula stage
+
+[Term]
+id: ECAO:1000032
+name: early mesenchyme blastula stage
+def: "Stage at which skeletogenic primary mesenchyme cells (PMCs) are starting to ingress from the vegetal plate into the blastocoel through an epithelial–to-mesenchymal transition (EMT)." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000015 ! mesenchyme blastula episode
+relationship: BFO:0000050 ECAO:1000058 ! stage 12
+relationship: BFO:0000062 ECAO:1000031 ! vegetal plate stage
+
+[Term]
+id: ECAO:1000033
+name: mid-mesenchyme blastula stage
+def: "Stage at which almost all skeletogenic primary mesenchyme cells (PMCs) have ingressed into the blastocoel and remain in a mound on the vegetal plate." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000015 ! mesenchyme blastula episode
+relationship: BFO:0000050 ECAO:1000058 ! stage 12
+relationship: BFO:0000062 ECAO:1000032 ! early mesenchyme blastula stage
+
+[Term]
+id: ECAO:1000034
+name: late mesenchyme blastula stage
+def: "Stage at which all skeletogenic primary mesenchyme cells (PMCs) have ingressed into the blastocoel. Many of these cells have extended filopodia and migrated away from the vegetal plate. The cells are found along the blastocoel wall, although they remain concentrated in the vegetal hemisphere of the embryo. The vegetal plate has flattened following the ingression of the PMCs. However, it has not started to invaginate. It is now composed at its center of the 8 small micromere descendants (the germ line) surrounded by non-skeletogenic mesoderm (NSM)." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000015 ! mesenchyme blastula episode
+relationship: BFO:0000050 ECAO:1000058 ! stage 12
+relationship: BFO:0000062 ECAO:1000033 ! mid-mesenchyme blastula stage
+
+[Term]
+id: ECAO:1000035
+name: blastopore formation stage
+def: "Stage at which the embryo is characterized morphologically by a slight invagination of the vegetal plate. This invagination has generated the anterior portion of the archenteron (primitive digestive tract) and the blastopore, an opening that will persist as the larval anus." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000016 ! invagination episode
+relationship: BFO:0000050 ECAO:1000058 ! stage 12
+relationship: BFO:0000062 ECAO:1000034 ! late mesenchyme blastula stage
+
+[Term]
+id: ECAO:1000036
+name: early gastrula stage
+def: "Stage at which the archenteron (primitive digestive tract) has elongated up to 1/3 of its final length. This elongation has occurred through the inward movement of all non-skeletogenic mesoderm (NSM) cells and part of the endoderm." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000016 ! invagination episode
+relationship: BFO:0000050 ECAO:1000059 ! stage 13
+relationship: BFO:0000062 ECAO:1000035 ! blastopore formation stage
+
+[Term]
+id: ECAO:1000037
+name: mid-gastrula stage
+def: "Stage at which the archenteron (primitive digestive tract) has elongated to about half (1/3-2/3) of its final length." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000016 ! invagination episode
+relationship: BFO:0000050 ECAO:1000060 ! stage 14
+relationship: BFO:0000062 ECAO:1000036 ! early gastrula stage
+
+[Term]
+id: ECAO:1000038
+name: late gastrula stage
+def: "Stage at which the archenteron (primitive digestive tract) has elongated up to more than 2/3 of its maximal length." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000016 ! invagination episode
+relationship: BFO:0000050 ECAO:1000061 ! stage 15
+relationship: BFO:0000062 ECAO:1000037 ! mid-gastrula stage
+
+[Term]
+id: ECAO:1000039
+name: early prism stage
+def: "Stage at which the embryo has a distinctive, angular shape due to the elongation of the skeletal rods. The body rods have elongated toward the apex (posterior end) of the embryo. The dorsoventral connecting rods are elongated, and the postoral rods are still very short although they already support thickened regions of ectoderm that will later form the distal tip of the postoral arms. The archenteron tip is slightly expanded, and its oral surface is directed toward the oral ectoderm. Ingression of secondary mesenchyme cells (SMCs) is complete. The embryo is reddish in color due to the presence of pigment cells within the aboral ectoderm. The animal pole domain (or apical plate) is prominent and the lateral walls of the embryo have thinned. The coelomic pouches and gut constrictions have not yet appeared." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000062 ! stage 16
+relationship: BFO:0000062 ECAO:1000038 ! late gastrula stage
+
+[Term]
+id: ECAO:1000040
+name: late prism stage
+def: "Stage at which the embryo has a distinctive, angular shape due to the elongation of the skeletal rods. The body rods have expended even further compared to earlier stages and the postoral rods support short postoral arm buds. The anterior ends of the dorsoventral connecting rods are also now branched or bent. The archenteron tip is still bent toward the oral ectoderm. At the tip of the archenteron coelomic evaginations start to be apparent, although no gut constrictions are visible yet. The embryo is reddish in color due to the presence of pigment cells within the aboral ectoderm. The animal pole domain is prominent, and it still bears long, immotile cilia." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000063 ! stage 17
+relationship: BFO:0000062 ECAO:1000039 ! early prism stage
+
+[Term]
+id: ECAO:1000041
+name: early organogenesis stage
+def: "Stage at which the embryo is elongated along the animal-vegetal axis and has thus a characteristic oblong shape. The archenteron is fully extended, even though it still does not reach the blastocoel roof. The tip of the archenteron is enlarged, rounded, and smooth, and the archenteron has begun to deflect orally. Mesenchyme cell ingression is complete. However, paired coelomic pouches and gut constrictions have not yet formed." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000062 ! stage 16
+relationship: BFO:0000062 ECAO:1000038 ! late gastrula stage
+
+[Term]
+id: ECAO:1000042
+name: mid-organogenesis stage
+def: "Stage at which the embryo is elongated along the animal-vegetal axis and has thus a characteristic oblong shape. The archenteron is overall deflected orally and its tip is enlarged, rounded, and smooth. The tip of the archenteron is further starting to display filopodia that interact with the ectoderm site where the mouth will form. At the tip of the archenteron, unpaired evaginations of the coelom are also now apparent, even though the stomodeal invagination, gut constrictions, and ciliary band(s) are still not discernable. Mesenchyme cells have dispersed through the blastocoel." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000063 ! stage 17
+relationship: BFO:0000062 ECAO:1000041 ! early organogenesis stage
+
+[Term]
+id: ECAO:1000043
+name: late organogenesis stage
+def: "Stage at which the embryo is characterized by the presence, at the tip of the archenteron, of two well-formed coelomic pouches, separated from the foregut by pronounced constrictions. The cardiac constriction, which separates the foregut and the midgut, has started to form. On the oral side of the embryo, the stomodeal invagination is visible, although the mouth has not yet opened. The ciliary band(s) is (are) not yet visible." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000064 ! stage 18
+relationship: BFO:0000062 ECAO:1000040 ! late prism stage
+relationship: BFO:0000062 ECAO:1000042 ! mid-organogenesis stage
+
+[Term]
+id: ECAO:1000044
+name: very late organogenesis stage
+def: "Stage at which the embryo displays prominent right and left anterior coelomic pouches, and the posterior enterocoel has enlarged. Pronounced cardiac and developing pyloric constrictions (separating respectively the foregut and midgut, and the midgut and hindgut) are formed, and the gut is thus visibly tripartite, with the posterior enterocoel projecting from the developing stomach (former midgut). The wall of the left anterior coelom is distended at both its anterior and posterior margins, where strands of cells extend to the ectoderm. Muscle bands surrounding the esophagus are apparent. Ridges of thickened ectoderm mark the positions of the future ciliary bands." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000064 ! stage 18
+relationship: BFO:0000062 ECAO:1000043 ! late organogenesis stage
+
+[Term]
+id: ECAO:1000045
+name: open mouth stage
+def: "Stage that is characterized by the opening of the mouth. The right and left coelomic pouches are prominent and well-separated from the foregut by narrow coelomic constrictions. Pronounced cardiac and developing pyloric constrictions (separating respectively the foregut and midgut, and the midgut and hindgut) are visible; the gut is thus visibly tripartite. The developing stomach (former midgut) is enlarged relative to the other segments of the gut and muscle bands surrounding the esophagus are apparent. The ciliary band(s) is (are) also discernable." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000065 ! stage 19
+relationship: BFO:0000062 ECAO:1000044 ! very late organogenesis stage
+
+[Term]
+id: ECAO:1000046
+name: pan-echinoderm life cycle stage
+def: "A specific developmental stage common to all echinoderms." []
+is_a: ECAO:1000001 ! developmental stage
+
+[Term]
+id: ECAO:1000047
+name: stage 1
+def: "Echinoderm developmental stage at which fertilization has occurred but the zygote has not divided (1-cell stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
+relationship: BFO:0000062 ECAO:1000007 ! gametogenesis phase
+
+[Term]
+id: ECAO:1000048
+name: stage 2
+def: "Echinoderm developmental stage at which the embryo is composed of 2 cells (2-cell stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000011 ! cleavage period
+relationship: BFO:0000062 ECAO:1000047 ! stage 1
+
+[Term]
+id: ECAO:1000049
+name: stage 3
+def: "Echinoderm developmental stage at which the embryo is composed of 4 cells (4-cell stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000011 ! cleavage period
+relationship: BFO:0000062 ECAO:1000048 ! stage 2
+
+[Term]
+id: ECAO:1000050
+name: stage 4
+def: "Echinoderm developmental stage at which the embryo is composed of 8 cells (8-cell stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000011 ! cleavage period
+relationship: BFO:0000062 ECAO:1000049 ! stage 3
+
+[Term]
+id: ECAO:1000051
+name: stage 5
+def: "Echinoderm developmental stage at which the embryo is composed of 16 cells (16-cell stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000011 ! cleavage period
+relationship: BFO:0000062 ECAO:1000050 ! stage 4
+
+[Term]
+id: ECAO:1000052
+name: stage 6
+def: "Echinoderm developmental stage at which the embryo is composed of 28-32 cells (includes 28- and 32-cell stages)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000011 ! cleavage period
+relationship: BFO:0000062 ECAO:1000051 ! stage 5
+
+[Term]
+id: ECAO:1000053
+name: stage 7
+def: "Echinoderm developmental stage at which the embryo is composed of 56-64 cells (includes 56-, 60-, and 64-cell stages)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000011 ! cleavage period
+relationship: BFO:0000062 ECAO:1000052 ! stage 6
+
+[Term]
+id: ECAO:1000054
+name: stage 8
+def: "Echinoderm developmental stage at which the embryo is an early blastula (early blastula stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000012 ! blastula period
+relationship: BFO:0000062 ECAO:1000053 ! stage 7
+
+[Term]
+id: ECAO:1000055
+name: stage 9
+def: "Echinoderm developmental stage at which the embryo is a mid-blastula (includes mid-blastula and motile blastula stages)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000012 ! blastula period
+relationship: BFO:0000062 ECAO:1000054 ! stage 8
+
+[Term]
+id: ECAO:1000056
+name: stage 10
+def: "Echinoderm developmental stage at which the embryo is a late blastula, it is still spherical, and the vegetal plate has not formed (late blastula stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000012 ! blastula period
+relationship: BFO:0000062 ECAO:1000055 ! stage 9
+
+[Term]
+id: ECAO:1000057
+name: stage 11
+def: "Echinoderm developmental stage at which the embryo, whether or not hatched from the fertilization envelope, has formed a vegetal plate but gastrulation has not begun (vegetal plate stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000012 ! blastula period
+relationship: BFO:0000062 ECAO:1000056 ! stage 10
+
+[Term]
+id: ECAO:1000058
+name: stage 12
+def: "Echinoderm developmental stage at which the embryo has hatched from the fertilization envelope and is undergoing the earliest cell movements of gastrulation (includes early, mid-, and late mesenchyme blastula stages and blastopore formation stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000013 ! gastrula period
+relationship: BFO:0000062 ECAO:1000057 ! stage 11
+
+[Term]
+id: ECAO:1000059
+name: stage 13
+def: "Echinoderm developmental stage at which the embryo is undergoing the first phase of archenteron extension (early gastrula stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000013 ! gastrula period
+relationship: BFO:0000062 ECAO:1000058 ! stage 12
+
+[Term]
+id: ECAO:1000060
+name: stage 14
+def: "Echinoderm developmental stage at which the embryo is undergoing the middle phase of archenteron extension (mid-gastrula stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000013 ! gastrula period
+relationship: BFO:0000062 ECAO:1000059 ! stage 13
+
+[Term]
+id: ECAO:1000061
+name: stage 15
+def: "Echinoderm developmental stage at which the embryo is undergoing the last phase of archenteron extension (late gastrula stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000013 ! gastrula period
+relationship: BFO:0000062 ECAO:1000060 ! stage 14
+
+[Term]
+id: ECAO:1000062
+name: stage 16
+def: "Echinoderm developmental stage at which the embryo has completed archenteron elongation and mesenchyme cell ingression is complete (includes early prism and early organogenesis stages)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000014 ! organogenesis period
+relationship: BFO:0000062 ECAO:1000061 ! stage 15
+
+[Term]
+id: ECAO:1000063
+name: stage 17
+def: "Echinoderm developmental stage at which the embryo has paired coelomic evaginations at the tip of the archenteron but lacks a stomodeal invagination and gut constrictions (includes late prism and mid-organogenesis stages)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000014 ! organogenesis period
+relationship: BFO:0000062 ECAO:1000062 ! stage 16
+
+[Term]
+id: ECAO:1000064
+name: stage 18
+def: "Echinoderm developmental stage at which the embryo has paired coelomic pouches along with a stomodeal invagination and gut constrictions (includes late and very late organogenesis stages)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000014 ! organogenesis period
+relationship: BFO:0000062 ECAO:1000063 ! stage 17
+
+[Term]
+id: ECAO:1000065
+name: stage 19
+def: "Echinoderm developmental stage at which the embryo has an open mouth (open mouth stage)." []
+is_a: BFO:0000003
+is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
+relationship: BFO:0000050 ECAO:1000014 ! organogenesis period
+relationship: BFO:0000062 ECAO:1000064 ! stage 18
+
+[Term]
+id: ECAO:1000066
+name: oogenesis period
+def: "Period during which female gametes (or oocytes, or eggs) develop and mature from primordial female germ cells to generate cells competent to further development upon fertilization by a mature spermatozoid." []
+is_a: ECAO:1000004 ! life cycle period
+relationship: BFO:0000050 ECAO:1000007 ! gametogenesis phase
+
+[Term]
+id: ECAO:1000067
+name: spermatogenesis period
+def: "Period during which male gametes (or spermatozoa, or spermatozoid) develop and mature from primordial male germ cells to generate cells competent to further development upon fertilization of a mature oocyte." []
+is_a: ECAO:1000004 ! life cycle period
+relationship: BFO:0000050 ECAO:1000007 ! gametogenesis phase
+
+[Term]
+id: ECAO:1000068
+name: previtellogenic primary oocyte stage
+def: "Stage at which the female gamete is small in size, i.e. about 10 micrometer in diameter, and is in the previtellogenic state." []
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
+
+[Term]
+id: ECAO:1000069
+name: not fully grown oocyte stage
+def: "Stage at which the developing female gamete has started growing in size by accumulation of yolk proteins, and is characterized by the presence of a large nucleus, the germinal vesicle, which contains a prominent nucleolus and occupies most of the cytoplasm." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
+relationship: BFO:0000062 ECAO:1000068 ! previtellogenic primary oocyte stage
+
+[Term]
+id: ECAO:1000070
+name: fully grown oocyte with centered germinal vesicle stage
+def: "Stage at which the developing female gamete has reached its full size. It has grown up to ten times its original size, i.e. 80 to 100 micrometers. It also displays a large germinal vesicle that is centered, but it is still not competent for fertilization." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
+relationship: BFO:0000062 ECAO:1000069 ! not fully grown oocyte stage
+
+[Term]
+id: ECAO:1000071
+name: fully grown oocyte with off-centered germinal vesicle stage
+def: "Stage at which the developing female gamete has reached its full size and whose germinal vesicle has moved asymmetrically to the cell periphery. The germinal vesicle is now close to the animal pole." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
+relationship: BFO:0000062 ECAO:1000070 ! fully grown oocyte with centered germinal vesicle stage
+
+[Term]
+id: ECAO:1000072
+name: fully grown oocyte with no nucleus stage
+def: "Stage of the developing female gamete in which the germinal vesicle has broken down. The germinal vesicle is no longer visible. However, the female gamete is still not mature. It is undergoing meiotic maturation, extruding successively a first and a second polar body." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
+relationship: BFO:0000062 ECAO:1000071 ! fully grown oocyte with off-centered germinal vesicle stage
+
+[Term]
+id: ECAO:1000073
+name: mature oocyte stage
+def: "Stage at which the mature female gamete has achieved its meiotic maturation and whose female pronucleus is visible. The mature oocyte is arrested in G1 phase and its average size is 80 to 100 micrometers. It is surrounded by a transparent jelly coat that is about 30 micrometers thick. It is competent to fertilization and is located in the female gonad where it may be stored for weeks to months before its release in sea water by spawning. In the P. lividus species, the mature female gametes are characterized by the presence of pigment granules concentrated in a subequatorial band. This band is classically called the pigment band and allows visualization of the first embryonic axis, i.e. the animal-vegetal axis, which is perpendicular to the band." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
+relationship: BFO:0000062 ECAO:1000072 ! fully grown oocyte with no nucleus stage
+
+[Term]
+id: ECAO:1000074
+name: developing spermatozoa stage
+def: "Stage at which the developing, immature male gamete is undergoing mitosis and meiosis to ultimately produce mature spermatozoa." []
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000067 ! spermatogenesis period
+
+[Term]
+id: ECAO:1000075
+name: mature spermatozoid stage
+def: "Stage at which the mature male gamete is composed of a head, encompassing a compact nucleus, a neck, a middle piece, and a tail (or flagellum) that propels it towards the oocyte upon spawning." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000067 ! spermatogenesis period
+relationship: BFO:0000062 ECAO:1000074 ! developing spermatozoa stage
+
+[Term]
+id: ECAO:1000076
+name: 4-arm pluteus larva stage
+def: "Stage at which the larva is characterized by the presence, on the ventral side, of four extended arms (two anterolateral arms at the level of the oral hood and two postoral arms) and on the dorsal side by a sleeked apex. The larva now possesses a completely tripartite and functional digestive tract composed of an esophagus, a stomach, and an intestine, respectively limited by a cardiac sphincter, a pyloric sphincter, and an anal sphincter." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000009 ! larval development phase
+relationship: BFO:0000062 ECAO:1000045 ! open mouth stage
+
+[Term]
+id: ECAO:1000077
+name: 6-arm pluteus larva stage
+def: "Stage at which the larva is characterized by the presence on the ventral side of six arms, and by the development, on the anterior midline of the esophagus, of the dorsal arch." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000009 ! larval development phase
+relationship: BFO:0000062 ECAO:1000076 ! 4-arm pluteus larva stage
+
+[Term]
+id: ECAO:1000078
+name: 8-arm pluteus larva stage
+def: "Stage at which the larva is characterized by the presence on the ventral side of eight arms and by the development within the larva, on the left side of the stomach, of the adult rudiment. This stage is relatively long. It includes distinct changes occurring to the larva as well as within the larva, although the larva consistently exhibits 8 arms." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000009 ! larval development phase
+relationship: BFO:0000062 ECAO:1000077 ! 6-arm pluteus larva stage
+
+[Term]
+id: ECAO:1000079
+name: competent pluteus larva stage
+def: "Stage at which the larva is characterized by the presence, within the larva, on the left side of its stomach, of the adult rudiment. The rudiment is now the size of or even bigger than the stomach and harbors five long primary podia (i.e. tube feet) and five quartets of definitive spines. Under the right environemental cue, the larva is competent to undergo metamorphosis." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000009 ! larval development phase
+relationship: BFO:0000062 ECAO:1000078 ! 8-arm pluteus larva stage
+
+[Term]
+id: ECAO:1000080
+name: metamorphic larva stage
+def: "Stage at which the larva essentially undergoes metamorphsis. The larva goes through drastic morphological changes to transofrm the bilateral, planctonic larva into a benthic, pentaradial juvenile." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000009 ! larval development phase
+relationship: BFO:0000062 ECAO:1000079 ! competent pluteus larva stage
+
+[Term]
+id: ECAO:1000081
+name: juvenile period
+def: "Period during which a young benthic individual, posing as a small adult, grows but remains unable to reproduce." []
+is_a: BFO:0000003
+is_a: ECAO:1000004 ! life cycle period
+relationship: BFO:0000050 ECAO:1000010 ! adulthood phase
+relationship: BFO:0000062 ECAO:1000009 ! larval development phase
+
+[Term]
+id: ECAO:1000082
+name: early juvenile stage
+def: "Stage at which the animal is morphologically similar to a miniature sea urchin adult. It harbors primary podia (or tube feet) and definitive spines, along with other appendages (e.g., immature spines, pedicellariae). Compare to the adult, however, it is smaller in size, deprived of a functional digestive system, and is sexually immature." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000081 ! juvenile period
+relationship: BFO:0000062 ECAO:1000080 ! metamorphic larva stage
+
+[Term]
+id: ECAO:1000083
+name: late juvenile stage
+def: "Stage at which the animal still looks like a small adult. Its digestive tract is now functional. However, the late juvenile remains sexually immature." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000081 ! juvenile period
+relationship: BFO:0000062 ECAO:1000082 ! early juvenile stage
+
+[Term]
+id: ECAO:1000084
+name: adult period
+def: "Period during which the animal reaches sexual maturity." []
+is_a: BFO:0000003
+is_a: ECAO:1000004 ! life cycle period
+relationship: BFO:0000050 ECAO:1000010 ! adulthood phase
+relationship: BFO:0000062 ECAO:1000081 ! juvenile period
+
+[Term]
+id: ECAO:1000085
+name: adult stage
+def: "Stage which corresponds to a fully formed pentaradial sea urchin individual that has reached sexual maturity. The gonads have developed within the perivisceral cavity and are connected to the outside by the genital pores pierced into the genital plates." []
+is_a: BFO:0000003
+is_a: ECAO:1000006 ! life cycle stage
+relationship: BFO:0000050 ECAO:1000084 ! adult period
+relationship: BFO:0000062 ECAO:1000083 ! late juvenile stage
 

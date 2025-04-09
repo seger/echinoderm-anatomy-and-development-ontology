@@ -1,28 +1,7 @@
 
-![Build Status](https://github.com/seger/ecao/actions/workflows/qc.yml/badge.svg)
 # Echinoderm Anatomy and Development Ontology
 
-Description: None
-
-More information can be found at http://obofoundry.org/ontology/ecao
-
-## Versions
-
-### Stable release versions
-
-The latest version of the ontology can always be found at:
-
-http://purl.obolibrary.org/obo/ecao.owl
-
-(note this will not show up until the request has been approved by obofoundry.org)
-
-### Editors' version
-
-Editors of this ontology should use the edit version, [src/ontology/ecao-edit.owl](src/ontology/ecao-edit.owl)
-
-## Contact
-
-Please use this GitHub repository's [Issue tracker](https://github.com/seger/ecao/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
+This is a draft of the EcAO developmental staging ontology. Do not use for annotation.
 
 ## Acknowledgements
 
