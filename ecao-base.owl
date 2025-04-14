@@ -11,12 +11,12 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecao/ecao-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecao/releases/2025-04-08/ecao-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecao/releases/2025-04-14/ecao-base.owl"/>
         <dc:title>Echinoderm Anatomy and Development Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo>2025-04-08</owl:versionInfo>
+        <owl:versionInfo>2025-04-14</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -65,6 +65,12 @@
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
     
 
 
@@ -226,6 +232,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The phase of the life cycle that begins with fertilization, continues with the formation and maturation of the embryo, and ends with the opening of the mouth, the onset of feeding, and the beginning of the growth of the organism.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0000105</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000008</oboInOwl:id>
         <rdfs:label>embryogenesis phase</rdfs:label>
     </owl:Class>
@@ -286,6 +293,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The period that immediately follows fertilization. It is characterized by rapid, synchronous mitotic cell divisions in the absence of cell growth. This period culminates in the formation of a hollow, spherical, multicellular, monolayered embryo (a blastula) with a hollow cavity (the blastocoel) in the center.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0000107</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000011</oboInOwl:id>
         <rdfs:label>cleavage period</rdfs:label>
     </owl:Class>
@@ -310,6 +318,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The period that immediately follows cleavage and precedes gastrulation. It is characterized by the progressive maturation of the embryo into a hollow sphere, which is one cell layer thick and encompasses a central, fluid-filled cavity (the blastocoel). This period culminates in the formation of the vegetal plate, a placode of elongated, presumptive endomesoderm cells.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0000307</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000012</oboInOwl:id>
         <rdfs:label>blastula period</rdfs:label>
     </owl:Class>
@@ -334,6 +343,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The period that immediately follows the blastula period and precedes organogenesis. It is characterized by extensive movements of cells in the vegetal region of the embryo. This period culminates in the formation of a multilayered embryo composed of three primary germ layers (ectoderm, mesoderm, and endoderm).</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0000109</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000013</oboInOwl:id>
         <rdfs:label>gastrula period</rdfs:label>
     </owl:Class>
@@ -430,6 +440,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Stage at which fertilization has occurred, but the zygote has not undergone cell division. The embryo is a single diploid cell surrounded by a fertilization envelope.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0000106</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000017</oboInOwl:id>
         <rdfs:label>1-cell stage</rdfs:label>
     </owl:Class>
@@ -454,6 +465,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Stage at which the embryo is composed of two cells and is surrounded by a fertilization envelope. The first cleavage division has taken place meridionally (i.e. along the animal-vegetal axis), thereby generating two blastomeres of equal size, each containing both animal and vegetal cytoplasm.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0007232</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000018</oboInOwl:id>
         <rdfs:label>2-cell stage</rdfs:label>
     </owl:Class>
@@ -478,6 +490,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Stage at which the embryo is composed of four cells and is surrounded by a fertilization envelope. The second cleavage division has taken place meridional and perpendicular to the first cleavage division. This has produced four blastomeres of equal size, all of which contain both animal and vegetal cytoplasm.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0007233</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000019</oboInOwl:id>
         <rdfs:label>4-cell stage</rdfs:label>
     </owl:Class>
@@ -502,6 +515,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Stage at which the embryo is composed of eight cells and is surrounded by a fertilization envelope. The third cleavage division has taken place equatorial and perpendicular to the first two cleavage divisions.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0007236</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000020</oboInOwl:id>
         <rdfs:label>8-cell stage</rdfs:label>
     </owl:Class>

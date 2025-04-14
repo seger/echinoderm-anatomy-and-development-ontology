@@ -11,7 +11,6 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/ecao.owl>
-Import(<http://purl.obolibrary.org/obo/ecao_taxslim.obo.owl>)
 Import(<http://purl.obolibrary.org/obo/ecao/imports/bfo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecao/imports/ro_import.owl>)
 Annotation(dc:title "Echinoderm Anatomy and Development Ontology")
@@ -103,14 +102,24 @@ Declaration(Class(obo:ECAO_1000082))
 Declaration(Class(obo:ECAO_1000083))
 Declaration(Class(obo:ECAO_1000084))
 Declaration(Class(obo:ECAO_1000085))
+Declaration(Class(obo:NCBITaxon_1))
+Declaration(Class(obo:NCBITaxon_46514))
+Declaration(Class(obo:NCBITaxon_7632))
+Declaration(Class(obo:NCBITaxon_7654))
+Declaration(Class(obo:NCBITaxon_7656))
+Declaration(Class(obo:NCBITaxon_7668))
+Declaration(Class(obo:NCBITaxon_species))
+Declaration(Class(<http://purl.obolibrary.org/obo/ecao.obo#taxonomic_rank>))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000062))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:RO_0002175))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/ecao.obo#has_rank>))
 Declaration(AnnotationProperty(dc:title))
 Declaration(AnnotationProperty(terms:license))
 Declaration(AnnotationProperty(oboInOwl:hasDbXref))
 Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
+Declaration(AnnotationProperty(oboInOwl:hasOBONamespace))
 Declaration(AnnotationProperty(oboInOwl:id))
 Declaration(AnnotationProperty(rdfs:label))
 ############################
@@ -134,6 +143,10 @@ AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 # Annotation Property: oboInOwl:hasOBOFormatVersion (has_obo_format_version)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_version")
+
+# Annotation Property: oboInOwl:hasOBONamespace (has_obo_namespace)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
 
 
 
@@ -196,6 +209,7 @@ SubClassOf(obo:ECAO_1000007 obo:ECAO_1000003)
 # Class: obo:ECAO_1000008 (embryogenesis phase)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000008 "The phase of the life cycle that begins with fertilization, continues with the formation and maturation of the embryo, and ends with the opening of the mouth, the onset of feeding, and the beginning of the growth of the organism.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:ECAO_1000008 "UBERON:0000105")
 AnnotationAssertion(oboInOwl:id obo:ECAO_1000008 "ECAO:1000008")
 AnnotationAssertion(rdfs:label obo:ECAO_1000008 "embryogenesis phase")
 SubClassOf(obo:ECAO_1000008 obo:ECAO_1000003)
@@ -220,6 +234,7 @@ SubClassOf(obo:ECAO_1000010 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_100000
 # Class: obo:ECAO_1000011 (cleavage period)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000011 "The period that immediately follows fertilization. It is characterized by rapid, synchronous mitotic cell divisions in the absence of cell growth. This period culminates in the formation of a hollow, spherical, multicellular, monolayered embryo (a blastula) with a hollow cavity (the blastocoel) in the center.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:ECAO_1000011 "UBERON:0000107")
 AnnotationAssertion(oboInOwl:id obo:ECAO_1000011 "ECAO:1000011")
 AnnotationAssertion(rdfs:label obo:ECAO_1000011 "cleavage period")
 SubClassOf(obo:ECAO_1000011 obo:ECAO_1000004)
@@ -229,6 +244,7 @@ SubClassOf(obo:ECAO_1000011 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_100001
 # Class: obo:ECAO_1000012 (blastula period)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000012 "The period that immediately follows cleavage and precedes gastrulation. It is characterized by the progressive maturation of the embryo into a hollow sphere, which is one cell layer thick and encompasses a central, fluid-filled cavity (the blastocoel). This period culminates in the formation of the vegetal plate, a placode of elongated, presumptive endomesoderm cells.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:ECAO_1000012 "UBERON:0000307")
 AnnotationAssertion(oboInOwl:id obo:ECAO_1000012 "ECAO:1000012")
 AnnotationAssertion(rdfs:label obo:ECAO_1000012 "blastula period")
 SubClassOf(obo:ECAO_1000012 obo:ECAO_1000004)
@@ -238,6 +254,7 @@ SubClassOf(obo:ECAO_1000012 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_100001
 # Class: obo:ECAO_1000013 (gastrula period)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000013 "The period that immediately follows the blastula period and precedes organogenesis. It is characterized by extensive movements of cells in the vegetal region of the embryo. This period culminates in the formation of a multilayered embryo composed of three primary germ layers (ectoderm, mesoderm, and endoderm).")
+AnnotationAssertion(oboInOwl:hasDbXref obo:ECAO_1000013 "UBERON:0000109")
 AnnotationAssertion(oboInOwl:id obo:ECAO_1000013 "ECAO:1000013")
 AnnotationAssertion(rdfs:label obo:ECAO_1000013 "gastrula period")
 SubClassOf(obo:ECAO_1000013 obo:ECAO_1000004)
@@ -275,6 +292,7 @@ SubClassOf(obo:ECAO_1000016 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_100003
 # Class: obo:ECAO_1000017 (1-cell stage)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000017 "Stage at which fertilization has occurred, but the zygote has not undergone cell division. The embryo is a single diploid cell surrounded by a fertilization envelope.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:ECAO_1000017 "UBERON:0000106")
 AnnotationAssertion(oboInOwl:id obo:ECAO_1000017 "ECAO:1000017")
 AnnotationAssertion(rdfs:label obo:ECAO_1000017 "1-cell stage")
 SubClassOf(obo:ECAO_1000017 obo:ECAO_1000006)
@@ -285,6 +303,7 @@ SubClassOf(obo:ECAO_1000017 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_100000
 # Class: obo:ECAO_1000018 (2-cell stage)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000018 "Stage at which the embryo is composed of two cells and is surrounded by a fertilization envelope. The first cleavage division has taken place meridionally (i.e. along the animal-vegetal axis), thereby generating two blastomeres of equal size, each containing both animal and vegetal cytoplasm.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:ECAO_1000018 "UBERON:0007232")
 AnnotationAssertion(oboInOwl:id obo:ECAO_1000018 "ECAO:1000018")
 AnnotationAssertion(rdfs:label obo:ECAO_1000018 "2-cell stage")
 SubClassOf(obo:ECAO_1000018 obo:ECAO_1000006)
@@ -295,6 +314,7 @@ SubClassOf(obo:ECAO_1000018 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_100001
 # Class: obo:ECAO_1000019 (4-cell stage)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000019 "Stage at which the embryo is composed of four cells and is surrounded by a fertilization envelope. The second cleavage division has taken place meridional and perpendicular to the first cleavage division. This has produced four blastomeres of equal size, all of which contain both animal and vegetal cytoplasm.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:ECAO_1000019 "UBERON:0007233")
 AnnotationAssertion(oboInOwl:id obo:ECAO_1000019 "ECAO:1000019")
 AnnotationAssertion(rdfs:label obo:ECAO_1000019 "4-cell stage")
 SubClassOf(obo:ECAO_1000019 obo:ECAO_1000006)
@@ -305,6 +325,7 @@ SubClassOf(obo:ECAO_1000019 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_100001
 # Class: obo:ECAO_1000020 (8-cell stage)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ECAO_1000020 "Stage at which the embryo is composed of eight cells and is surrounded by a fertilization envelope. The third cleavage division has taken place equatorial and perpendicular to the first two cleavage divisions.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:ECAO_1000020 "UBERON:0007236")
 AnnotationAssertion(oboInOwl:id obo:ECAO_1000020 "ECAO:1000020")
 AnnotationAssertion(rdfs:label obo:ECAO_1000020 "8-cell stage")
 SubClassOf(obo:ECAO_1000020 obo:ECAO_1000006)
@@ -926,6 +947,57 @@ AnnotationAssertion(rdfs:label obo:ECAO_1000085 "adult stage")
 SubClassOf(obo:ECAO_1000085 obo:ECAO_1000006)
 SubClassOf(obo:ECAO_1000085 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ECAO_1000084))
 SubClassOf(obo:ECAO_1000085 ObjectSomeValuesFrom(obo:BFO_0000062 obo:ECAO_1000083))
+
+# Class: obo:NCBITaxon_1 (root)
+
+AnnotationAssertion(oboInOwl:id obo:NCBITaxon_1 "NCBITaxon:1")
+AnnotationAssertion(rdfs:label obo:NCBITaxon_1 "root"@en)
+
+# Class: obo:NCBITaxon_46514 (Patiria miniata)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/ecao.obo#has_rank> obo:NCBITaxon_46514 obo:NCBITaxon_species)
+AnnotationAssertion(oboInOwl:id obo:NCBITaxon_46514 "NCBITaxon:46514")
+AnnotationAssertion(rdfs:label obo:NCBITaxon_46514 "Patiria miniata")
+SubClassOf(obo:NCBITaxon_46514 obo:NCBITaxon_1)
+
+# Class: obo:NCBITaxon_7632 (Eucidaris tribuloides)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/ecao.obo#has_rank> obo:NCBITaxon_7632 obo:NCBITaxon_species)
+AnnotationAssertion(oboInOwl:id obo:NCBITaxon_7632 "NCBITaxon:7632")
+AnnotationAssertion(rdfs:label obo:NCBITaxon_7632 "Eucidaris tribuloides")
+SubClassOf(obo:NCBITaxon_7632 obo:NCBITaxon_1)
+
+# Class: obo:NCBITaxon_7654 (Lytechinus variegatus)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/ecao.obo#has_rank> obo:NCBITaxon_7654 obo:NCBITaxon_species)
+AnnotationAssertion(oboInOwl:id obo:NCBITaxon_7654 "NCBITaxon:7654")
+AnnotationAssertion(rdfs:label obo:NCBITaxon_7654 "Lytechinus variegatus")
+SubClassOf(obo:NCBITaxon_7654 obo:NCBITaxon_1)
+
+# Class: obo:NCBITaxon_7656 (Paracentrotus lividus)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/ecao.obo#has_rank> obo:NCBITaxon_7656 obo:NCBITaxon_species)
+AnnotationAssertion(oboInOwl:id obo:NCBITaxon_7656 "NCBITaxon:7656")
+AnnotationAssertion(rdfs:label obo:NCBITaxon_7656 "Paracentrotus lividus")
+SubClassOf(obo:NCBITaxon_7656 obo:NCBITaxon_1)
+
+# Class: obo:NCBITaxon_7668 (Strongylocentrotus purpuratus)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/ecao.obo#has_rank> obo:NCBITaxon_7668 obo:NCBITaxon_species)
+AnnotationAssertion(oboInOwl:id obo:NCBITaxon_7668 "NCBITaxon:7668")
+AnnotationAssertion(rdfs:label obo:NCBITaxon_7668 "Strongylocentrotus purpuratus")
+SubClassOf(obo:NCBITaxon_7668 obo:NCBITaxon_1)
+
+# Class: obo:NCBITaxon_species (species)
+
+AnnotationAssertion(oboInOwl:id obo:NCBITaxon_species "NCBITaxon:species")
+AnnotationAssertion(rdfs:label obo:NCBITaxon_species "species")
+SubClassOf(obo:NCBITaxon_species <http://purl.obolibrary.org/obo/ecao.obo#taxonomic_rank>)
+
+# Class: <http://purl.obolibrary.org/obo/ecao.obo#taxonomic_rank> (taxonomic rank)
+
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/ecao.obo#taxonomic_rank> "taxonomic_rank")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecao.obo#taxonomic_rank> "taxonomic rank")
 
 
 )

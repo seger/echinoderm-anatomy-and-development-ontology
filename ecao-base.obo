@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: ecao/releases/2025-04-08/ecao-base.owl
+data-version: ecao/releases/2025-04-14/ecao-base.owl
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: terms http://purl.org/dc/terms/ 
 ontology: ecao/ecao-base
 property_value: dc:title "Echinoderm Anatomy and Development Ontology" xsd:string
 property_value: dc:type IAO:8000001
-property_value: owl:versionInfo "2025-04-08" xsd:string
+property_value: owl:versionInfo "2025-04-14" xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by/3.0/
 
 [Term]
@@ -57,6 +57,7 @@ is_a: ECAO:1000003 ! life cycle phase
 id: ECAO:1000008
 name: embryogenesis phase
 def: "The phase of the life cycle that begins with fertilization, continues with the formation and maturation of the embryo, and ends with the opening of the mouth, the onset of feeding, and the beginning of the growth of the organism." []
+xref: UBERON:0000105
 is_a: BFO:0000003
 is_a: ECAO:1000003 ! life cycle phase
 relationship: BFO:0000062 ECAO:1000007 ! gametogenesis phase
@@ -81,6 +82,7 @@ relationship: BFO:0000062 ECAO:1000009 ! larval development phase
 id: ECAO:1000011
 name: cleavage period
 def: "The period that immediately follows fertilization. It is characterized by rapid, synchronous mitotic cell divisions in the absence of cell growth. This period culminates in the formation of a hollow, spherical, multicellular, monolayered embryo (a blastula) with a hollow cavity (the blastocoel) in the center." []
+xref: UBERON:0000107
 is_a: BFO:0000003
 is_a: ECAO:1000004 ! life cycle period
 relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
@@ -90,6 +92,7 @@ relationship: BFO:0000062 ECAO:1000017 ! 1-cell stage
 id: ECAO:1000012
 name: blastula period
 def: "The period that immediately follows cleavage and precedes gastrulation. It is characterized by the progressive maturation of the embryo into a hollow sphere, which is one cell layer thick and encompasses a central, fluid-filled cavity (the blastocoel). This period culminates in the formation of the vegetal plate, a placode of elongated, presumptive endomesoderm cells." []
+xref: UBERON:0000307
 is_a: BFO:0000003
 is_a: ECAO:1000004 ! life cycle period
 relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
@@ -99,6 +102,7 @@ relationship: BFO:0000062 ECAO:1000011 ! cleavage period
 id: ECAO:1000013
 name: gastrula period
 def: "The period that immediately follows the blastula period and precedes organogenesis. It is characterized by extensive movements of cells in the vegetal region of the embryo. This period culminates in the formation of a multilayered embryo composed of three primary germ layers (ectoderm, mesoderm, and endoderm)." []
+xref: UBERON:0000109
 is_a: BFO:0000003
 is_a: ECAO:1000004 ! life cycle period
 relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
@@ -135,6 +139,7 @@ relationship: BFO:0000062 ECAO:1000015 ! mesenchyme blastula episode
 id: ECAO:1000017
 name: 1-cell stage
 def: "Stage at which fertilization has occurred, but the zygote has not undergone cell division. The embryo is a single diploid cell surrounded by a fertilization envelope." []
+xref: UBERON:0000106
 is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
 relationship: BFO:0000050 ECAO:1000047 ! stage 1
@@ -144,6 +149,7 @@ relationship: BFO:0000062 ECAO:1000007 ! gametogenesis phase
 id: ECAO:1000018
 name: 2-cell stage
 def: "Stage at which the embryo is composed of two cells and is surrounded by a fertilization envelope. The first cleavage division has taken place meridionally (i.e. along the animal-vegetal axis), thereby generating two blastomeres of equal size, each containing both animal and vegetal cytoplasm." []
+xref: UBERON:0007232
 is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
 relationship: BFO:0000050 ECAO:1000048 ! stage 2
@@ -153,6 +159,7 @@ relationship: BFO:0000062 ECAO:1000017 ! 1-cell stage
 id: ECAO:1000019
 name: 4-cell stage
 def: "Stage at which the embryo is composed of four cells and is surrounded by a fertilization envelope. The second cleavage division has taken place meridional and perpendicular to the first cleavage division. This has produced four blastomeres of equal size, all of which contain both animal and vegetal cytoplasm." []
+xref: UBERON:0007233
 is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
 relationship: BFO:0000050 ECAO:1000049 ! stage 3
@@ -162,6 +169,7 @@ relationship: BFO:0000062 ECAO:1000018 ! 2-cell stage
 id: ECAO:1000020
 name: 8-cell stage
 def: "Stage at which the embryo is composed of eight cells and is surrounded by a fertilization envelope. The third cleavage division has taken place equatorial and perpendicular to the first two cleavage divisions." []
+xref: UBERON:0007236
 is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
 relationship: BFO:0000050 ECAO:1000050 ! stage 4

@@ -1,16 +1,11 @@
 format-version: 1.2
-data-version: releases/2025-04-08
+data-version: releases/2025-04-14
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
-synonymtypedef: blast_name "blast name"
-synonymtypedef: genbank_common_name "genbank common name"
-synonymtypedef: genbank_synonym "genbank synonym"
-synonymtypedef: OMO:0003003 "layperson synonym"
-synonymtypedef: synonym "synonym"
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: foaf http://xmlns.com/foaf/0.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
@@ -21,7 +16,7 @@ idspace: swrlb http://www.w3.org/2003/11/swrlb#
 idspace: terms http://purl.org/dc/terms/ 
 ontology: ecao
 property_value: dc:title "Echinoderm Anatomy and Development Ontology" xsd:string
-property_value: owl:versionInfo "2025-04-08" xsd:string
+property_value: owl:versionInfo "2025-04-14" xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by/3.0/
 
 [Term]
@@ -147,6 +142,7 @@ is_a: ECAO:1000003 ! life cycle phase
 id: ECAO:1000008
 name: embryogenesis phase
 def: "The phase of the life cycle that begins with fertilization, continues with the formation and maturation of the embryo, and ends with the opening of the mouth, the onset of feeding, and the beginning of the growth of the organism." []
+xref: UBERON:0000105
 is_a: BFO:0000003 ! occurrent
 is_a: ECAO:1000003 ! life cycle phase
 relationship: BFO:0000062 ECAO:1000007 ! preceded by gametogenesis phase
@@ -171,6 +167,7 @@ relationship: BFO:0000062 ECAO:1000009 ! preceded by larval development phase
 id: ECAO:1000011
 name: cleavage period
 def: "The period that immediately follows fertilization. It is characterized by rapid, synchronous mitotic cell divisions in the absence of cell growth. This period culminates in the formation of a hollow, spherical, multicellular, monolayered embryo (a blastula) with a hollow cavity (the blastocoel) in the center." []
+xref: UBERON:0000107
 is_a: BFO:0000003 ! occurrent
 is_a: ECAO:1000004 ! life cycle period
 relationship: BFO:0000050 ECAO:1000008 ! part of embryogenesis phase
@@ -180,6 +177,7 @@ relationship: BFO:0000062 ECAO:1000017 ! preceded by 1-cell stage
 id: ECAO:1000012
 name: blastula period
 def: "The period that immediately follows cleavage and precedes gastrulation. It is characterized by the progressive maturation of the embryo into a hollow sphere, which is one cell layer thick and encompasses a central, fluid-filled cavity (the blastocoel). This period culminates in the formation of the vegetal plate, a placode of elongated, presumptive endomesoderm cells." []
+xref: UBERON:0000307
 is_a: BFO:0000003 ! occurrent
 is_a: ECAO:1000004 ! life cycle period
 relationship: BFO:0000050 ECAO:1000008 ! part of embryogenesis phase
@@ -189,6 +187,7 @@ relationship: BFO:0000062 ECAO:1000011 ! preceded by cleavage period
 id: ECAO:1000013
 name: gastrula period
 def: "The period that immediately follows the blastula period and precedes organogenesis. It is characterized by extensive movements of cells in the vegetal region of the embryo. This period culminates in the formation of a multilayered embryo composed of three primary germ layers (ectoderm, mesoderm, and endoderm)." []
+xref: UBERON:0000109
 is_a: BFO:0000003 ! occurrent
 is_a: ECAO:1000004 ! life cycle period
 relationship: BFO:0000050 ECAO:1000008 ! part of embryogenesis phase
@@ -225,6 +224,7 @@ relationship: BFO:0000062 ECAO:1000015 ! preceded by mesenchyme blastula episode
 id: ECAO:1000017
 name: 1-cell stage
 def: "Stage at which fertilization has occurred, but the zygote has not undergone cell division. The embryo is a single diploid cell surrounded by a fertilization envelope." []
+xref: UBERON:0000106
 is_a: BFO:0000003 ! occurrent
 is_a: ECAO:1000006 ! life cycle stage
 relationship: BFO:0000050 ECAO:1000047 ! part of stage 1
@@ -234,6 +234,7 @@ relationship: BFO:0000062 ECAO:1000007 ! preceded by gametogenesis phase
 id: ECAO:1000018
 name: 2-cell stage
 def: "Stage at which the embryo is composed of two cells and is surrounded by a fertilization envelope. The first cleavage division has taken place meridionally (i.e. along the animal-vegetal axis), thereby generating two blastomeres of equal size, each containing both animal and vegetal cytoplasm." []
+xref: UBERON:0007232
 is_a: BFO:0000003 ! occurrent
 is_a: ECAO:1000006 ! life cycle stage
 relationship: BFO:0000050 ECAO:1000048 ! part of stage 2
@@ -243,6 +244,7 @@ relationship: BFO:0000062 ECAO:1000017 ! preceded by 1-cell stage
 id: ECAO:1000019
 name: 4-cell stage
 def: "Stage at which the embryo is composed of four cells and is surrounded by a fertilization envelope. The second cleavage division has taken place meridional and perpendicular to the first cleavage division. This has produced four blastomeres of equal size, all of which contain both animal and vegetal cytoplasm." []
+xref: UBERON:0007233
 is_a: BFO:0000003 ! occurrent
 is_a: ECAO:1000006 ! life cycle stage
 relationship: BFO:0000050 ECAO:1000049 ! part of stage 3
@@ -252,6 +254,7 @@ relationship: BFO:0000062 ECAO:1000018 ! preceded by 2-cell stage
 id: ECAO:1000020
 name: 8-cell stage
 def: "Stage at which the embryo is composed of eight cells and is surrounded by a fertilization envelope. The third cleavage division has taken place equatorial and perpendicular to the first two cleavage divisions." []
+xref: UBERON:0007236
 is_a: BFO:0000003 ! occurrent
 is_a: ECAO:1000006 ! life cycle stage
 relationship: BFO:0000050 ECAO:1000050 ! part of stage 4
@@ -895,72 +898,40 @@ property_value: IAO:0000119 "OBI_0000266" xsd:string
 [Term]
 id: NCBITaxon:1
 name: root
-namespace: ncbi_taxonomy
-synonym: "all" RELATED synonym []
-xref: GC_ID:1
-xref: PMID:30365038
-xref: PMID:32761142
 
 [Term]
 id: NCBITaxon:46514
 name: Patiria miniata
-namespace: ncbi_taxonomy
-alt_id: NCBITaxon:35077
-synonym: "Asterias miniata" RELATED synonym []
-synonym: "Asterina miniata" RELATED synonym []
-synonym: "bat star" EXACT genbank_common_name []
-synonym: "broad-disk star" EXACT OMO:0003003 []
-synonym: "sea bat" EXACT OMO:0003003 []
-synonym: "webbed star" EXACT OMO:0003003 []
-xref: GC_ID:1
 is_a: NCBITaxon:1 ! root
 property_value: has_rank NCBITaxon:species
 
 [Term]
 id: NCBITaxon:7632
 name: Eucidaris tribuloides
-namespace: ncbi_taxonomy
-synonym: "Cidarites tribuloides" RELATED synonym []
-xref: GC_ID:1
 is_a: NCBITaxon:1 ! root
 property_value: has_rank NCBITaxon:species
 
 [Term]
 id: NCBITaxon:7654
 name: Lytechinus variegatus
-namespace: ncbi_taxonomy
-synonym: "Echinus variegatus" RELATED synonym []
-synonym: "green sea urchin" EXACT genbank_common_name []
-xref: GC_ID:1
 is_a: NCBITaxon:1 ! root
 property_value: has_rank NCBITaxon:species
 
 [Term]
 id: NCBITaxon:7656
 name: Paracentrotus lividus
-namespace: ncbi_taxonomy
-synonym: "common sea urchin" EXACT OMO:0003003 []
-synonym: "common urchin" EXACT genbank_common_name []
-synonym: "Echinus lividus" RELATED synonym []
-xref: GC_ID:1
 is_a: NCBITaxon:1 ! root
 property_value: has_rank NCBITaxon:species
 
 [Term]
 id: NCBITaxon:7668
 name: Strongylocentrotus purpuratus
-namespace: ncbi_taxonomy
-synonym: "Echinus purpuratus" RELATED synonym []
-synonym: "purple sea urchin" EXACT genbank_common_name []
-synonym: "purple urchin" EXACT OMO:0003003 []
-xref: GC_ID:1
 is_a: NCBITaxon:1 ! root
 property_value: has_rank NCBITaxon:species
 
 [Term]
 id: NCBITaxon:species
 name: species
-namespace: ncbi_taxonomy
 is_a: taxonomic_rank ! taxonomic rank
 
 [Term]
@@ -972,7 +943,6 @@ is_a: BFO:0000020 ! specifically dependent continuant
 [Term]
 id: taxonomic_rank
 name: taxonomic rank
-namespace: ncbi_taxonomy
 
 [Typedef]
 id: BFO:0000050

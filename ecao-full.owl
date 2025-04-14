@@ -7,6 +7,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ecao="http://purl.obolibrary.org/obo/ecao.obo#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -15,14 +16,13 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:ecao_taxslim="http://purl.obolibrary.org/obo/ecao_taxslim.obo#">
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecao/ecao-full.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecao/releases/2025-04-08/ecao-full.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecao/releases/2025-04-14/ecao-full.owl"/>
         <dc:title>Echinoderm Anatomy and Development Ontology</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo>2025-04-08</owl:versionInfo>
+        <owl:versionInfo>2025-04-14</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -115,12 +115,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000231 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000231"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
@@ -157,32 +151,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001">
-        <obo:IAO_0000111 xml:lang="en">term replaced by</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">Use on obsolete terms, relating the term to another term that can be used as a substitute</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000119>
-        <rdfs:comment xml:lang="en">Add as annotation triples in the granting ontology</rdfs:comment>
-        <rdfs:label xml:lang="en">term replaced by</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OMO_0002000 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OMO_0002000"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMO_0003003 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OMO_0003003">
-        <rdfs:label>layperson synonym</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
-    </owl:AnnotationProperty>
     
 
 
@@ -357,45 +328,9 @@ WHERE {
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ecao_taxslim.obo#blast_name -->
+    <!-- http://purl.obolibrary.org/obo/ecao.obo#has_rank -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ecao_taxslim.obo#blast_name">
-        <rdfs:label>blast name</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ecao_taxslim.obo#genbank_common_name -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ecao_taxslim.obo#genbank_common_name">
-        <rdfs:label>genbank common name</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ecao_taxslim.obo#genbank_synonym -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ecao_taxslim.obo#genbank_synonym">
-        <rdfs:label>genbank synonym</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ecao_taxslim.obo#has_rank -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ecao_taxslim.obo#has_rank"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ecao_taxslim.obo#synonym -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ecao_taxslim.obo#synonym">
-        <rdfs:label>synonym</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ecao.obo#has_rank"/>
     
 
 
@@ -479,14 +414,6 @@ WHERE {
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty">
-        <rdfs:label>synonym_type_property</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
@@ -496,14 +423,6 @@ WHERE {
     <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId">
-        <rdfs:label>has_alternative_id</rdfs:label>
-    </owl:AnnotationProperty>
     
 
 
@@ -529,9 +448,7 @@ WHERE {
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
-        <rdfs:label>has_exact_synonym</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     
 
 
@@ -553,25 +470,13 @@ WHERE {
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
-        <rdfs:label>has_related_synonym</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType">
-        <rdfs:label>has_synonym_type</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id">
-        <rdfs:label>id</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
     
 
 
@@ -2764,6 +2669,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The phase of the life cycle that begins with fertilization, continues with the formation and maturation of the embryo, and ends with the opening of the mouth, the onset of feeding, and the beginning of the growth of the organism.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0000105</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000008</oboInOwl:id>
         <rdfs:label>embryogenesis phase</rdfs:label>
     </owl:Class>
@@ -2824,6 +2730,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The period that immediately follows fertilization. It is characterized by rapid, synchronous mitotic cell divisions in the absence of cell growth. This period culminates in the formation of a hollow, spherical, multicellular, monolayered embryo (a blastula) with a hollow cavity (the blastocoel) in the center.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0000107</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000011</oboInOwl:id>
         <rdfs:label>cleavage period</rdfs:label>
     </owl:Class>
@@ -2848,6 +2755,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The period that immediately follows cleavage and precedes gastrulation. It is characterized by the progressive maturation of the embryo into a hollow sphere, which is one cell layer thick and encompasses a central, fluid-filled cavity (the blastocoel). This period culminates in the formation of the vegetal plate, a placode of elongated, presumptive endomesoderm cells.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0000307</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000012</oboInOwl:id>
         <rdfs:label>blastula period</rdfs:label>
     </owl:Class>
@@ -2872,6 +2780,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The period that immediately follows the blastula period and precedes organogenesis. It is characterized by extensive movements of cells in the vegetal region of the embryo. This period culminates in the formation of a multilayered embryo composed of three primary germ layers (ectoderm, mesoderm, and endoderm).</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0000109</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000013</oboInOwl:id>
         <rdfs:label>gastrula period</rdfs:label>
     </owl:Class>
@@ -2968,6 +2877,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Stage at which fertilization has occurred, but the zygote has not undergone cell division. The embryo is a single diploid cell surrounded by a fertilization envelope.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0000106</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000017</oboInOwl:id>
         <rdfs:label>1-cell stage</rdfs:label>
     </owl:Class>
@@ -2992,6 +2902,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Stage at which the embryo is composed of two cells and is surrounded by a fertilization envelope. The first cleavage division has taken place meridionally (i.e. along the animal-vegetal axis), thereby generating two blastomeres of equal size, each containing both animal and vegetal cytoplasm.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0007232</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000018</oboInOwl:id>
         <rdfs:label>2-cell stage</rdfs:label>
     </owl:Class>
@@ -3016,6 +2927,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Stage at which the embryo is composed of four cells and is surrounded by a fertilization envelope. The second cleavage division has taken place meridional and perpendicular to the first cleavage division. This has produced four blastomeres of equal size, all of which contain both animal and vegetal cytoplasm.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0007233</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000019</oboInOwl:id>
         <rdfs:label>4-cell stage</rdfs:label>
     </owl:Class>
@@ -3040,6 +2952,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Stage at which the embryo is composed of eight cells and is surrounded by a fertilization envelope. The third cleavage division has taken place equatorial and perpendicular to the first two cleavage divisions.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UBERON:0007236</oboInOwl:hasDbXref>
         <oboInOwl:id>ECAO:1000020</oboInOwl:id>
         <rdfs:label>8-cell stage</rdfs:label>
     </owl:Class>
@@ -4749,29 +4662,8 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_1 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1">
-        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:30365038</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:32761142</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>all</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>NCBITaxon:1</oboInOwl:id>
-        <rdfs:label>root</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>all</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#synonym"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_35077 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_35077">
-        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000227"/>
-        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_46514"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">root</rdfs:label>
     </owl:Class>
     
 
@@ -4780,55 +4672,10 @@ For example, A and B may be gene products and binding of B by A positively regul
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_46514">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
-        <ecao_taxslim:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
-        <oboInOwl:hasAlternativeId>NCBITaxon:35077</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>bat star</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>broad-disk star</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>sea bat</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>webbed star</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>Asterias miniata</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Asterina miniata</oboInOwl:hasRelatedSynonym>
+        <ecao:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
         <oboInOwl:id>NCBITaxon:46514</oboInOwl:id>
         <rdfs:label>Patiria miniata</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_46514"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>bat star</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#genbank_common_name"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_46514"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>broad-disk star</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003003"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_46514"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>sea bat</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003003"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_46514"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>webbed star</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003003"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_46514"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Asterias miniata</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#synonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_46514"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Asterina miniata</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#synonym"/>
-    </owl:Axiom>
     
 
 
@@ -4836,19 +4683,10 @@ For example, A and B may be gene products and binding of B by A positively regul
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7632">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
-        <ecao_taxslim:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
-        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>Cidarites tribuloides</oboInOwl:hasRelatedSynonym>
+        <ecao:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
         <oboInOwl:id>NCBITaxon:7632</oboInOwl:id>
         <rdfs:label>Eucidaris tribuloides</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7632"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Cidarites tribuloides</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#synonym"/>
-    </owl:Axiom>
     
 
 
@@ -4856,26 +4694,10 @@ For example, A and B may be gene products and binding of B by A positively regul
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7654">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
-        <ecao_taxslim:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
-        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>green sea urchin</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>Echinus variegatus</oboInOwl:hasRelatedSynonym>
+        <ecao:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
         <oboInOwl:id>NCBITaxon:7654</oboInOwl:id>
         <rdfs:label>Lytechinus variegatus</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7654"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>green sea urchin</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#genbank_common_name"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7654"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Echinus variegatus</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#synonym"/>
-    </owl:Axiom>
     
 
 
@@ -4883,33 +4705,10 @@ For example, A and B may be gene products and binding of B by A positively regul
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7656">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
-        <ecao_taxslim:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
-        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>common sea urchin</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>common urchin</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>Echinus lividus</oboInOwl:hasRelatedSynonym>
+        <ecao:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
         <oboInOwl:id>NCBITaxon:7656</oboInOwl:id>
         <rdfs:label>Paracentrotus lividus</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7656"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>common sea urchin</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003003"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7656"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>common urchin</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#genbank_common_name"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7656"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Echinus lividus</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#synonym"/>
-    </owl:Axiom>
     
 
 
@@ -4917,41 +4716,17 @@ For example, A and B may be gene products and binding of B by A positively regul
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7668">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
-        <ecao_taxslim:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
-        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>purple sea urchin</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>purple urchin</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>Echinus purpuratus</oboInOwl:hasRelatedSynonym>
+        <ecao:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
         <oboInOwl:id>NCBITaxon:7668</oboInOwl:id>
         <rdfs:label>Strongylocentrotus purpuratus</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7668"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>purple sea urchin</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#genbank_common_name"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7668"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>purple urchin</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003003"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7668"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Echinus purpuratus</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#synonym"/>
-    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_species -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_species">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ecao_taxslim.obo#taxonomic_rank"/>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ecao.obo#taxonomic_rank"/>
         <oboInOwl:id>NCBITaxon:species</oboInOwl:id>
         <rdfs:label>species</rdfs:label>
     </owl:Class>
@@ -4975,10 +4750,9 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ecao_taxslim.obo#taxonomic_rank -->
+    <!-- http://purl.obolibrary.org/obo/ecao.obo#taxonomic_rank -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ecao_taxslim.obo#taxonomic_rank">
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ecao.obo#taxonomic_rank">
         <oboInOwl:id>taxonomic_rank</oboInOwl:id>
         <rdfs:label>taxonomic rank</rdfs:label>
     </owl:Class>
