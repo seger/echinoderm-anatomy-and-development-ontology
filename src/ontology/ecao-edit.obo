@@ -1,13 +1,9 @@
 format-version: 1.2
-data-version: ecao/releases/2025-07-09/ecao-base.owl
-idspace: dc http://purl.org/dc/elements/1.1/ 
-idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
-idspace: terms http://purl.org/dc/terms/ 
-ontology: ecao/ecao-base
-property_value: dc:title "Echinoderm Anatomy and Development Ontology" xsd:string
-property_value: dc:type IAO:8000001
-property_value: owl:versionInfo "2025-07-09" xsd:string
-property_value: terms:license https://creativecommons.org/licenses/by/3.0/
+import: http://purl.obolibrary.org/obo/ecao/imports/bfo_import.owl
+import: http://purl.obolibrary.org/obo/ecao/imports/ro_import.owl
+ontology: ecao
+property_value: http://purl.org/dc/elements/1.1/title "Echinoderm Anatomy and Development Ontology" xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 
 [Term]
 id: ECAO:1000001
@@ -25,21 +21,21 @@ id: ECAO:1000003
 name: life cycle phase
 def: "A temporal phase encompassing some part of the life cycle of an organism." []
 is_a: ECAO:1000001 ! developmental stage
-relationship: BFO:0000050 ECAO:1000002 ! life cycle
+relationship: BFO:0000050 ECAO:1000002 ! part of life cycle
 
 [Term]
 id: ECAO:1000004
 name: life cycle period
 def: "A temporal period included in a life cycle phase." []
 is_a: ECAO:1000001 ! developmental stage
-relationship: BFO:0000050 ECAO:1000003 ! life cycle phase
+relationship: BFO:0000050 ECAO:1000003 ! part of life cycle phase
 
 [Term]
 id: ECAO:1000005
 name: life cycle episode
 def: "A temporal episode encompassing some part of a life cycle period." []
 is_a: ECAO:1000001 ! developmental stage
-relationship: BFO:0000050 ECAO:1000004 ! life cycle period
+relationship: BFO:0000050 ECAO:1000004 ! part of life cycle period
 
 [Term]
 id: ECAO:1000006
@@ -58,140 +54,132 @@ id: ECAO:1000008
 name: embryogenesis phase
 def: "The phase of the life cycle that begins with fertilization, continues with the formation and maturation of the embryo, and ends with the opening of the mouth, the onset of feeding, and the beginning of the growth of the organism." []
 xref: UBERON:0000105
-is_a: BFO:0000003
 is_a: ECAO:1000003 ! life cycle phase
-relationship: BFO:0000062 ECAO:1000007 ! gametogenesis phase
+relationship: BFO:0000062 ECAO:1000007 ! preceded by gametogenesis phase
 
 [Term]
 id: ECAO:1000009
 name: larval development phase
 def: "The phase of the life cycle that begins when the mouth opens and the larva starts to feed, continues through the growth and maturation of the larva, and ends with metamorphosis." []
-is_a: BFO:0000003
 is_a: ECAO:1000003 ! life cycle phase
-relationship: BFO:0000062 ECAO:1000008 ! embryogenesis phase
+relationship: BFO:0000062 ECAO:1000008 ! preceded by embryogenesis phase
 
 [Term]
 id: ECAO:1000010
 name: adulthood phase
 def: "The phase of the life cycle that begins after metamorphosis, continues through the growth and maturation of the juvenile, and culminates in the formation of a sexually mature adult that produces functional gametes." []
-is_a: BFO:0000003
 is_a: ECAO:1000003 ! life cycle phase
-relationship: BFO:0000062 ECAO:1000009 ! larval development phase
+relationship: BFO:0000062 ECAO:1000009 ! preceded by larval development phase
 
 [Term]
 id: ECAO:1000011
 name: cleavage period
 def: "The period that immediately follows fertilization. It is characterized by rapid, synchronous mitotic cell divisions in the absence of cell growth. This period culminates in the formation of a hollow, spherical, multicellular, monolayered embryo (a blastula) with a hollow cavity (the blastocoel) in the center." []
 xref: UBERON:0000107
-is_a: BFO:0000003
 is_a: ECAO:1000004 ! life cycle period
-relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
-relationship: BFO:0000062 ECAO:1000017 ! 1-cell stage
+relationship: BFO:0000050 ECAO:1000008 ! part of embryogenesis phase
+relationship: BFO:0000062 ECAO:1000017 ! preceded by 1-cell stage
 
 [Term]
 id: ECAO:1000012
 name: blastula period
 def: "The period that immediately follows cleavage and precedes gastrulation. It is characterized by the progressive maturation of the embryo into a hollow sphere, which is one cell layer thick and encompasses a central, fluid-filled cavity (the blastocoel). This period culminates in the formation of the vegetal plate, a placode of elongated, presumptive endomesoderm cells." []
 xref: UBERON:0000307
-is_a: BFO:0000003
 is_a: ECAO:1000004 ! life cycle period
-relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
-relationship: BFO:0000062 ECAO:1000011 ! cleavage period
+relationship: BFO:0000050 ECAO:1000008 ! part of embryogenesis phase
+relationship: BFO:0000062 ECAO:1000011 ! preceded by cleavage period
 
 [Term]
 id: ECAO:1000013
 name: gastrula period
 def: "The period that immediately follows the blastula period and precedes organogenesis. It is characterized by extensive movements of cells in the vegetal region of the embryo. This period culminates in the formation of a multilayered embryo composed of three primary germ layers (ectoderm, mesoderm, and endoderm)." []
 xref: UBERON:0000109
-is_a: BFO:0000003
 is_a: ECAO:1000004 ! life cycle period
-relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
-relationship: BFO:0000062 ECAO:1000012 ! blastula period
+relationship: BFO:0000050 ECAO:1000008 ! part of embryogenesis phase
+relationship: BFO:0000062 ECAO:1000012 ! preceded by blastula period
 
 [Term]
 id: ECAO:1000014
 name: organogenesis period
 def: "The period that immediately follows the gastrula period. It is characterized by the progressive maturation of tissues and organs. This period culminates in the opening of the mouth." []
-is_a: BFO:0000003
 is_a: ECAO:1000004 ! life cycle period
-relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
-relationship: BFO:0000062 ECAO:1000013 ! gastrula period
+relationship: BFO:0000050 ECAO:1000008 ! part of embryogenesis phase
+relationship: BFO:0000062 ECAO:1000013 ! preceded by gastrula period
 
 [Term]
 id: ECAO:1000015
 name: mesenchyme blastula episode
 def: "The first episode of the gastrulation period, characterized by the ingression into the blastocoel of the skeletogenic primary mesenchyme cells (PMCs), prior to the invagination of the vegetal plate." []
-is_a: BFO:0000003
 is_a: ECAO:1000005 ! life cycle episode
-relationship: BFO:0000050 ECAO:1000013 ! gastrula period
-relationship: BFO:0000062 ECAO:1000031 ! vegetal plate stage
+relationship: BFO:0000050 ECAO:1000013 ! part of gastrula period
+relationship: BFO:0000062 ECAO:1000031 ! preceded by vegetal plate stage
 
 [Term]
 id: ECAO:1000016
 name: invagination episode
 def: "The second episode of the gastrulation period, characterized by the invagination of the vegetal plate into the blastocoel to form the primitive digestive tract (archenteron)." []
-is_a: BFO:0000003
 is_a: ECAO:1000005 ! life cycle episode
-relationship: BFO:0000050 ECAO:1000013 ! gastrula period
-relationship: BFO:0000062 ECAO:1000015 ! mesenchyme blastula episode
+relationship: BFO:0000050 ECAO:1000013 ! part of gastrula period
+relationship: BFO:0000062 ECAO:1000015 ! preceded by mesenchyme blastula episode
+relationship: BFO:0000062 ECAO:1000031 ! preceded by vegetal plate stage
 
 [Term]
 id: ECAO:1000017
 name: 1-cell stage
 def: "Stage at which fertilization has occurred, but the zygote has not undergone cell division. The embryo is a single diploid cell surrounded by a fertilization envelope." []
 xref: UBERON:0000106
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000047 ! stage 1
-relationship: BFO:0000062 ECAO:1000007 ! gametogenesis phase
+relationship: BFO:0000050 ECAO:1000008 ! part of embryogenesis phase
+relationship: BFO:0000050 ECAO:1000047 ! part of stage 1
+relationship: BFO:0000062 ECAO:1000007 ! preceded by gametogenesis phase
 
 [Term]
 id: ECAO:1000018
 name: 2-cell stage
 def: "Stage at which the embryo is composed of two cells and is surrounded by a fertilization envelope. The first cleavage division has taken place meridionally (i.e. along the animal-vegetal axis), thereby generating two blastomeres of equal size, each containing both animal and vegetal cytoplasm." []
 xref: UBERON:0007232
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000048 ! stage 2
-relationship: BFO:0000062 ECAO:1000017 ! 1-cell stage
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000050 ECAO:1000048 ! part of stage 2
+relationship: BFO:0000062 ECAO:1000017 ! preceded by 1-cell stage
 
 [Term]
 id: ECAO:1000019
 name: 4-cell stage
 def: "Stage at which the embryo is composed of four cells and is surrounded by a fertilization envelope. The second cleavage division has taken place meridional and perpendicular to the first cleavage division. This has produced four blastomeres of equal size, all of which contain both animal and vegetal cytoplasm." []
 xref: UBERON:0007233
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000049 ! stage 3
-relationship: BFO:0000062 ECAO:1000018 ! 2-cell stage
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000050 ECAO:1000049 ! part of stage 3
+relationship: BFO:0000062 ECAO:1000018 ! preceded by 2-cell stage
 
 [Term]
 id: ECAO:1000020
 name: 8-cell stage
 def: "Stage at which the embryo is composed of eight cells and is surrounded by a fertilization envelope. The third cleavage division has taken place equatorial and perpendicular to the first two cleavage divisions." []
 xref: UBERON:0007236
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000050 ! stage 4
-relationship: BFO:0000062 ECAO:1000019 ! 4-cell stage
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000050 ECAO:1000050 ! part of stage 4
+relationship: BFO:0000062 ECAO:1000019 ! preceded by 4-cell stage
 
 [Term]
 id: ECAO:1000021
 name: 16-cell stage
 def: "Stage at which the embryo is composed of 16 cells and is surrounded by a fertilization envelope." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000051 ! stage 5
-relationship: BFO:0000062 ECAO:1000020 ! 8-cell stage
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000050 ECAO:1000051 ! part of stage 5
+relationship: BFO:0000062 ECAO:1000020 ! preceded by 8-cell stage
 
 [Term]
 id: ECAO:1000022
 name: 28-cell stage
 def: "Stage at which the embryo is composed of 28 cells and is surrounded by a fertilization envelope." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000052 ! stage 6
-relationship: BFO:0000062 ECAO:1000021 ! 16-cell stage
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000050 ECAO:1000052 ! part of stage 6
+relationship: BFO:0000062 ECAO:1000021 ! preceded by 16-cell stage
 property_value: RO:0002161 NCBITaxon:46514
 property_value: RO:0002161 NCBITaxon:7632
 property_value: RO:0002175 NCBITaxon:7654
@@ -202,218 +190,214 @@ property_value: RO:0002175 NCBITaxon:7668
 id: ECAO:1000023
 name: 32-cell stage
 def: "Stage at which the embryo is composed of 32 cells and is surrounded by a fertilization envelope." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000052 ! stage 6
-relationship: BFO:0000062 ECAO:1000022 ! 28-cell stage
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000050 ECAO:1000052 ! part of stage 6
+relationship: BFO:0000062 ECAO:1000021 ! preceded by 16-cell stage
+relationship: BFO:0000062 ECAO:1000022 ! preceded by 28-cell stage
 
 [Term]
 id: ECAO:1000024
 name: 56-cell stage
 def: "Stage at which the embryo is composed of 56 cells and is surrounded by a fertilization envelope." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000053 ! stage 7
-relationship: BFO:0000062 ECAO:1000023 ! 32-cell stage
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000050 ECAO:1000053 ! part of stage 7
+relationship: BFO:0000062 ECAO:1000023 ! preceded by 32-cell stage
 
 [Term]
 id: ECAO:1000025
 name: 60-cell stage
 def: "Stage at which the embryo is composed of 60 cells and is surrounded by a fertilization envelope." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000053 ! stage 7
-relationship: BFO:0000062 ECAO:1000024 ! 56-cell stage
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000050 ECAO:1000053 ! part of stage 7
+relationship: BFO:0000062 ECAO:1000024 ! preceded by 56-cell stage
 
 [Term]
 id: ECAO:1000026
 name: 64-cell stage
 def: "Stage at which the embryo is composed of 64 cells and is surrounded by a fertilization envelope." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000053 ! stage 7
-relationship: BFO:0000062 ECAO:1000023 ! 32-cell stage
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000050 ECAO:1000053 ! part of stage 7
+relationship: BFO:0000062 ECAO:1000023 ! preceded by 32-cell stage
 
 [Term]
 id: ECAO:1000027
 name: early blastula stage
 def: "Stage at which the embryo is composed of about 100-200 cells and is surrounded by a fertilization envelope. Most blastomeres have completed at least one additional mitotic division since the 60- or 64-cell stage. All cells are approximately the same size and there are no obvious morphological indications of the primary or secondary embryonic axes. All cells have begun to acquire an apical-basal polarity and the embryo is beginning to transform into a hollow sphere with a monolayered epithelial wall and a fluid-filled cavity (the blastocoel) in the center." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000054 ! stage 8
-relationship: BFO:0000062 ECAO:1000025 ! 60-cell stage
-relationship: BFO:0000062 ECAO:1000026 ! 64-cell stage
+relationship: BFO:0000050 ECAO:1000012 ! part of blastula period
+relationship: BFO:0000050 ECAO:1000054 ! part of stage 8
+relationship: BFO:0000062 ECAO:1000025 ! preceded by 60-cell stage
+relationship: BFO:0000062 ECAO:1000026 ! preceded by 64-cell stage
 
 [Term]
 id: ECAO:1000028
 name: mid-blastula stage
 def: "Stage at which the embryo is composed of about 200-500 cells and is surrounded by a fertilization envelope. Most cells have completed at least one additional mitotic division since the early blastula stage. The cell divisions are now less synchronous than at earlier stages. The embryo remains spherical in shape and one cell layer thick. It does not display any morphological indications of the embryonic axes or of the vegetal plate. The cells have started to flatten on their inner (basal) surface, further contributing to the enlargement of the blastocoel, which has expanded since the early blastula stage." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000055 ! stage 9
-relationship: BFO:0000062 ECAO:1000027 ! early blastula stage
+relationship: BFO:0000050 ECAO:1000012 ! part of blastula period
+relationship: BFO:0000050 ECAO:1000055 ! part of stage 9
+relationship: BFO:0000062 ECAO:1000027 ! preceded by early blastula stage
 
 [Term]
 id: ECAO:1000029
 name: motile blastula stage
 def: "Stage at which the embryo is composed of 400-500 cells and is no longer surrounded by a fertilization envelope. Most cells have completed at least one additional mitotic division after the early blastula stage and the cell divisions are now less synchronous than at earlier stages. The embryo remains spherical in shape and one cell layer thick. It does not display any morphological indications of the embryonic axes or of the vegetal plate. The cells have started to flatten on their inner (basal) surface, further contributing to the enlargement of the blastocoel, which has expanded since the early blastula stage." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000055 ! stage 9
-relationship: BFO:0000062 ECAO:1000027 ! early blastula stage
+relationship: BFO:0000050 ECAO:1000012 ! part of blastula period
+relationship: BFO:0000050 ECAO:1000055 ! part of stage 9
+relationship: BFO:0000062 ECAO:1000027 ! preceded by early blastula stage
 
 [Term]
 id: ECAO:1000030
 name: late blastula stage
 def: "Stage at which the embryo is composed of about 600-1000 cells. Most cells have completed at least one additional mitotic division since the mid-blastula stage and developed an apical cilium. The embryo is still spherical in shape and one cell layer thick. It still lacks obvious morphological landmarks of the embryonic axes and of the vegetal plate. Cells have further continued to flatten along the apical-basal axis, accentuating the enlargement of the blastocoel. They are also now joined to one another apically by septate and adherens junctions and laterally by desmosomes." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000056 ! stage 10
-relationship: BFO:0000062 ECAO:1000028 ! mid-blastula stage
-relationship: BFO:0000062 ECAO:1000029 ! motile blastula stage
+relationship: BFO:0000050 ECAO:1000012 ! part of blastula period
+relationship: BFO:0000050 ECAO:1000056 ! part of stage 10
+relationship: BFO:0000062 ECAO:1000028 ! preceded by mid-blastula stage
+relationship: BFO:0000062 ECAO:1000029 ! preceded by motile blastula stage
 
 [Term]
 id: ECAO:1000031
 name: vegetal plate stage
 def: "Stage at which the embryo displays a vegetal epithelial placode, the vegetal plate, that formed at the vegetal pole and thereby provides the first morphological indication of the animal-vegetal axis of the blastula. All cells have developed an apical cilium, although the embryo may or may not have hatched from the fertilization envelope." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000057 ! stage 11
-relationship: BFO:0000062 ECAO:1000030 ! late blastula stage
+relationship: BFO:0000050 ECAO:1000012 ! part of blastula period
+relationship: BFO:0000050 ECAO:1000057 ! part of stage 11
+relationship: BFO:0000062 ECAO:1000030 ! preceded by late blastula stage
 
 [Term]
 id: ECAO:1000032
 name: early mesenchyme blastula stage
 def: "Stage at which skeletogenic primary mesenchyme cells (PMCs) are starting to ingress from the vegetal plate into the blastocoel through an epithelial–to-mesenchymal transition (EMT)." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000015 ! mesenchyme blastula episode
-relationship: BFO:0000050 ECAO:1000058 ! stage 12
-relationship: BFO:0000062 ECAO:1000031 ! vegetal plate stage
+relationship: BFO:0000050 ECAO:1000015 ! part of mesenchyme blastula episode
+relationship: BFO:0000050 ECAO:1000058 ! part of stage 12
+relationship: BFO:0000062 ECAO:1000031 ! preceded by vegetal plate stage
 
 [Term]
 id: ECAO:1000033
 name: mid-mesenchyme blastula stage
 def: "Stage at which almost all skeletogenic primary mesenchyme cells (PMCs) have ingressed into the blastocoel and remain in a mound on the vegetal plate." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000015 ! mesenchyme blastula episode
-relationship: BFO:0000050 ECAO:1000058 ! stage 12
-relationship: BFO:0000062 ECAO:1000032 ! early mesenchyme blastula stage
+relationship: BFO:0000050 ECAO:1000015 ! part of mesenchyme blastula episode
+relationship: BFO:0000050 ECAO:1000058 ! part of stage 12
+relationship: BFO:0000062 ECAO:1000032 ! preceded by early mesenchyme blastula stage
 
 [Term]
 id: ECAO:1000034
 name: late mesenchyme blastula stage
 def: "Stage at which all skeletogenic primary mesenchyme cells (PMCs) have ingressed into the blastocoel. Many of these cells have extended filopodia and migrated away from the vegetal plate. The cells are found along the blastocoel wall, although they remain concentrated in the vegetal hemisphere of the embryo. The vegetal plate has flattened following the ingression of the PMCs. However, it has not started to invaginate. It is now composed at its center of the 8 small micromere descendants (the germ line) surrounded by non-skeletogenic mesoderm (NSM)." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000015 ! mesenchyme blastula episode
-relationship: BFO:0000050 ECAO:1000058 ! stage 12
-relationship: BFO:0000062 ECAO:1000033 ! mid-mesenchyme blastula stage
+relationship: BFO:0000050 ECAO:1000015 ! part of mesenchyme blastula episode
+relationship: BFO:0000050 ECAO:1000058 ! part of stage 12
+relationship: BFO:0000062 ECAO:1000033 ! preceded by mid-mesenchyme blastula stage
 
 [Term]
 id: ECAO:1000035
 name: blastopore formation stage
 def: "Stage at which the embryo is characterized morphologically by a slight invagination of the vegetal plate. This invagination has generated the anterior portion of the archenteron (primitive digestive tract) and the blastopore, an opening that will persist as the larval anus." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000016 ! invagination episode
-relationship: BFO:0000050 ECAO:1000058 ! stage 12
-relationship: BFO:0000062 ECAO:1000034 ! late mesenchyme blastula stage
+relationship: BFO:0000050 ECAO:1000016 ! part of invagination episode
+relationship: BFO:0000050 ECAO:1000058 ! part of stage 12
+relationship: BFO:0000062 ECAO:1000031 ! preceded by vegetal plate stage
+relationship: BFO:0000062 ECAO:1000034 ! preceded by late mesenchyme blastula stage
 
 [Term]
 id: ECAO:1000036
 name: early gastrula stage
 def: "Stage at which the archenteron (primitive digestive tract) has elongated up to 1/3 of its final length. This elongation has occurred through the inward movement of all non-skeletogenic mesoderm (NSM) cells and part of the endoderm." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000016 ! invagination episode
-relationship: BFO:0000050 ECAO:1000059 ! stage 13
-relationship: BFO:0000062 ECAO:1000035 ! blastopore formation stage
+relationship: BFO:0000050 ECAO:1000016 ! part of invagination episode
+relationship: BFO:0000050 ECAO:1000059 ! part of stage 13
+relationship: BFO:0000062 ECAO:1000035 ! preceded by blastopore formation stage
 
 [Term]
 id: ECAO:1000037
 name: mid-gastrula stage
 def: "Stage at which the archenteron (primitive digestive tract) has elongated to about half (1/3-2/3) of its final length." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000016 ! invagination episode
-relationship: BFO:0000050 ECAO:1000060 ! stage 14
-relationship: BFO:0000062 ECAO:1000036 ! early gastrula stage
+relationship: BFO:0000050 ECAO:1000016 ! part of invagination episode
+relationship: BFO:0000050 ECAO:1000060 ! part of stage 14
+relationship: BFO:0000062 ECAO:1000036 ! preceded by early gastrula stage
 
 [Term]
 id: ECAO:1000038
 name: late gastrula stage
 def: "Stage at which the archenteron (primitive digestive tract) has elongated up to more than 2/3 of its maximal length." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000016 ! invagination episode
-relationship: BFO:0000050 ECAO:1000061 ! stage 15
-relationship: BFO:0000062 ECAO:1000037 ! mid-gastrula stage
+relationship: BFO:0000050 ECAO:1000016 ! part of invagination episode
+relationship: BFO:0000050 ECAO:1000061 ! part of stage 15
+relationship: BFO:0000062 ECAO:1000037 ! preceded by mid-gastrula stage
 
 [Term]
 id: ECAO:1000039
 name: early prism stage
 def: "Stage at which the embryo has a distinctive, angular shape due to the elongation of the skeletal rods. The body rods have elongated toward the apex (posterior end) of the embryo. The dorsoventral connecting rods are elongated, and the postoral rods are still very short although they already support thickened regions of ectoderm that will later form the distal tip of the postoral arms. The archenteron tip is slightly expanded, and its oral surface is directed toward the oral ectoderm. Ingression of secondary mesenchyme cells (SMCs) is complete. The embryo is reddish in color due to the presence of pigment cells within the aboral ectoderm. The animal pole domain (or apical plate) is prominent and the lateral walls of the embryo have thinned. The coelomic pouches and gut constrictions have not yet appeared." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000062 ! stage 16
-relationship: BFO:0000062 ECAO:1000038 ! late gastrula stage
+relationship: BFO:0000050 ECAO:1000014 ! part of organogenesis period
+relationship: BFO:0000050 ECAO:1000062 ! part of stage 16
+relationship: BFO:0000062 ECAO:1000038 ! preceded by late gastrula stage
 
 [Term]
 id: ECAO:1000040
 name: late prism stage
 def: "Stage at which the embryo has a distinctive, angular shape due to the elongation of the skeletal rods. The body rods have expended even further compared to earlier stages and the postoral rods support short postoral arm buds. The anterior ends of the dorsoventral connecting rods are also now branched or bent. The archenteron tip is still bent toward the oral ectoderm. At the tip of the archenteron coelomic evaginations start to be apparent, although no gut constrictions are visible yet. The embryo is reddish in color due to the presence of pigment cells within the aboral ectoderm. The animal pole domain is prominent, and it still bears long, immotile cilia." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000063 ! stage 17
-relationship: BFO:0000062 ECAO:1000039 ! early prism stage
+relationship: BFO:0000050 ECAO:1000014 ! part of organogenesis period
+relationship: BFO:0000050 ECAO:1000063 ! part of stage 17
+relationship: BFO:0000062 ECAO:1000039 ! preceded by early prism stage
 
 [Term]
 id: ECAO:1000041
 name: early organogenesis stage
 def: "Stage at which the embryo is elongated along the animal-vegetal axis and has thus a characteristic oblong shape. The archenteron is fully extended, even though it still does not reach the blastocoel roof. The tip of the archenteron is enlarged, rounded, and smooth, and the archenteron has begun to deflect orally. Mesenchyme cell ingression is complete. However, paired coelomic pouches and gut constrictions have not yet formed." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000062 ! stage 16
-relationship: BFO:0000062 ECAO:1000038 ! late gastrula stage
+relationship: BFO:0000050 ECAO:1000014 ! part of organogenesis period
+relationship: BFO:0000050 ECAO:1000062 ! part of stage 16
+relationship: BFO:0000062 ECAO:1000038 ! preceded by late gastrula stage
 
 [Term]
 id: ECAO:1000042
 name: mid-organogenesis stage
 def: "Stage at which the embryo is elongated along the animal-vegetal axis and has thus a characteristic oblong shape. The archenteron is overall deflected orally and its tip is enlarged, rounded, and smooth. The tip of the archenteron is further starting to display filopodia that interact with the ectoderm site where the mouth will form. At the tip of the archenteron, unpaired evaginations of the coelom are also now apparent, even though the stomodeal invagination, gut constrictions, and ciliary band(s) are still not discernable. Mesenchyme cells have dispersed through the blastocoel." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000063 ! stage 17
-relationship: BFO:0000062 ECAO:1000041 ! early organogenesis stage
+relationship: BFO:0000050 ECAO:1000014 ! part of organogenesis period
+relationship: BFO:0000050 ECAO:1000063 ! part of stage 17
+relationship: BFO:0000062 ECAO:1000041 ! preceded by early organogenesis stage
 
 [Term]
 id: ECAO:1000043
 name: late organogenesis stage
 def: "Stage at which the embryo is characterized by the presence, at the tip of the archenteron, of two well-formed coelomic pouches, separated from the foregut by pronounced constrictions. The cardiac constriction, which separates the foregut and the midgut, has started to form. On the oral side of the embryo, the stomodeal invagination is visible, although the mouth has not yet opened. The ciliary band(s) is (are) not yet visible." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000064 ! stage 18
-relationship: BFO:0000062 ECAO:1000040 ! late prism stage
-relationship: BFO:0000062 ECAO:1000042 ! mid-organogenesis stage
+relationship: BFO:0000050 ECAO:1000014 ! part of organogenesis period
+relationship: BFO:0000050 ECAO:1000064 ! part of stage 18
+relationship: BFO:0000062 ECAO:1000040 ! preceded by late prism stage
+relationship: BFO:0000062 ECAO:1000042 ! preceded by mid-organogenesis stage
 
 [Term]
 id: ECAO:1000044
 name: very late organogenesis stage
 def: "Stage at which the embryo displays prominent right and left anterior coelomic pouches, and the posterior enterocoel has enlarged. Pronounced cardiac and developing pyloric constrictions (separating respectively the foregut and midgut, and the midgut and hindgut) are formed, and the gut is thus visibly tripartite, with the posterior enterocoel projecting from the developing stomach (former midgut). The wall of the left anterior coelom is distended at both its anterior and posterior margins, where strands of cells extend to the ectoderm. Muscle bands surrounding the esophagus are apparent. Ridges of thickened ectoderm mark the positions of the future ciliary bands." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000064 ! stage 18
-relationship: BFO:0000062 ECAO:1000043 ! late organogenesis stage
+relationship: BFO:0000050 ECAO:1000014 ! part of organogenesis period
+relationship: BFO:0000050 ECAO:1000064 ! part of stage 18
+relationship: BFO:0000062 ECAO:1000043 ! preceded by late organogenesis stage
 
 [Term]
 id: ECAO:1000045
 name: open mouth stage
 def: "Stage that is characterized by the opening of the mouth. The right and left coelomic pouches are prominent and well-separated from the foregut by narrow coelomic constrictions. Pronounced cardiac and developing pyloric constrictions (separating respectively the foregut and midgut, and the midgut and hindgut) are visible; the gut is thus visibly tripartite. The developing stomach (former midgut) is enlarged relative to the other segments of the gut and muscle bands surrounding the esophagus are apparent. The ciliary band(s) is (are) also discernable." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000065 ! stage 19
-relationship: BFO:0000062 ECAO:1000044 ! very late organogenesis stage
+relationship: BFO:0000050 ECAO:1000014 ! part of organogenesis period
+relationship: BFO:0000050 ECAO:1000065 ! part of stage 19
+relationship: BFO:0000062 ECAO:1000043 ! preceded by late organogenesis stage
+relationship: BFO:0000062 ECAO:1000044 ! preceded by very late organogenesis stage
 
 [Term]
 id: ECAO:1000046
@@ -425,344 +409,309 @@ is_a: ECAO:1000001 ! developmental stage
 id: ECAO:1000047
 name: stage 1
 def: "Echinoderm developmental stage at which fertilization has occurred but the zygote has not divided (1-cell stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000008 ! embryogenesis phase
-relationship: BFO:0000062 ECAO:1000007 ! gametogenesis phase
+relationship: BFO:0000050 ECAO:1000008 ! part of embryogenesis phase
+relationship: BFO:0000062 ECAO:1000007 ! preceded by gametogenesis phase
 
 [Term]
 id: ECAO:1000048
 name: stage 2
 def: "Echinoderm developmental stage at which the embryo is composed of 2 cells (2-cell stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000011 ! cleavage period
-relationship: BFO:0000062 ECAO:1000047 ! stage 1
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000062 ECAO:1000047 ! preceded by stage 1
 
 [Term]
 id: ECAO:1000049
 name: stage 3
 def: "Echinoderm developmental stage at which the embryo is composed of 4 cells (4-cell stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000011 ! cleavage period
-relationship: BFO:0000062 ECAO:1000048 ! stage 2
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000062 ECAO:1000048 ! preceded by stage 2
 
 [Term]
 id: ECAO:1000050
 name: stage 4
 def: "Echinoderm developmental stage at which the embryo is composed of 8 cells (8-cell stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000011 ! cleavage period
-relationship: BFO:0000062 ECAO:1000049 ! stage 3
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000062 ECAO:1000049 ! preceded by stage 3
 
 [Term]
 id: ECAO:1000051
 name: stage 5
 def: "Echinoderm developmental stage at which the embryo is composed of 16 cells (16-cell stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000011 ! cleavage period
-relationship: BFO:0000062 ECAO:1000050 ! stage 4
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000062 ECAO:1000050 ! preceded by stage 4
 
 [Term]
 id: ECAO:1000052
 name: stage 6
 def: "Echinoderm developmental stage at which the embryo is composed of 28-32 cells (includes 28- and 32-cell stages)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000011 ! cleavage period
-relationship: BFO:0000062 ECAO:1000051 ! stage 5
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000062 ECAO:1000051 ! preceded by stage 5
 
 [Term]
 id: ECAO:1000053
 name: stage 7
 def: "Echinoderm developmental stage at which the embryo is composed of 56-64 cells (includes 56-, 60-, and 64-cell stages)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000011 ! cleavage period
-relationship: BFO:0000062 ECAO:1000052 ! stage 6
+relationship: BFO:0000050 ECAO:1000011 ! part of cleavage period
+relationship: BFO:0000062 ECAO:1000052 ! preceded by stage 6
 
 [Term]
 id: ECAO:1000054
 name: stage 8
 def: "Echinoderm developmental stage at which the embryo is an early blastula (early blastula stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000012 ! blastula period
-relationship: BFO:0000062 ECAO:1000053 ! stage 7
+relationship: BFO:0000050 ECAO:1000012 ! part of blastula period
+relationship: BFO:0000062 ECAO:1000053 ! preceded by stage 7
 
 [Term]
 id: ECAO:1000055
 name: stage 9
 def: "Echinoderm developmental stage at which the embryo is a mid-blastula (includes mid-blastula and motile blastula stages)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000012 ! blastula period
-relationship: BFO:0000062 ECAO:1000054 ! stage 8
+relationship: BFO:0000050 ECAO:1000012 ! part of blastula period
+relationship: BFO:0000062 ECAO:1000054 ! preceded by stage 8
 
 [Term]
 id: ECAO:1000056
 name: stage 10
 def: "Echinoderm developmental stage at which the embryo is a late blastula, it is still spherical, and the vegetal plate has not formed (late blastula stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000012 ! blastula period
-relationship: BFO:0000062 ECAO:1000055 ! stage 9
+relationship: BFO:0000050 ECAO:1000012 ! part of blastula period
+relationship: BFO:0000062 ECAO:1000055 ! preceded by stage 9
 
 [Term]
 id: ECAO:1000057
 name: stage 11
 def: "Echinoderm developmental stage at which the embryo, whether or not hatched from the fertilization envelope, has formed a vegetal plate but gastrulation has not begun (vegetal plate stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000012 ! blastula period
-relationship: BFO:0000062 ECAO:1000056 ! stage 10
+relationship: BFO:0000050 ECAO:1000012 ! part of blastula period
+relationship: BFO:0000062 ECAO:1000056 ! preceded by stage 10
 
 [Term]
 id: ECAO:1000058
 name: stage 12
 def: "Echinoderm developmental stage at which the embryo has hatched from the fertilization envelope and is undergoing the earliest cell movements of gastrulation (includes early, mid-, and late mesenchyme blastula stages and blastopore formation stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000013 ! gastrula period
-relationship: BFO:0000062 ECAO:1000057 ! stage 11
+relationship: BFO:0000050 ECAO:1000013 ! part of gastrula period
+relationship: BFO:0000062 ECAO:1000057 ! preceded by stage 11
 
 [Term]
 id: ECAO:1000059
 name: stage 13
 def: "Echinoderm developmental stage at which the embryo is undergoing the first phase of archenteron extension (early gastrula stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000013 ! gastrula period
-relationship: BFO:0000062 ECAO:1000058 ! stage 12
+relationship: BFO:0000050 ECAO:1000013 ! part of gastrula period
+relationship: BFO:0000062 ECAO:1000058 ! preceded by stage 12
 
 [Term]
 id: ECAO:1000060
 name: stage 14
 def: "Echinoderm developmental stage at which the embryo is undergoing the middle phase of archenteron extension (mid-gastrula stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000013 ! gastrula period
-relationship: BFO:0000062 ECAO:1000059 ! stage 13
+relationship: BFO:0000050 ECAO:1000013 ! part of gastrula period
+relationship: BFO:0000062 ECAO:1000059 ! preceded by stage 13
 
 [Term]
 id: ECAO:1000061
 name: stage 15
 def: "Echinoderm developmental stage at which the embryo is undergoing the last phase of archenteron extension (late gastrula stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000013 ! gastrula period
-relationship: BFO:0000062 ECAO:1000060 ! stage 14
+relationship: BFO:0000050 ECAO:1000013 ! part of gastrula period
+relationship: BFO:0000062 ECAO:1000060 ! preceded by stage 14
 
 [Term]
 id: ECAO:1000062
 name: stage 16
 def: "Echinoderm developmental stage at which the embryo has completed archenteron elongation and mesenchyme cell ingression is complete (includes early prism and early organogenesis stages)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000014 ! organogenesis period
-relationship: BFO:0000062 ECAO:1000061 ! stage 15
+relationship: BFO:0000050 ECAO:1000014 ! part of organogenesis period
+relationship: BFO:0000062 ECAO:1000061 ! preceded by stage 15
 
 [Term]
 id: ECAO:1000063
 name: stage 17
 def: "Echinoderm developmental stage at which the embryo has paired coelomic evaginations at the tip of the archenteron but lacks a stomodeal invagination and gut constrictions (includes late prism and mid-organogenesis stages)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000014 ! organogenesis period
-relationship: BFO:0000062 ECAO:1000062 ! stage 16
+relationship: BFO:0000050 ECAO:1000014 ! part of organogenesis period
+relationship: BFO:0000062 ECAO:1000062 ! preceded by stage 16
 
 [Term]
 id: ECAO:1000064
 name: stage 18
 def: "Echinoderm developmental stage at which the embryo has paired coelomic pouches along with a stomodeal invagination and gut constrictions (includes late and very late organogenesis stages)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000014 ! organogenesis period
-relationship: BFO:0000062 ECAO:1000063 ! stage 17
+relationship: BFO:0000050 ECAO:1000014 ! part of organogenesis period
+relationship: BFO:0000062 ECAO:1000063 ! preceded by stage 17
 
 [Term]
 id: ECAO:1000065
 name: stage 19
 def: "Echinoderm developmental stage at which the embryo has an open mouth (open mouth stage)." []
-is_a: BFO:0000003
 is_a: ECAO:1000046 ! pan-echinoderm life cycle stage
-relationship: BFO:0000050 ECAO:1000014 ! organogenesis period
-relationship: BFO:0000062 ECAO:1000064 ! stage 18
+relationship: BFO:0000050 ECAO:1000014 ! part of organogenesis period
+relationship: BFO:0000062 ECAO:1000064 ! preceded by stage 18
 
 [Term]
 id: ECAO:1000066
 name: oogenesis period
 def: "Period during which female gametes (or oocytes, or eggs) develop and mature from primordial female germ cells to generate cells competent to further development upon fertilization by a mature spermatozoid." []
 is_a: ECAO:1000004 ! life cycle period
-relationship: BFO:0000050 ECAO:1000007 ! gametogenesis phase
+relationship: BFO:0000050 ECAO:1000007 ! part of gametogenesis phase
 
 [Term]
 id: ECAO:1000067
 name: spermatogenesis period
 def: "Period during which male gametes (or spermatozoa, or spermatozoid) develop and mature from primordial male germ cells to generate cells competent to further development upon fertilization of a mature oocyte." []
 is_a: ECAO:1000004 ! life cycle period
-relationship: BFO:0000050 ECAO:1000007 ! gametogenesis phase
+relationship: BFO:0000050 ECAO:1000007 ! part of gametogenesis phase
 
 [Term]
 id: ECAO:1000068
 name: previtellogenic primary oocyte stage
 def: "Stage at which the female gamete is small in size, i.e. about 10 micrometer in diameter, and is in the previtellogenic state." []
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
+relationship: BFO:0000050 ECAO:1000066 ! part of oogenesis period
 
 [Term]
 id: ECAO:1000069
 name: not fully grown oocyte stage
 def: "Stage at which the developing female gamete has started growing in size by accumulation of yolk proteins, and is characterized by the presence of a large nucleus, the germinal vesicle, which contains a prominent nucleolus and occupies most of the cytoplasm." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
-relationship: BFO:0000062 ECAO:1000068 ! previtellogenic primary oocyte stage
+relationship: BFO:0000050 ECAO:1000066 ! part of oogenesis period
+relationship: BFO:0000062 ECAO:1000068 ! preceded by previtellogenic primary oocyte stage
 
 [Term]
 id: ECAO:1000070
 name: fully grown oocyte with centered germinal vesicle stage
 def: "Stage at which the developing female gamete has reached its full size. It has grown up to ten times its original size, i.e. 80 to 100 micrometers. It also displays a large germinal vesicle that is centered, but it is still not competent for fertilization." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
-relationship: BFO:0000062 ECAO:1000069 ! not fully grown oocyte stage
+relationship: BFO:0000050 ECAO:1000066 ! part of oogenesis period
+relationship: BFO:0000062 ECAO:1000069 ! preceded by not fully grown oocyte stage
 
 [Term]
 id: ECAO:1000071
 name: fully grown oocyte with off-centered germinal vesicle stage
 def: "Stage at which the developing female gamete has reached its full size and whose germinal vesicle has moved asymmetrically to the cell periphery. The germinal vesicle is now close to the animal pole." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
-relationship: BFO:0000062 ECAO:1000070 ! fully grown oocyte with centered germinal vesicle stage
+relationship: BFO:0000050 ECAO:1000066 ! part of oogenesis period
+relationship: BFO:0000062 ECAO:1000070 ! preceded by fully grown oocyte with centered germinal vesicle stage
 
 [Term]
 id: ECAO:1000072
 name: fully grown oocyte with no nucleus stage
 def: "Stage of the developing female gamete in which the germinal vesicle has broken down. The germinal vesicle is no longer visible. However, the female gamete is still not mature. It is undergoing meiotic maturation, extruding successively a first and a second polar body." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
-relationship: BFO:0000062 ECAO:1000071 ! fully grown oocyte with off-centered germinal vesicle stage
+relationship: BFO:0000050 ECAO:1000066 ! part of oogenesis period
+relationship: BFO:0000062 ECAO:1000071 ! preceded by fully grown oocyte with off-centered germinal vesicle stage
 
 [Term]
 id: ECAO:1000073
 name: mature oocyte stage
 def: "Stage at which the mature female gamete has achieved its meiotic maturation and whose female pronucleus is visible. The mature oocyte is arrested in G1 phase and its average size is 80 to 100 micrometers. It is surrounded by a transparent jelly coat that is about 30 micrometers thick. It is competent to fertilization and is located in the female gonad where it may be stored for weeks to months before its release in sea water by spawning. In the P. lividus species, the mature female gametes are characterized by the presence of pigment granules concentrated in a subequatorial band. This band is classically called the pigment band and allows visualization of the first embryonic axis, i.e. the animal-vegetal axis, which is perpendicular to the band." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000066 ! oogenesis period
-relationship: BFO:0000062 ECAO:1000072 ! fully grown oocyte with no nucleus stage
+relationship: BFO:0000050 ECAO:1000066 ! part of oogenesis period
+relationship: BFO:0000062 ECAO:1000072 ! preceded by fully grown oocyte with no nucleus stage
 
 [Term]
 id: ECAO:1000074
 name: developing spermatozoa stage
 def: "Stage at which the developing, immature male gamete is undergoing mitosis and meiosis to ultimately produce mature spermatozoa." []
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000067 ! spermatogenesis period
+relationship: BFO:0000050 ECAO:1000067 ! part of spermatogenesis period
 
 [Term]
 id: ECAO:1000075
 name: mature spermatozoid stage
 def: "Stage at which the mature male gamete is composed of a head, encompassing a compact nucleus, a neck, a middle piece, and a tail (or flagellum) that propels it towards the oocyte upon spawning." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000067 ! spermatogenesis period
-relationship: BFO:0000062 ECAO:1000074 ! developing spermatozoa stage
+relationship: BFO:0000050 ECAO:1000067 ! part of spermatogenesis period
+relationship: BFO:0000062 ECAO:1000074 ! preceded by developing spermatozoa stage
 
 [Term]
 id: ECAO:1000076
 name: 4-arm pluteus larva stage
 def: "Stage at which the larva is characterized by the presence, on the ventral side, of four extended arms (two anterolateral arms at the level of the oral hood and two postoral arms) and on the dorsal side by a sleeked apex. The larva now possesses a completely tripartite and functional digestive tract composed of an esophagus, a stomach, and an intestine, respectively limited by a cardiac sphincter, a pyloric sphincter, and an anal sphincter." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000009 ! larval development phase
-relationship: BFO:0000062 ECAO:1000045 ! open mouth stage
+relationship: BFO:0000050 ECAO:1000009 ! part of larval development phase
+relationship: BFO:0000062 ECAO:1000045 ! preceded by open mouth stage
 
 [Term]
 id: ECAO:1000077
 name: 6-arm pluteus larva stage
 def: "Stage at which the larva is characterized by the presence on the ventral side of six arms, and by the development, on the anterior midline of the esophagus, of the dorsal arch." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000009 ! larval development phase
-relationship: BFO:0000062 ECAO:1000076 ! 4-arm pluteus larva stage
+relationship: BFO:0000050 ECAO:1000009 ! part of larval development phase
+relationship: BFO:0000062 ECAO:1000076 ! preceded by 4-arm pluteus larva stage
 
 [Term]
 id: ECAO:1000078
 name: 8-arm pluteus larva stage
 def: "Stage at which the larva is characterized by the presence on the ventral side of eight arms and by the development within the larva, on the left side of the stomach, of the adult rudiment. This stage is relatively long. It includes distinct changes occurring to the larva as well as within the larva, although the larva consistently exhibits 8 arms." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000009 ! larval development phase
-relationship: BFO:0000062 ECAO:1000077 ! 6-arm pluteus larva stage
+relationship: BFO:0000050 ECAO:1000009 ! part of larval development phase
+relationship: BFO:0000062 ECAO:1000077 ! preceded by 6-arm pluteus larva stage
 
 [Term]
 id: ECAO:1000079
 name: competent pluteus larva stage
 def: "Stage at which the larva is characterized by the presence, within the larva, on the left side of its stomach, of the adult rudiment. The rudiment is now the size of or even bigger than the stomach and harbors five long primary podia (i.e. tube feet) and five quartets of definitive spines. Under the right environemental cue, the larva is competent to undergo metamorphosis." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000009 ! larval development phase
-relationship: BFO:0000062 ECAO:1000078 ! 8-arm pluteus larva stage
+relationship: BFO:0000050 ECAO:1000009 ! part of larval development phase
+relationship: BFO:0000062 ECAO:1000078 ! preceded by 8-arm pluteus larva stage
 
 [Term]
 id: ECAO:1000080
 name: metamorphic larva stage
 def: "Stage at which the larva essentially undergoes metamorphsis. The larva goes through drastic morphological changes to transofrm the bilateral, planctonic larva into a benthic, pentaradial juvenile." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000009 ! larval development phase
-relationship: BFO:0000062 ECAO:1000079 ! competent pluteus larva stage
+relationship: BFO:0000050 ECAO:1000009 ! part of larval development phase
+relationship: BFO:0000062 ECAO:1000079 ! preceded by competent pluteus larva stage
 
 [Term]
 id: ECAO:1000081
 name: juvenile period
 def: "Period during which a young benthic individual, posing as a small adult, grows but remains unable to reproduce." []
-is_a: BFO:0000003
 is_a: ECAO:1000004 ! life cycle period
-relationship: BFO:0000050 ECAO:1000010 ! adulthood phase
-relationship: BFO:0000062 ECAO:1000009 ! larval development phase
+relationship: BFO:0000050 ECAO:1000010 ! part of adulthood phase
+relationship: BFO:0000062 ECAO:1000009 ! preceded by larval development phase
 
 [Term]
 id: ECAO:1000082
 name: early juvenile stage
 def: "Stage at which the animal is morphologically similar to a miniature sea urchin adult. It harbors primary podia (or tube feet) and definitive spines, along with other appendages (e.g., immature spines, pedicellariae). Compare to the adult, however, it is smaller in size, deprived of a functional digestive system, and is sexually immature." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000081 ! juvenile period
-relationship: BFO:0000062 ECAO:1000080 ! metamorphic larva stage
+relationship: BFO:0000050 ECAO:1000081 ! part of juvenile period
+relationship: BFO:0000062 ECAO:1000080 ! preceded by metamorphic larva stage
 
 [Term]
 id: ECAO:1000083
 name: late juvenile stage
 def: "Stage at which the animal still looks like a small adult. Its digestive tract is now functional. However, the late juvenile remains sexually immature." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000081 ! juvenile period
-relationship: BFO:0000062 ECAO:1000082 ! early juvenile stage
+relationship: BFO:0000050 ECAO:1000081 ! part of juvenile period
+relationship: BFO:0000062 ECAO:1000082 ! preceded by early juvenile stage
 
 [Term]
 id: ECAO:1000084
 name: adult period
 def: "Period during which the animal reaches sexual maturity." []
-is_a: BFO:0000003
 is_a: ECAO:1000004 ! life cycle period
-relationship: BFO:0000050 ECAO:1000010 ! adulthood phase
-relationship: BFO:0000062 ECAO:1000081 ! juvenile period
+relationship: BFO:0000050 ECAO:1000010 ! part of adulthood phase
+relationship: BFO:0000062 ECAO:1000081 ! preceded by juvenile period
 
 [Term]
 id: ECAO:1000085
 name: adult stage
 def: "Stage which corresponds to a fully formed pentaradial sea urchin individual that has reached sexual maturity. The gonads have developed within the perivisceral cavity and are connected to the outside by the genital pores pierced into the genital plates." []
-is_a: BFO:0000003
 is_a: ECAO:1000006 ! life cycle stage
-relationship: BFO:0000050 ECAO:1000084 ! adult period
-relationship: BFO:0000062 ECAO:1000083 ! late juvenile stage
+relationship: BFO:0000050 ECAO:1000084 ! part of adult period
+relationship: BFO:0000062 ECAO:1000083 ! preceded by late juvenile stage
 
 [Term]
 id: ECAO:2000000
@@ -782,8 +731,8 @@ is_a: ECAO:2000000 ! anatomy
 id: ECAO:2000002
 name: anatomical system
 def: "A multicellular, connected anatomical structure composed of multiple organs that work together to achieve some shared function." []
-synonym: "body system" RELATED []
 synonym: "organ system" RELATED []
+synonym: "body system" RELATED []
 xref: UBERON:0000467
 is_a: ECAO:2000000 ! anatomy
 
@@ -813,8 +762,8 @@ is_a: ECAO:2000000 ! anatomy
 id: ECAO:2000006
 name: multicellular organism
 def: "An anatomical structure that is an individual member of a species and consists of more than one cell. It includes all forms during all life cycle phases (embryogenesis, larval development, and adulthood)." []
-synonym: "body" RELATED []
 synonym: "whole organism" RELATED []
+synonym: "body" RELATED []
 xref: UBERON:0000468
 is_a: ECAO:2000001 ! anatomical structure
 
@@ -822,8 +771,8 @@ is_a: ECAO:2000001 ! anatomical structure
 id: ECAO:2000007
 name: zygote
 def: "A diploid cell produced by the fusion of a male and a female gamete at fertilization. It constitutes the first stage of the embryogenesis life cycle phase." []
-synonym: "1-cell" RELATED []
 synonym: "fertilized egg" RELATED []
+synonym: "1-cell" RELATED []
 xref: CL_0010017
 is_a: ECAO:2000058 ! cell
 
@@ -842,6 +791,7 @@ def: "A multicellular organism at an early stage of development characterized by
 synonym: "cleaving embryo" RELATED []
 xref: UBERON:0007010
 is_a: ECAO:2000008 ! embryo
+relationship: develops_from ECAO:2000007 ! zygote
 relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
@@ -907,8 +857,8 @@ relationship: develops_from ECAO:2000012 ! larva
 id: ECAO:2000017
 name: mature adult
 def: "A multicellular organism the existence of which starts with gamete production and ends with death." []
-synonym: "post-juvenile adult" RELATED []
 synonym: "sexually mature adult" RELATED []
+synonym: "post-juvenile adult" RELATED []
 xref: UBERON:0000113
 is_a: ECAO:2000006 ! multicellular organism
 relationship: develops_from ECAO:2000016 ! juvenile
@@ -1065,6 +1015,7 @@ name: female reproductive system
 def: "An anatomical reproductive system that is present in a female multicellular organism." []
 xref: UBERON_0000474
 is_a: ECAO:2000036 ! reproductive system
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000038
@@ -1072,6 +1023,7 @@ name: male reproductive system
 def: "An anatomical reproductive system that is present in a male multicellular organism." []
 xref: UBERON:0000079
 is_a: ECAO:2000036 ! reproductive system
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000039
@@ -1106,8 +1058,8 @@ relationship: part_of ECAO:2000013 ! pre-metamorphic organism
 id: ECAO:2000043
 name: muscular system
 def: "An anatomical system that has as its parts all muscles of the body." []
-synonym: "muscle system" RELATED []
 synonym: "musculature of the body" RELATED []
+synonym: "muscle system" RELATED []
 xref: UBERON:0000383
 is_a: ECAO:2000002 ! anatomical system
 relationship: part_of ECAO:2000006 ! multicellular organism
@@ -1184,16 +1136,18 @@ synonym: "upper half" RELATED []
 synonym: "upper hemisphere" RELATED []
 xref: UBERON:0012284
 is_a: ECAO:2000051 ! embryonic hemisphere
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000053
 name: vegetal hemisphere
 def: "An anatomical region that corresponds to the lower half of an embryo. Among echinoderms, in euechinoids, during the cleavage period, it is composed of the macromeres and the micromeres and ultimately encompasses the presumptive endoderm and mesoderm." []
+synonym: "vegetal half" RELATED []
 synonym: "lower half" RELATED []
 synonym: "lower hemisphere" RELATED []
-synonym: "vegetal half" RELATED []
 xref: UBERON:0012285
 is_a: ECAO:2000051 ! embryonic hemisphere
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000054
@@ -1201,6 +1155,7 @@ name: cell tier
 def: "A layer of blastomeres perpendicular to the animal-vegetal axis of an embryo." []
 synonym: "blastomere tier" RELATED []
 is_a: ECAO:2000026 ! embryonic structure
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000055
@@ -1278,6 +1233,7 @@ synonym: "PGC" RELATED []
 synonym: "primitive germ cell" RELATED []
 xref: CL:0000670
 is_a: ECAO:2000059 ! germ line cell
+relationship: part_of ECAO:2000036 ! reproductive system
 
 [Term]
 id: ECAO:2000064
@@ -1286,6 +1242,7 @@ def: "The reproductive haploid, mature sexual reproductive cell of a multicellul
 synonym: "gamete" RELATED []
 is_a: ECAO:2000060 ! germ cell
 relationship: develops_from ECAO:2000063 ! primordial germ cell
+relationship: part_of ECAO:2000036 ! reproductive system
 
 [Term]
 id: ECAO:2000065
@@ -1293,6 +1250,7 @@ name: oocyte
 def: "A female germ cell that has entered meiosis." []
 xref: CL:0000023
 is_a: ECAO:2000061 ! female germ cell
+relationship: part_of ECAO:2000037 ! female reproductive system
 
 [Term]
 id: ECAO:2000066
@@ -1315,9 +1273,9 @@ id: ECAO:2000068
 name: mature oocyte
 def: "A haploid oocyte that has advanced through meiosis to the stage at which it can be fertilized successfully by sperm. Mature echinoderm eggs have completed meiosis." []
 synonym: "egg" RELATED []
+synonym: "unfertilized egg" RELATED []
 synonym: "female gamete" RELATED []
 synonym: "ovum" RELATED []
-synonym: "unfertilized egg" RELATED []
 is_a: ECAO:2000064 ! mature germ cell
 relationship: develops_from ECAO:2000067 ! secondary oocyte
 relationship: part_of ECAO:2000037 ! female reproductive system
@@ -1352,11 +1310,11 @@ relationship: part_of ECAO:2000038 ! male reproductive system
 id: ECAO:2000072
 name: spermatozoid
 def: "A mature male germ cell that develops from a spermatid." []
-synonym: "male gamete" RELATED []
-synonym: "mature sperm cell" RELATED []
 synonym: "sperm" RELATED []
 synonym: "spermatozoa" RELATED []
 synonym: "spermatozoon" RELATED []
+synonym: "male gamete" RELATED []
+synonym: "mature sperm cell" RELATED []
 xref: CL:0000019
 is_a: ECAO:2000064 ! mature germ cell
 relationship: develops_from ECAO:2000071 ! spermatid
@@ -1378,6 +1336,7 @@ def: "The part of the spermatozoid that contains the nucleus and acrosome." []
 synonym: "sperm head" RELATED []
 xref: GO:0061827
 is_a: ECAO:2000073 ! spermatozoid part
+relationship: part_of ECAO:2000072 ! spermatozoid
 
 [Term]
 id: ECAO:2000075
@@ -1392,10 +1351,11 @@ relationship: part_of ECAO:2000074 ! spermatozoid head
 id: ECAO:2000076
 name: spermatozoid flagellum
 def: "A microtubule-based flagellum (or cilium) that is part of a spermatozoid." []
-synonym: "sperm cilium" RELATED []
 synonym: "sperm tail" RELATED []
+synonym: "sperm cilium" RELATED []
 xref: GO:0036126
 is_a: ECAO:2000073 ! spermatozoid part
+relationship: part_of ECAO:2000072 ! spermatozoid
 
 [Term]
 id: ECAO:2000077
@@ -1410,8 +1370,8 @@ relationship: part_of ECAO:2000007 ! zygote
 id: ECAO:2000078
 name: spermatozoid nucleus
 def: "An intracellular anatomical structure in which the male chromosomes are housed." []
-synonym: "male germ cell nucleus" RELATED []
 synonym: "sperm nucleus" RELATED []
+synonym: "male germ cell nucleus" RELATED []
 xref: GO_0001673
 is_a: ECAO:2000093 ! nucleus
 relationship: part_of ECAO:2000072 ! spermatozoid
@@ -1420,8 +1380,8 @@ relationship: part_of ECAO:2000072 ! spermatozoid
 id: ECAO:2000079
 name: oocyte nucleus
 def: "An intracellular anatomical structure in which the female chromosomes are housed." []
-synonym: "female germ cell nucleus" RELATED []
 synonym: "female nucleus" RELATED []
+synonym: "female germ cell nucleus" RELATED []
 xref: GO_0001674
 is_a: ECAO:2000093 ! nucleus
 relationship: part_of ECAO:2000065 ! oocyte
@@ -1443,6 +1403,7 @@ synonym: "intracellular part" RELATED []
 synonym: "organelle" RELATED []
 xref: GO:0005622
 is_a: ECAO:2000080 ! cellular anatomical entity
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000082
@@ -1450,6 +1411,7 @@ name: cell-cell junction
 def: "A cell junction that forms a connection between two or more cells of a multicellular organism." []
 xref: GO:0005911
 is_a: ECAO:2000080 ! cellular anatomical entity
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000083
@@ -1458,6 +1420,7 @@ def: "A strong cell-cell junction usually found in tissue that experience intens
 synonym: "spot desmosome" RELATED []
 xref: GO:0030057
 is_a: ECAO:2000082 ! cell-cell junction
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000084
@@ -1466,6 +1429,7 @@ def: "A cell-cell junction that forms a continuous band around each cell in an e
 synonym: "spetate desmosome" RELATED []
 xref: GO:0005918
 is_a: ECAO:2000082 ! cell-cell junction
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000085
@@ -1473,6 +1437,7 @@ name: adherens junction
 def: "A cell-cell junction composed of the epithelial cadherin-catenin complex." []
 xref: GO:0005912
 is_a: ECAO:2000082 ! cell-cell junction
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000086
@@ -1496,6 +1461,7 @@ name: microtubule cytoskeleton
 def: "The part of the cytoskeleton composed of microtubules and associated proteins." []
 xref: GO:0015630
 is_a: ECAO:2000087 ! cytoskeleton
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000089
@@ -1503,14 +1469,15 @@ name: actin cytoskeleton
 def: "The part of the cytoskeleton composed of actin and associated proteins. Includes actin cytoskeleton-associated complexes." []
 xref: GO:0015629
 is_a: ECAO:2000087 ! cytoskeleton
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000090
 name: filament
 def: "A component of a cytoskeleton consisting of a homo or heteropolymeric fiber constructed from an indeterminate number of protein subunits." []
+synonym: "protein filament" RELATED []
 synonym: "fiber" RELATED []
 synonym: "polymeric cytoskeletal fiber" RELATED []
-synonym: "protein filament" RELATED []
 xref: GO:0099513
 is_a: ECAO:2000081 ! intracellular anatomical structure
 relationship: part_of ECAO:2000087 ! cytoskeleton
@@ -1538,6 +1505,7 @@ name: nucleus
 def: "A membrane-bounded organelle of in which chromosomes are housed and replicated." []
 xref: GO:0005634
 is_a: ECAO:2000081 ! intracellular anatomical structure
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000094
@@ -1554,6 +1522,7 @@ name: cytoplasm
 def: "All the contents of a cell excluding the plasma membrane and nucleus, but including all other subcellular structures." []
 xref: GO:0005737
 is_a: ECAO:2000081 ! intracellular anatomical structure
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000096
@@ -1593,6 +1562,7 @@ name: cell cortex
 def: "The region of a cell that lies just beneath the plasma membrane." []
 xref: GO:0005938
 is_a: ECAO:2000080 ! cellular anatomical entity
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000101
@@ -1652,8 +1622,8 @@ relationship: part_of ECAO:2000008 ! embryo
 id: ECAO:2000108
 name: vitelline membrane
 def: "A structure directly adjacent to the outer surface of the plasma membrane of an ovum. It is composed mostly of protein fibers, with protein receptors needed for sperm binding. The species-specificity of these receptors contributes to prevention of breeding between different species." []
-synonym: "vitelline envelope" RELATED []
 synonym: "vitelline layer" RELATED []
+synonym: "vitelline envelope" RELATED []
 xref: GO:0060388
 is_a: ECAO:2000080 ! cellular anatomical entity
 relationship: part_of ECAO:2000065 ! oocyte
@@ -1665,13 +1635,14 @@ def: "A secretory vesicle that is stored under the cell membrane of an egg. Thes
 synonym: "cortical vesicle" RELATED []
 xref: GO:0060473
 is_a: ECAO:2000116 ! secretory vesicle
+relationship: part_of ECAO:2000095 ! cytoplasm
 
 [Term]
 id: ECAO:2000110
 name: aster
 def: "An array of microtubules arranged radially that emanates from a spindle pole and is not connect to kinetochores." []
-synonym: "mitotic aster" RELATED []
 synonym: "spindle aster" RELATED []
+synonym: "mitotic aster" RELATED []
 xref: GO:0005818
 is_a: ECAO:2000081 ! intracellular anatomical structure
 relationship: part_of ECAO:2000088 ! microtubule cytoskeleton
@@ -1716,6 +1687,7 @@ name: microvillus
 def: "A thin cylindrical membrane-covered projection on the surface of a cell containing a core bundle of actin filaments." []
 xref: GO:0005902
 is_a: ECAO:2000080 ! cellular anatomical entity
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000116
@@ -1732,6 +1704,7 @@ def: "A specialized organelle that consists of a filiform extrusion of the cell 
 synonym: "flagellum" RELATED []
 xref: GO:0005929
 is_a: ECAO:2000081 ! intracellular anatomical structure
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000118
@@ -1752,8 +1725,8 @@ relationship: part_of ECAO:2000013 ! pre-metamorphic organism
 id: ECAO:2000120
 name: long immotile cilium
 def: "A cilium of long size that does not contain molecular motors and as such does not exhibit any beating movement. In some echinoderms, long immotile cilia are found, when present, at the animal pole of embryos and constitute the apical tuft." []
-synonym: "elongated cilium" RELATED []
 synonym: "long non-motile cilium" RELATED []
+synonym: "elongated cilium" RELATED []
 xref: GO:0097730
 is_a: ECAO:2000117 ! cilium
 relationship: part_of ECAO:2000227 ! apical tuft
@@ -1765,6 +1738,7 @@ def: "A thin, stiff, actin-based protrusion extended by the leading edge of a mo
 synonym: "pseudopod" RELATED []
 xref: GO:0030175
 is_a: ECAO:2000080 ! cellular anatomical entity
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000122
@@ -1773,6 +1747,7 @@ def: "A sheet-like cellular projection that is supported by an ordered network o
 synonym: "lamellipodia" RELATED []
 xref: NCIT:C32914
 is_a: ECAO:2000080 ! cellular anatomical entity
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000123
@@ -1780,6 +1755,7 @@ name: basal lamina
 def: "An acellular anatomical structure that consists of a thin sheet of fibrous proteins that underlie and support the cells of an epithelium. It separates the cells of an epithelium from any underlying tissue." []
 xref: UBERON:0000482
 is_a: ECAO:2000080 ! cellular anatomical entity
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000124
@@ -1788,21 +1764,24 @@ def: "A secretory vesicle containing molecules that will be secreted and incorpo
 synonym: "basal lamina vesicle" RELATED []
 synonym: "basal vesicle" RELATED []
 is_a: ECAO:2000116 ! secretory vesicle
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000125
 name: apical vesicle
 def: "A secretory vesicle found near the outer (apical) surface of an oocyte, a spermatozoid head, or an early blastomere, and that contains molecules that will be incorporated into the hyaline layer after secretion." []
 is_a: ECAO:2000116 ! secretory vesicle
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000126
 name: echinonectin vesicle
 def: "A secretory vesicle that contains echinonectin." []
+synonym: "nectosome" RELATED []
 synonym: "echinonectin granule" RELATED []
 synonym: "EN-vesicle" RELATED []
-synonym: "nectosome" RELATED []
 is_a: ECAO:2000116 ! secretory vesicle
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000127
@@ -1860,6 +1839,7 @@ def: "The membrane surrounding a cell and separating the cell from its external 
 synonym: "cell membrane" RELATED []
 xref: GO:0005886
 is_a: ECAO:2000080 ! cellular anatomical entity
+relationship: part_of ECAO:2000058 ! cell
 
 [Term]
 id: ECAO:2000134
@@ -1885,6 +1865,7 @@ def: "An undifferentiated cell produced by early cleavages of the fertilized egg
 synonym: "blastoderm cell" RELATED []
 xref: CL:0000353
 is_a: ECAO:2000135 ! embryonic cell
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000137
@@ -1907,6 +1888,7 @@ def: "An intermediate size blastomere constituting the animal hemisphere of a 16
 synonym: "Mes" RELATED []
 is_a: ECAO:2000137 ! animal blastomere
 relationship: develops_from ECAO:2000148 ! animal quartet
+relationship: part_of ECAO:2000052 ! animal hemisphere
 
 [Term]
 id: ECAO:2000140
@@ -1915,6 +1897,7 @@ def: "A large blastomere located in the vegetal hemisphere of a 16-cell stage eu
 synonym: "Mac" RELATED []
 is_a: ECAO:2000138 ! vegetal blastomere
 relationship: develops_from ECAO:2000149 ! vegetal quartet
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000141
@@ -1923,6 +1906,7 @@ def: "A small blastomere located at the vegetal pole of a 16- and 28-cell stage 
 synonym: "Mic" RELATED []
 is_a: ECAO:2000138 ! vegetal blastomere
 relationship: develops_from ECAO:2000149 ! vegetal quartet
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000142
@@ -1931,6 +1915,7 @@ def: "The largest of the two daughter cells of a micromere." []
 synonym: "Lmic" RELATED []
 is_a: ECAO:2000138 ! vegetal blastomere
 relationship: develops_from ECAO:2000141 ! micromere
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000143
@@ -1940,16 +1925,17 @@ synonym: "SM" RELATED []
 synonym: "sMic" RELATED []
 is_a: ECAO:2000138 ! vegetal blastomere
 relationship: develops_from ECAO:2000141 ! micromere
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000144
 name: large micromere descendant cell
 def: "A cell derived from a large micromere through cell division." []
-synonym: "large micromere descendant" RELATED []
 synonym: "large micromere progeny" RELATED []
 synonym: "presumptive PMC" RELATED []
-synonym: "presumptive primary mesenchyme cell" RELATED []
 synonym: "presumptive skeletogenic mesenchyme cell" RELATED []
+synonym: "presumptive primary mesenchyme cell" RELATED []
+synonym: "large micromere descendant" RELATED []
 is_a: ECAO:2000135 ! embryonic cell
 relationship: develops_from ECAO:2000142 ! large micromere
 relationship: part_of ECAO:2000053 ! vegetal hemisphere
@@ -1958,8 +1944,8 @@ relationship: part_of ECAO:2000053 ! vegetal hemisphere
 id: ECAO:2000145
 name: small micromere descendant cell
 def: "A cell derived from a small micromere through cell division." []
-synonym: "germ line" RELATED []
 synonym: "presumptive primordial germ cell" RELATED []
+synonym: "germ line" RELATED []
 is_a: ECAO:2000059 ! germ line cell
 relationship: develops_from ECAO:2000143 ! small micromere
 relationship: part_of ECAO:2000053 ! vegetal hemisphere
@@ -1978,6 +1964,7 @@ name: macromere daughter cell tier
 def: "A tier of cells in the vegetal region of an euechinoid cleaving embryo that is composed of the 8 daughter cells of the macromeres." []
 is_a: ECAO:2000056 ! vegetal cell tier
 relationship: develops_from ECAO:2000140 ! macromere
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000148
@@ -1985,6 +1972,7 @@ name: animal quartet
 def: "A group of four cells of equal size forming the animal hemisphere of an 8-cell stage embryo." []
 synonym: "quartet of animal cell" RELATED []
 is_a: ECAO:2000055 ! animal cell tier
+relationship: part_of ECAO:2000052 ! animal hemisphere
 
 [Term]
 id: ECAO:2000149
@@ -1992,6 +1980,7 @@ name: vegetal quartet
 def: "A group of four cells of equal size forming the vegetal hemisphere of an 8-cell stage embryo." []
 synonym: "quartet of vegetal cell" RELATED []
 is_a: ECAO:2000056 ! vegetal cell tier
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000150
@@ -2000,6 +1989,7 @@ def: "A cell tier derived from the mesomeres through cell division. This cell ti
 synonym: "an1" RELATED []
 is_a: ECAO:2000055 ! animal cell tier
 relationship: develops_from ECAO:2000139 ! mesomere
+relationship: part_of ECAO:2000052 ! animal hemisphere
 
 [Term]
 id: ECAO:2000151
@@ -2008,60 +1998,67 @@ def: "A cell tier derived from the mesomeres through cell division. This cell ti
 synonym: "an2" RELATED []
 is_a: ECAO:2000055 ! animal cell tier
 relationship: develops_from ECAO:2000139 ! mesomere
+relationship: part_of ECAO:2000052 ! animal hemisphere
 
 [Term]
 id: ECAO:2000152
 name: vegetal tier 1
 def: "A cell tier derived from the macromere daughter tier through cell division. The veg1 tier is composed of the animal-most daughter cells of the macromere daughter tier and is located adjacent to and on the vegetal side of the an2 tier of the euechinoid 56- and 64-cell stage embryo." []
-synonym: "ectoendoderm" RELATED []
 synonym: "veg1" RELATED []
+synonym: "ectoendoderm" RELATED []
 is_a: ECAO:2000056 ! vegetal cell tier
 relationship: develops_from ECAO:2000147 ! macromere daughter cell tier
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000153
 name: vegetal tier 2
 def: "A cell tier derived from the macromere daughter tier through cell division. The veg2 tier is composed of the vegetal-most daughter cells of the macromere daughter tier and is located adjacent to and on the vegetal side of the veg1 tier of the euechinoid 56- and 64-cell stage embryo." []
-synonym: "endomesoderm" RELATED []
 synonym: "veg2" RELATED []
+synonym: "endomesoderm" RELATED []
 is_a: ECAO:2000056 ! vegetal cell tier
 relationship: develops_from ECAO:2000147 ! macromere daughter cell tier
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000154
 name: vegetal tier 1 upper
 def: "A cell tier derived from the veg1 tier through cell division. The veg1 upper tier is composed of the animal-most daughter cells of the veg1 tier and is located adjacent to and on the vegetal side of the an2 tier of euechinoid embryos." []
-synonym: "veg1 upper" RELATED []
 synonym: "veg1U" RELATED []
+synonym: "veg1 upper" RELATED []
 is_a: ECAO:2000056 ! vegetal cell tier
 relationship: develops_from ECAO:2000152 ! vegetal tier 1
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000155
 name: vegetal tier 1 lower
 def: "A cell tier derived from the veg1 tier through cell division. The veg1 lower tier is composed of the vegetal-most daughter cells of the veg1 tier and is located adjacent to and on the vegetal side of the veg1 upper tier of euechinoid embryos." []
-synonym: "veg1 lower" RELATED []
 synonym: "veg1L" RELATED []
+synonym: "veg1 lower" RELATED []
 is_a: ECAO:2000056 ! vegetal cell tier
 relationship: develops_from ECAO:2000152 ! vegetal tier 1
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000156
 name: vegetal tier 2 upper
 def: "A cell tier derived from the veg2 tier through cell division. The veg2 upper tier is composed of the animal-most daughter cells of the veg2 tier and is located adjacent to and on the vegetal side of the veg1 lower tier of euechinoid embryos." []
-synonym: "veg2 upper" RELATED []
 synonym: "veg2U" RELATED []
+synonym: "veg2 upper" RELATED []
 is_a: ECAO:2000056 ! vegetal cell tier
 relationship: develops_from ECAO:2000153 ! vegetal tier 2
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000157
 name: vegetal tier 2 lower
 def: "A cell tier derived from the veg2 tier through cell division. The veg2 lower tier is composed of the vegetal-most daughter cells of the veg2 tier and is located adjacent to and on the vegetal side of the veg2 upper tier of euechinoid embryos." []
-synonym: "veg2 lower" RELATED []
 synonym: "veg2L" RELATED []
+synonym: "veg2 lower" RELATED []
 is_a: ECAO:2000056 ! vegetal cell tier
 relationship: develops_from ECAO:2000153 ! vegetal tier 2
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000158
@@ -2119,6 +2116,7 @@ def: "The outermost primary germ layer, which forms during gastrulation and will
 xref: UBERON:0000924
 is_a: ECAO:2000162 ! germ layer
 relationship: develops_from ECAO:2000163 ! presumptive ectoderm
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000165
@@ -2135,6 +2133,7 @@ name: epidermis
 def: "An epithelium derived from ectoderm and constituting the outermost protective layer of an embryo, a larva, or an adult." []
 is_a: ECAO:2000021 ! tissue
 relationship: develops_from ECAO:2000164 ! ectoderm
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000167
@@ -2142,12 +2141,15 @@ name: epithelium
 def: "A tissue that consists of one or more layers of epithelial cells connected to each other by cell junctions and which is underlain by a basal lamina." []
 xref: UBERON:0000483
 is_a: ECAO:2000021 ! tissue
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000168
 name: embryonic ectoderm
 def: "The ectoderm that is specifically present in an embryo" []
 is_a: ECAO:2000164 ! ectoderm
+relationship: develops_from ECAO:2000163 ! presumptive ectoderm
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000169
@@ -2170,6 +2172,7 @@ name: animal ectoderm
 def: "The ectoderm that develops in the animal hemisphere of the embryo and is located above the ectoendoderm." []
 is_a: ECAO:2000163 ! presumptive ectoderm
 relationship: develops_from ECAO:2000148 ! animal quartet
+relationship: part_of ECAO:2000052 ! animal hemisphere
 
 [Term]
 id: ECAO:2000172
@@ -2179,6 +2182,7 @@ synonym: "veg1 ecto" RELATED []
 synonym: "veg1 ectoderm" RELATED []
 is_a: ECAO:2000163 ! presumptive ectoderm
 relationship: develops_from ECAO:2000192 ! ectoendoderm
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000173
@@ -2191,10 +2195,11 @@ relationship: part_of ECAO:2000171 ! animal ectoderm
 id: ECAO:2000174
 name: apical pole domain
 def: "A thickened region at the animal hemisphere, located at the animal pole, and that contains developing neurons and cells with elongated cilia." []
-synonym: "animal plate" RELATED []
 synonym: "animal pole domain" RELATED []
 synonym: "apical plate" RELATED []
+synonym: "animal plate" RELATED []
 is_a: ECAO:2000018 ! embryonic region
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000175
@@ -2217,13 +2222,14 @@ name: oral ectoderm
 def: "The portion of the embryonic ectoderm that is located on the oral side of the embryo and will give rise to ventral ectoderm of the larva." []
 is_a: ECAO:2000163 ! presumptive ectoderm
 relationship: develops_from ECAO:2000176 ! presumptive oral ectoderm
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000178
 name: ventral ectoderm
 def: "The portion of the ectoderm that is on the ventral side of the larva." []
-synonym: "oral animal ectoderm" RELATED []
 synonym: "oral ectoderm" RELATED []
+synonym: "oral animal ectoderm" RELATED []
 is_a: ECAO:2000019 ! larval region
 relationship: develops_from ECAO:2000177 ! oral ectoderm
 relationship: part_of ECAO:2000169 ! larval ectoderm
@@ -2242,6 +2248,7 @@ name: aboral ectoderm
 def: "The portion of the embryonic ectoderm that is located on the aboral side of the embryo and will give rise to dorsal ectoderm of the larva." []
 is_a: ECAO:2000163 ! presumptive ectoderm
 relationship: develops_from ECAO:2000179 ! presumptive aboral ectoderm
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000181
@@ -2257,8 +2264,8 @@ relationship: part_of ECAO:2000169 ! larval ectoderm
 id: ECAO:2000182
 name: lateral ectoderm
 def: "The portion of the ectoderm that is located between the oral and aboral ectoderm of an embryo or the ventral and dorsal ectoderm of a larva." []
-synonym: "ciliary band ectoderm" RELATED []
 synonym: "lateral animal ectoderm" RELATED []
+synonym: "ciliary band ectoderm" RELATED []
 is_a: ECAO:2000003 ! anatomical region
 relationship: develops_from ECAO:2000163 ! presumptive ectoderm
 
@@ -2298,10 +2305,10 @@ relationship: part_of ECAO:2000173 ! non-apical ectoderm
 id: ECAO:2000187
 name: oral border ectoderm
 def: "The portion of the border ectoderm that is located on the oral side of the embryo." []
-synonym: "equatorial oral ectoderm" RELATED []
-synonym: "oral BE" RELATED []
 synonym: "veg1 oral ectoderm" RELATED []
+synonym: "oral BE" RELATED []
 synonym: "ventral BE" RELATED []
+synonym: "equatorial oral ectoderm" RELATED []
 is_a: ECAO:2000018 ! embryonic region
 relationship: develops_from ECAO:2000192 ! ectoendoderm
 relationship: part_of ECAO:2000184 ! border ectoderm
@@ -2310,9 +2317,9 @@ relationship: part_of ECAO:2000184 ! border ectoderm
 id: ECAO:2000188
 name: aboral border ectoderm
 def: "The portion of the border ectoderm that is located on the aboral side of the embryo." []
-synonym: "aboral BE" RELATED []
-synonym: "dorsal BE" RELATED []
 synonym: "veg1 aboral ectoderm" RELATED []
+synonym: "dorsal BE" RELATED []
+synonym: "aboral BE" RELATED []
 is_a: ECAO:2000018 ! embryonic region
 relationship: develops_from ECAO:2000192 ! ectoendoderm
 relationship: part_of ECAO:2000184 ! border ectoderm
@@ -2321,9 +2328,9 @@ relationship: part_of ECAO:2000184 ! border ectoderm
 id: ECAO:2000189
 name: lateral border ectoderm
 def: "The portion of the border ectoderm that is located between the oral and aboral border ectoderm. This region overlaps with part of the presumptive ciliary band." []
-synonym: "lateral BE" RELATED []
-synonym: "lateral border ectoderm" RELATED []
 synonym: "veg1 lateral ectoderm" RELATED []
+synonym: "lateral border ectoderm" RELATED []
+synonym: "lateral BE" RELATED []
 is_a: ECAO:2000018 ! embryonic region
 relationship: develops_from ECAO:2000192 ! ectoendoderm
 relationship: part_of ECAO:2000184 ! border ectoderm
@@ -2378,8 +2385,8 @@ id: ECAO:2000195
 name: inner anterior neuroectoderm
 def: "A disc shape region corresponding to the innermost part of the anterior neuroectoderm." []
 synonym: "inner ANE" RELATED []
-synonym: "inner animal pole domain" RELATED []
 synonym: "inner apical pole domain" RELATED []
+synonym: "inner animal pole domain" RELATED []
 is_a: ECAO:2000003 ! anatomical region
 relationship: part_of ECAO:2000194 ! anterior neuroectoderm
 
@@ -2388,8 +2395,8 @@ id: ECAO:2000196
 name: outer anterior neuroectoderm
 def: "A torus shaped region corresponding to the outer part of the anterior neuroectoderm." []
 synonym: "outer ANE" RELATED []
-synonym: "outer animal pole domain" RELATED []
 synonym: "outer apical pole domain" RELATED []
+synonym: "outer animal pole domain" RELATED []
 is_a: ECAO:2000003 ! anatomical region
 relationship: part_of ECAO:2000194 ! anterior neuroectoderm
 
@@ -2405,8 +2412,8 @@ relationship: part_of ECAO:2000164 ! ectoderm
 id: ECAO:2000198
 name: presumptive neuron
 def: "A progenitor cell that will develop into a neuron." []
-synonym: "neuron precursor" RELATED []
 synonym: "neuronal progenitor cell" RELATED []
+synonym: "neuron precursor" RELATED []
 is_a: ECAO:2000058 ! cell
 relationship: part_of ECAO:2000039 ! nervous system
 
@@ -2414,8 +2421,8 @@ relationship: part_of ECAO:2000039 ! nervous system
 id: ECAO:2000199
 name: presumptive apical pole domain neuron
 def: "An ectodermal progenitor cell from the animal pole domain that will develop into a neuron." []
-synonym: "animal pole domain neuronal progenitor cell" RELATED []
 synonym: "apical pole domain presumptive neuron" RELATED []
+synonym: "animal pole domain neuronal progenitor cell" RELATED []
 is_a: ECAO:2000198 ! presumptive neuron
 relationship: part_of ECAO:2000174 ! apical pole domain
 
@@ -2431,8 +2438,8 @@ relationship: part_of ECAO:2000164 ! ectoderm
 id: ECAO:2000201
 name: presumptive endoderm neuron
 def: "An endodermal cell that will develop into a neuron." []
-synonym: "endoderm-ssociated neuronal progenitor cell" RELATED []
 synonym: "presumptive endodermal neuron" RELATED []
+synonym: "endoderm-ssociated neuronal progenitor cell" RELATED []
 is_a: ECAO:2000198 ! presumptive neuron
 relationship: part_of ECAO:2000485 ! endoderm
 
@@ -2473,6 +2480,7 @@ id: ECAO:2000206
 name: larval neuron
 def: "A neuron that is present in a larva." []
 is_a: ECAO:2000205 ! neuron
+relationship: develops_from ECAO:2000198 ! presumptive neuron
 relationship: part_of ECAO:2000041 ! larval nervous system
 
 [Term]
@@ -2499,6 +2507,7 @@ def: "A neuron that derives from an endoderm presumptive neuron and is located i
 synonym: "endodermal neuron" RELATED []
 is_a: ECAO:2000206 ! larval neuron
 relationship: develops_from ECAO:2000201 ! presumptive endoderm neuron
+relationship: part_of ECAO:2000041 ! larval nervous system
 
 [Term]
 id: ECAO:2000210
@@ -2514,14 +2523,16 @@ name: serotonergic neuron
 def: "A neuron that releases serotonin as a neurotransmitter." []
 xref: CL:0000850
 is_a: ECAO:2000205 ! neuron
+relationship: part_of ECAO:2000039 ! nervous system
 
 [Term]
 id: ECAO:2000212
 name: synaptotagmin-B neuron
 def: "A neuron that produces the synaptotagmin-B protein." []
-synonym: "synaptotagmin-B positive neuron" RELATED []
 synonym: "synaptotagmin-B-expressing neuron" RELATED []
+synonym: "synaptotagmin-B positive neuron" RELATED []
 is_a: ECAO:2000205 ! neuron
+relationship: part_of ECAO:2000039 ! nervous system
 
 [Term]
 id: ECAO:2000213
@@ -2529,6 +2540,7 @@ name: dopaminergic neuron
 def: "A neuron that releases dopamine as a neurotransmitter." []
 xref: CL:0000700
 is_a: ECAO:2000205 ! neuron
+relationship: part_of ECAO:2000039 ! nervous system
 
 [Term]
 id: ECAO:2000214
@@ -2536,6 +2548,7 @@ name: GABAergic neuron
 def: "A neuron that uses GABA as a vesicular neurotransmitter." []
 xref: CL:0000617
 is_a: ECAO:2000205 ! neuron
+relationship: part_of ECAO:2000039 ! nervous system
 
 [Term]
 id: ECAO:2000215
@@ -2544,6 +2557,7 @@ def: "A neuron of which transmission is mediated by nitric oxide." []
 synonym: "nitrergic neuron" RELATED []
 xref: CL:0000528
 is_a: ECAO:2000205 ! neuron
+relationship: part_of ECAO:2000039 ! nervous system
 
 [Term]
 id: ECAO:2000216
@@ -2551,6 +2565,7 @@ name: cholinergic neuron
 def: "A neuron that uses acetylcholine as a vesicular neurotransmitter." []
 xref: CL:0000108
 is_a: ECAO:2000205 ! neuron
+relationship: part_of ECAO:2000039 ! nervous system
 
 [Term]
 id: ECAO:2000217
@@ -2559,6 +2574,7 @@ def: "Any neuron having a sensory function." []
 synonym: "sensory cell" RELATED []
 xref: CL:0000101
 is_a: ECAO:2000205 ! neuron
+relationship: part_of ECAO:2000039 ! nervous system
 
 [Term]
 id: ECAO:2000218
@@ -2593,6 +2609,7 @@ def: "A mass of nerve cell bodies." []
 synonym: "neuronal ganglion" RELATED []
 xref: UBERON:0000045
 is_a: ECAO:2000218 ! neural structure
+relationship: part_of ECAO:2000039 ! nervous system
 
 [Term]
 id: ECAO:2000222
@@ -2613,12 +2630,14 @@ id: ECAO:2000224
 name: right lateral ganglion
 def: "The lateral ganglion that forms on the right side of the larva." []
 is_a: ECAO:2000223 ! lateral ganglion
+relationship: part_of ECAO:2000041 ! larval nervous system
 
 [Term]
 id: ECAO:2000225
 name: left lateral ganglion
 def: "The lateral ganglion that forms on the left side of the larva." []
 is_a: ECAO:2000223 ! lateral ganglion
+relationship: part_of ECAO:2000041 ! larval nervous system
 
 [Term]
 id: ECAO:2000226
@@ -2644,8 +2663,8 @@ id: ECAO:2000228
 name: presumptive ciliary band
 def: "A specific embryonic ectodermal territory comprises between the oral and aboral ectoderm and that will give rise to the ciliary band." []
 synonym: "presumptive ciliated band" RELATED []
-synonym: "prospective ciliary band" RELATED []
 synonym: "ridge of thickened ectoderm" RELATED []
+synonym: "prospective ciliary band" RELATED []
 is_a: ECAO:2000018 ! embryonic region
 relationship: part_of ECAO:2000164 ! ectoderm
 
@@ -2686,6 +2705,7 @@ name: oral hood ciliary band
 def: "The portion of the ciliary band located along the edge of the oral hood, anterior to the mouth." []
 is_a: ECAO:2000230 ! ciliary band
 relationship: develops_from ECAO:2000229 ! presumptive oral ciliary band
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000234
@@ -2699,30 +2719,35 @@ id: ECAO:2000235
 name: arm bud ciliary band
 def: "The portion of the ciliary band that covers the arm buds." []
 is_a: ECAO:2000228 ! presumptive ciliary band
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000236
 name: arm ciliary band
 def: "The portion of the ciliary band that outlines a larval arm." []
 is_a: ECAO:2000230 ! ciliary band
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000237
 name: arm distal tip ciliary band
 def: "The portion of the arm ciliary band that covers the arm distal tip." []
 is_a: ECAO:2000236 ! arm ciliary band
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000238
 name: arm proximal tip ciliary band
 def: "The portion of the arm ciliary band that covers the arm proximal tip." []
 is_a: ECAO:2000236 ! arm ciliary band
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000239
 name: arm middle portion ciliary band
 def: "The portion of the arm ciliary band that covers the region of the arm between the distal and proximal tips." []
 is_a: ECAO:2000236 ! arm ciliary band
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000240
@@ -2736,30 +2761,35 @@ id: ECAO:2000241
 name: animal presumptive ciliary band
 def: "The portion of the presumptive ciliary band that overlaps with the animal pole domain." []
 is_a: ECAO:2000228 ! presumptive ciliary band
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000242
 name: vegetal presumtive ciliary band
 def: "The portion of the presumptive ciliary band  located close to the vegetal pole." []
 is_a: ECAO:2000228 ! presumptive ciliary band
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000243
 name: lateral presumptive ciliary band
 def: "The portion of the presumptive ciliary located between the animal and the vegetal presumptive ciliary bands." []
 is_a: ECAO:2000228 ! presumptive ciliary band
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000244
 name: preoral presumptive ciliary band
 def: "In species with two separate ciliary bands, a specific embryonic territory that will develop into the preoral ciliary band." []
 is_a: ECAO:2000228 ! presumptive ciliary band
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000245
 name: postoral presumptive ciliary band
 def: "In species with two separate ciliary bands, a specific embryonic territory that will develop into the postoral ciliary band." []
 is_a: ECAO:2000228 ! presumptive ciliary band
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000246
@@ -2768,6 +2798,7 @@ def: "In species with two separate ciliary bands, a short ciliary band contained
 synonym: "anterior ciliary band loop" RELATED []
 is_a: ECAO:2000230 ! ciliary band
 relationship: develops_from ECAO:2000244 ! preoral presumptive ciliary band
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000247
@@ -2776,6 +2807,7 @@ def: "In species with two separate ciliary bands, a ciliary band that surrounds 
 synonym: "posterior ciliary band loop" RELATED []
 is_a: ECAO:2000230 ! ciliary band
 relationship: develops_from ECAO:2000245 ! postoral presumptive ciliary band
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000248
@@ -2790,8 +2822,8 @@ id: ECAO:2000249
 name: oral hood
 def: "A shelf-like projection on the ventral side of the larva, anterior to the mouth." []
 synonym: "oh" RELATED []
-synonym: "PL" RELATED []
 synonym: "preoral lobe" RELATED []
+synonym: "PL" RELATED []
 is_a: ECAO:2000001 ! anatomical structure
 relationship: part_of ECAO:2000012 ! larva
 
@@ -2886,9 +2918,9 @@ relationship: part_of ECAO:2000251 ! arm bud
 id: ECAO:2000262
 name: skeletal rod
 def: "A linear biomineralized element arising from one of the three radii of a triradiate spicule rudiment and looking as a needle-like structure." []
-synonym: "branch" RELATED []
-synonym: "rod" RELATED []
 synonym: "spicule rod" RELATED []
+synonym: "rod" RELATED []
+synonym: "branch" RELATED []
 is_a: ECAO:2000049 ! skeletal element
 relationship: develops_from ECAO:2000574 ! triradiate spicule rudiment
 relationship: part_of ECAO:2000575 ! triradiate spicule
@@ -3006,18 +3038,21 @@ name: postoral arm bud
 def: "An arm bud that will develop into a postoral arm." []
 is_a: ECAO:2000251 ! arm bud
 relationship: develops_from ECAO:2000184 ! border ectoderm
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000279
 name: right postoral arm bud
 def: "The arm bud on the right side of the embryo that will develop into a postoral arm." []
 is_a: ECAO:2000278 ! postoral arm bud
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000280
 name: left postoral arm bud
 def: "The arm bud on the left side of the embryo that will develop into a postoral arm." []
 is_a: ECAO:2000278 ! postoral arm bud
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000281
@@ -3027,26 +3062,29 @@ synonym: "PO" RELATED []
 synonym: "posterolateral arm" RELATED []
 is_a: ECAO:2000252 ! arm
 relationship: develops_from ECAO:2000278 ! postoral arm bud
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000282
 name: right postoral arm
 def: "The postoral arm that develops on the right side of the larva." []
-synonym: "right posterolateral arm" RELATED []
 synonym: "RPO" RELATED []
 synonym: "rPo" RELATED []
+synonym: "right posterolateral arm" RELATED []
 is_a: ECAO:2000281 ! postoral arm
 relationship: develops_from ECAO:2000279 ! right postoral arm bud
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000283
 name: left postoral arm
 def: "The postoral arm that develops on the left side of the larva." []
-synonym: "left posterolateral arm" RELATED []
 synonym: "LPO" RELATED []
 synonym: "lPo" RELATED []
+synonym: "left posterolateral arm" RELATED []
 is_a: ECAO:2000281 ! postoral arm
 relationship: develops_from ECAO:2000280 ! left postoral arm bud
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000284
@@ -3116,6 +3154,7 @@ id: ECAO:2000293
 name: postoral arm bud ectoderm
 def: "The portion of the ectoderm that outlines a postoral arm bud." []
 is_a: ECAO:2000256 ! arm bud ectoderm
+relationship: develops_from ECAO:2000184 ! border ectoderm
 relationship: part_of ECAO:2000278 ! postoral arm bud
 
 [Term]
@@ -3238,6 +3277,7 @@ def: "The postoral rod that supports a postoral arm on the right side of the lar
 synonym: "rPoR" RELATED []
 is_a: ECAO:2000308 ! postoral rod
 relationship: develops_from ECAO:2000333 ! right anonymous rod
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000310
@@ -3246,6 +3286,7 @@ def: "The postoral rod that supports a postoral arm on the left side of the larv
 synonym: "lPoR" RELATED []
 is_a: ECAO:2000308 ! postoral rod
 relationship: develops_from ECAO:2000334 ! left anonymous rod
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000311
@@ -3408,6 +3449,7 @@ name: right anonymous rod
 def: "The anonymous rod that forms on the right side of the embryo and remains on the right side of the pre-metamorphic organism." []
 is_a: ECAO:2000332 ! anonymous rod
 relationship: develops_from ECAO:2000577 ! right ventrolateral spicule granule
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000334
@@ -3415,6 +3457,7 @@ name: left anonymous rod
 def: "The anonymous rod that forms on the left side of the embryo and remains on the left side of the pre-metamorphic organism." []
 is_a: ECAO:2000332 ! anonymous rod
 relationship: develops_from ECAO:2000578 ! left ventrolateral spicule granule
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000335
@@ -3579,6 +3622,7 @@ def: "The anterolateral rod that forms on the right side of the pre-metamorphic 
 synonym: "rAlR" RELATED []
 is_a: ECAO:2000356 ! anterolateral rod
 relationship: develops_from ECAO:2000381 ! right dorsoventral connecting rod
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000358
@@ -3587,6 +3631,7 @@ def: "The anterolateral rod that forms on the left side of the pre-metamorphic o
 synonym: "lAlR" RELATED []
 is_a: ECAO:2000356 ! anterolateral rod
 relationship: develops_from ECAO:2000382 ! left dorsoventral connecting rod
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000359
@@ -3751,6 +3796,7 @@ def: "The dorsoventral connecting rod that forms on the right side of the pre-me
 synonym: "rDvcR" RELATED []
 is_a: ECAO:2000380 ! dorsoventral connecting rod
 relationship: develops_from ECAO:2000577 ! right ventrolateral spicule granule
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000382
@@ -3759,6 +3805,7 @@ def: "The dorsoventral connecting rod that forms on the left side of the pre-met
 synonym: "lDvcR" RELATED []
 is_a: ECAO:2000380 ! dorsoventral connecting rod
 relationship: develops_from ECAO:2000578 ! left ventrolateral spicule granule
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000383
@@ -3967,6 +4014,7 @@ def: "The ventral transverse rod that forms on the right side of the pre-metamor
 synonym: "rVtR" RELATED []
 is_a: ECAO:2000410 ! ventral transverse rod
 relationship: develops_from ECAO:2000577 ! right ventrolateral spicule granule
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000412
@@ -3975,6 +4023,7 @@ def: "The ventral transverse rod that forms on the left side of the pre-metamorp
 synonym: "lVtR" RELATED []
 is_a: ECAO:2000410 ! ventral transverse rod
 relationship: develops_from ECAO:2000578 ! left ventrolateral spicule granule
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000413
@@ -4139,6 +4188,7 @@ def: "The body rod that forms on the right side of the pre-metamorphic organism.
 synonym: "rBR" RELATED []
 is_a: ECAO:2000434 ! body rod
 relationship: develops_from ECAO:2000333 ! right anonymous rod
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000436
@@ -4147,13 +4197,14 @@ def: "The body rod that forms on the left side of the pre-metamorphic organism."
 synonym: "lBR" RELATED []
 is_a: ECAO:2000434 ! body rod
 relationship: develops_from ECAO:2000334 ! left anonymous rod
+relationship: part_of ECAO:2000048 ! pre-metamorphic organism endoskeleton
 
 [Term]
 id: ECAO:2000437
 name: body rod distal tip
 def: "The growing tip of a body rod as it extends dorsally away from an anonymous rod." []
-synonym: "body rod distal tip" RELATED []
 synonym: "posterior tip body rod" RELATED []
+synonym: "body rod distal tip" RELATED []
 is_a: ECAO:2000263 ! skeletal rod distal tip
 relationship: part_of ECAO:2000434 ! body rod
 
@@ -4330,6 +4381,7 @@ def: "The recurrent rod that forms on the right side of the pre-metamorphic orga
 synonym: "rRR" RELATED []
 is_a: ECAO:2000460 ! recurrent rod
 relationship: develops_from ECAO:2000381 ! right dorsoventral connecting rod
+relationship: part_of ECAO:2000047 ! larval endoskeleton
 
 [Term]
 id: ECAO:2000462
@@ -4338,6 +4390,7 @@ def: "The recurrent rod that forms on the left side of the pre-metamorphic organ
 synonym: "lRR" RELATED []
 is_a: ECAO:2000460 ! recurrent rod
 relationship: develops_from ECAO:2000382 ! left dorsoventral connecting rod
+relationship: part_of ECAO:2000047 ! larval endoskeleton
 
 [Term]
 id: ECAO:2000463
@@ -4503,6 +4556,7 @@ def: "The innermost primary germ layer, which forms during gastrulation and will
 xref: UBERON:0000925
 is_a: ECAO:2000162 ! germ layer
 relationship: develops_from ECAO:2000484 ! presumptive endoderm
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000486
@@ -4521,6 +4575,7 @@ synonym: "veg1 endo" RELATED []
 synonym: "veg1 endoderm" RELATED []
 is_a: ECAO:2000484 ! presumptive endoderm
 relationship: develops_from ECAO:2000192 ! ectoendoderm
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000488
@@ -4530,12 +4585,15 @@ synonym: "veg2 endo" RELATED []
 synonym: "veg2 endoderm" RELATED []
 is_a: ECAO:2000484 ! presumptive endoderm
 relationship: develops_from ECAO:2000193 ! endomesoderm
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000489
 name: embryonic endoderm
 def: "The endoderm that is specifically present in an embryo." []
 is_a: ECAO:2000485 ! endoderm
+relationship: develops_from ECAO:2000484 ! presumptive endoderm
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000490
@@ -4572,10 +4630,10 @@ relationship: part_of ECAO:2000492 ! vegetal plate
 id: ECAO:2000494
 name: archenteron
 def: "The invaginated tube of a gastrula embryo that will give rise to the larval digestive tract." []
-synonym: "embryonic gut" RELATED []
+synonym: "primordial digestive tube" RELATED []
 synonym: "primitive digestive tract" RELATED []
 synonym: "primitive gut" RELATED []
-synonym: "primordial digestive tube" RELATED []
+synonym: "embryonic gut" RELATED []
 xref: UBERON:0004735
 is_a: ECAO:2000001 ! anatomical structure
 relationship: develops_from ECAO:2000492 ! vegetal plate
@@ -4585,8 +4643,8 @@ relationship: part_of ECAO:2000008 ! embryo
 id: ECAO:2000495
 name: archenteron tip
 def: "The anterior territory of the archenteron." []
-synonym: "anterior archenteron" RELATED []
 synonym: "archenteron roof" RELATED []
+synonym: "anterior archenteron" RELATED []
 synonym: "tip of archetron" RELATED []
 xref: UBERON:3010432
 is_a: ECAO:2000018 ! embryonic region
@@ -4838,11 +4896,11 @@ relationship: part_of ECAO:2000006 ! multicellular organism
 id: ECAO:2000528
 name: coelomic evagination
 def: "The outpocketing of the mesoderm constituting the tip of the archenteron and forming a bilobed bag (or pouch) lying on the top of the archenteron roof." []
-synonym: "unpaire evagination of the coelom" RELATED []
-synonym: "unpaired coelomic evaginations" RELATED []
-synonym: "unpaired coelomic outpocketing" RELATED []
 synonym: "unpaired coelomic pouch" RELATED []
 synonym: "unpaired coelomic rudiment" RELATED []
+synonym: "unpaired coelomic outpocketing" RELATED []
+synonym: "unpaired coelomic evaginations" RELATED []
+synonym: "unpaire evagination of the coelom" RELATED []
 is_a: ECAO:2000001 ! anatomical structure
 relationship: develops_from ECAO:2000495 ! archenteron tip
 relationship: part_of ECAO:2000008 ! embryo
@@ -4862,6 +4920,7 @@ def: "The coelomic pouch present on the right side of the embryo or the larva." 
 synonym: "right coelomic sac" RELATED []
 is_a: ECAO:2000529 ! coelomic pouch
 relationship: develops_from ECAO:2000528 ! coelomic evagination
+relationship: part_of ECAO:2000013 ! pre-metamorphic organism
 
 [Term]
 id: ECAO:2000531
@@ -4870,6 +4929,7 @@ def: "The coelomic pouch present on the left side of the embryo or the larva." [
 synonym: "left coelomic sac" RELATED []
 is_a: ECAO:2000529 ! coelomic pouch
 relationship: develops_from ECAO:2000528 ! coelomic evagination
+relationship: part_of ECAO:2000013 ! pre-metamorphic organism
 
 [Term]
 id: ECAO:2000532
@@ -4914,6 +4974,7 @@ name: left anterior coelomic pouch
 def: "In species with a posterior enterocoel, it is the coelomic pouch that develops at the tip of the archenteron on the left side of the embryo." []
 synonym: "left anterior coelom" RELATED []
 is_a: ECAO:2000536 ! anterior coelomic pouch
+relationship: part_of ECAO:2000013 ! pre-metamorphic organism
 
 [Term]
 id: ECAO:2000538
@@ -4921,6 +4982,7 @@ name: right anterior coelomic pouch
 def: "In species with a posterior enterocoel, it is the coelomic pouch that develops at the tip of the archenteron on the right side of the embryo." []
 synonym: "right anterior coelom" RELATED []
 is_a: ECAO:2000536 ! anterior coelomic pouch
+relationship: part_of ECAO:2000013 ! pre-metamorphic organism
 
 [Term]
 id: ECAO:2000539
@@ -4943,11 +5005,12 @@ relationship: part_of ECAO:2000012 ! larva
 id: ECAO:2000541
 name: ventral epiderms
 def: "The epidermal tissue of the larva that surrounds the mouth." []
-synonym: "circumoral ectoderm" RELATED []
-synonym: "circumoral epithelium" RELATED []
 synonym: "oral epidermis" RELATED []
+synonym: "circumoral epithelium" RELATED []
+synonym: "circumoral ectoderm" RELATED []
 is_a: ECAO:2000540 ! larval epidermis
 relationship: develops_from ECAO:2000178 ! ventral ectoderm
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000542
@@ -4956,13 +5019,14 @@ def: "The epidermal tissue of the larva that is on the side opposite to the mout
 synonym: "aboral epidermis" RELATED []
 is_a: ECAO:2000540 ! larval epidermis
 relationship: develops_from ECAO:2000181 ! dorsal ectoderm
+relationship: part_of ECAO:2000012 ! larva
 
 [Term]
 id: ECAO:2000543
 name: primary pore canal rudiment
 def: "A strand of mesenchyme cells that extends from the left (or left anterior) coelom towards the ectoderm and will give rise to the primary pore canal." []
-synonym: "hydropore canal rudiment" RELATED []
 synonym: "presumptive hydropore canal" RELATED []
+synonym: "hydropore canal rudiment" RELATED []
 is_a: ECAO:2000001 ! anatomical structure
 relationship: develops_from ECAO:2000531 ! left coelomic pouch
 relationship: part_of ECAO:2000008 ! embryo
@@ -5001,6 +5065,7 @@ def: "The middle primary germ layer, which forms during gastrulation and will gi
 xref: UBERON:0000926
 is_a: ECAO:2000162 ! germ layer
 relationship: develops_from ECAO:2000546 ! presumptive mesoderm
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000548
@@ -5009,14 +5074,15 @@ def: "A tissue composed of mesenchymal cells." []
 xref: UBERON:0003104
 is_a: ECAO:2000021 ! tissue
 relationship: develops_from ECAO:2000547 ! mesoderm
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000549
 name: mesenchyme cell
 def: "A cell that has undergone epithelial to mesenchymal transition and is capable of migration." []
 synonym: "mesenchymal cell" RELATED []
-synonym: "migratory cell" RELATED []
 synonym: "motile cell" RELATED []
+synonym: "migratory cell" RELATED []
 xref: CL:0008019
 is_a: ECAO:2000058 ! cell
 relationship: develops_from ECAO:2000547 ! mesoderm
@@ -5028,6 +5094,7 @@ name: presumptive skeletogenic mesoderm
 def: "The region of the early embryo that will develop into skeletogenic mesoderm." []
 is_a: ECAO:2000546 ! presumptive mesoderm
 relationship: develops_from ECAO:2000547 ! mesoderm
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000551
@@ -5066,9 +5133,9 @@ relationship: part_of ECAO:2000553 ! skeletogenic mesenchyme
 id: ECAO:2000555
 name: embryonic skeletogenic mesenchyme
 def: "The skeletogenic mesenchyme that  is specifically present in an embryo and produces the embryonic endoskeleton." []
-synonym: "primary mesenchyme" RELATED []
 synonym: "skeletogenic mesenchyme" RELATED []
 synonym: "SM" RELATED []
+synonym: "primary mesenchyme" RELATED []
 is_a: ECAO:2000553 ! skeletogenic mesenchyme
 relationship: part_of ECAO:2000008 ! embryo
 
@@ -5078,8 +5145,8 @@ name: embryonic skeletogenic mesenchyme cell
 def: "A cell that is part of the embryonic skeletogenic mesenchyme and constitutes the embryonic endoskeleton." []
 synonym: "PMC" RELATED []
 synonym: "primary mesenchyme cell" RELATED []
-synonym: "skeletogenic mesenchyme cell" RELATED []
 synonym: "skeletogenic primary mesenchyme cell" RELATED []
+synonym: "skeletogenic mesenchyme cell" RELATED []
 synonym: "SM cell" RELATED []
 is_a: ECAO:2000554 ! skeletogenic mesenchyme cell
 relationship: part_of ECAO:2000555 ! embryonic skeletogenic mesenchyme
@@ -5110,13 +5177,14 @@ synonym: "syncytial network" RELATED []
 xref: CL:0000228
 is_a: ECAO:2000058 ! cell
 relationship: develops_from ECAO:2000549 ! mesenchyme cell
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000560
 name: syncytial filipodial cable
 def: "A filopodial cable that participates in the establishment of a syncytium." []
-synonym: "syncytial cable" RELATED []
 synonym: "syncytial lamellipodia" RELATED []
+synonym: "syncytial cable" RELATED []
 is_a: ECAO:2000026 ! embryonic structure
 relationship: part_of ECAO:2000559 ! syncytium
 
@@ -5132,12 +5200,12 @@ relationship: part_of ECAO:2000008 ! embryo
 id: ECAO:2000562
 name: subequatorial skeletogenic mesenchyme ring
 def: "The circumferential, syncytial network of embryonic skeletogenic mesenchyme cells that forms between the equator and the vegetal pole of the embryo during gastrulation and surrounds the developing digestive tract." []
-synonym: "PMC ring" RELATED []
-synonym: "primary mesenchyme cell ring" RELATED []
 synonym: "SM ring" RELATED []
-synonym: "subequatorial PMC ring" RELATED []
-synonym: "subequatorial primary mesenchyme cell ring" RELATED []
 synonym: "subequatorial SM ring" RELATED []
+synonym: "PMC ring" RELATED []
+synonym: "subequatorial PMC ring" RELATED []
+synonym: "primary mesenchyme cell ring" RELATED []
+synonym: "subequatorial primary mesenchyme cell ring" RELATED []
 is_a: ECAO:2000026 ! embryonic structure
 relationship: part_of ECAO:2000561 ! embryonic skeletogenic mesenchyme syncytium
 
@@ -5153,19 +5221,23 @@ relationship: part_of ECAO:2000562 ! subequatorial skeletogenic mesenchyme ring
 id: ECAO:2000564
 name: oral chain of skeletogenic mesenchyme cell
 def: "The chain of skeletogenic mesenchyme cell that within the subequatorial skeletogenic mesenchyme ring links the two ventrolateral skeletogenic mesenchyme clusters on the oral side of the embryo. The ventral transverse rods will be deposited along this cellular strand." []
-synonym: "oral chain of PMCs" RELATED []
 synonym: "ventral chain of PMCs" RELATED []
+synonym: "oral chain of PMCs" RELATED []
 synonym: "ventral skeletogenic mesenchyme chain" RELATED []
 is_a: ECAO:2000563 ! chain of skeletogenic mesenchyme cell
+relationship: develops_from ECAO:2000555 ! embryonic skeletogenic mesenchyme
+relationship: part_of ECAO:2000562 ! subequatorial skeletogenic mesenchyme ring
 
 [Term]
 id: ECAO:2000565
 name: aboral chain of skeletogenic mesenchyme cell
 def: "The chain of skeletogenic mesenchyme cell that within the subequatorial skeletogenic mesenchyme ring links the two ventrolateral skeletogenic mesenchyme clusters on the aboral side of the embryo. The body rods will be deposited along this cellular strand." []
-synonym: "aboral chain of PMCs" RELATED []
 synonym: "dorsal chain of PMCs" RELATED []
+synonym: "aboral chain of PMCs" RELATED []
 synonym: "dorsal skeletogenic mesenchyme chain" RELATED []
 is_a: ECAO:2000563 ! chain of skeletogenic mesenchyme cell
+relationship: develops_from ECAO:2000555 ! embryonic skeletogenic mesenchyme
+relationship: part_of ECAO:2000562 ! subequatorial skeletogenic mesenchyme ring
 
 [Term]
 id: ECAO:2000566
@@ -5189,12 +5261,16 @@ id: ECAO:2000568
 name: right ventrolateral skeletogenic mesenchyme cluster
 def: "A skeletogenic mesenchyme cluster that forms in the right, ventrolateral region of the embryo." []
 is_a: ECAO:2000567 ! ventrolateral skeletogenic mesenchyme cluster
+relationship: develops_from ECAO:2000555 ! embryonic skeletogenic mesenchyme
+relationship: part_of ECAO:2000562 ! subequatorial skeletogenic mesenchyme ring
 
 [Term]
 id: ECAO:2000569
 name: left ventrolateral skeletogenic mesenchyme cluster
 def: "A skeletogenic mesenchyme cluster that forms in the left, ventrolateral region of the embryo." []
 is_a: ECAO:2000567 ! ventrolateral skeletogenic mesenchyme cluster
+relationship: develops_from ECAO:2000555 ! embryonic skeletogenic mesenchyme
+relationship: part_of ECAO:2000562 ! subequatorial skeletogenic mesenchyme ring
 
 [Term]
 id: ECAO:2000570
@@ -5211,6 +5287,7 @@ name: right lateral chain of skeletogenic mesenchyme cell
 def: "The lateral chain that forms on the right side of the embryo from the right ventrolateral cluster." []
 synonym: "right lateral chain of PMCs" RELATED []
 is_a: ECAO:2000570 ! lateral chain of skeletogenic mesenchyme cell
+relationship: part_of ECAO:2000561 ! embryonic skeletogenic mesenchyme syncytium
 
 [Term]
 id: ECAO:2000572
@@ -5218,20 +5295,22 @@ name: left lateral chain of skeletogenic mesenchyme cell
 def: "The lateral chain that forms on the left side of the embryo from the left ventrolateral cluster." []
 synonym: "left lateral chain of PMCs" RELATED []
 is_a: ECAO:2000570 ! lateral chain of skeletogenic mesenchyme cell
+relationship: part_of ECAO:2000561 ! embryonic skeletogenic mesenchyme syncytium
 
 [Term]
 id: ECAO:2000573
 name: spicule granule
 def: "A very small, punctate deposit of calcite; i.e., the biomineralized primordium for spicule formation. It will undergo growth and often branching to produce a complex skeletal element." []
+synonym: "spicule primordium" RELATED []
+synonym: "spicule rudiment" RELATED []
+synonym: "small granules of calcite" RELATED []
+synonym: "spicule dot" RELATED []
+synonym: "spicule crystal" RELATED []
 synonym: "amorphous calcium carbonate-containing granule" RELATED []
 synonym: "rhombohedral calcite crystal" RELATED []
 synonym: "rhombohedral crystal" RELATED []
-synonym: "small granules of calcite" RELATED []
-synonym: "spicule crystal" RELATED []
-synonym: "spicule dot" RELATED []
-synonym: "spicule primordium" RELATED []
-synonym: "spicule rudiment" RELATED []
 is_a: ECAO:2000049 ! skeletal element
+relationship: part_of ECAO:2000045 ! endoskeleton
 
 [Term]
 id: ECAO:2000574
@@ -5241,6 +5320,7 @@ synonym: "spicule rudiment" RELATED []
 synonym: "triradiate element with elongating skeletal rods" RELATED []
 is_a: ECAO:2000049 ! skeletal element
 relationship: develops_from ECAO:2000573 ! spicule granule
+relationship: part_of ECAO:2000045 ! endoskeleton
 
 [Term]
 id: ECAO:2000575
@@ -5249,6 +5329,7 @@ def: "A skeletal, calcified structure composed of three elongated skeletal rods.
 synonym: "triradiate element" RELATED []
 is_a: ECAO:2000049 ! skeletal element
 relationship: develops_from ECAO:2000574 ! triradiate spicule rudiment
+relationship: part_of ECAO:2000045 ! endoskeleton
 
 [Term]
 id: ECAO:2000576
@@ -5264,6 +5345,7 @@ name: right ventrolateral spicule granule
 def: "A ventrolateral spicule granule that forms on the right side of the embryo." []
 is_a: ECAO:2000576 ! ventrolateral spicule granule
 relationship: develops_from ECAO:2000568 ! right ventrolateral skeletogenic mesenchyme cluster
+relationship: part_of ECAO:2000046 ! embryonic endoskeleton
 
 [Term]
 id: ECAO:2000578
@@ -5271,6 +5353,7 @@ name: left ventrolateral spicule granule
 def: "A ventrolateral spicule granule that forms on the left side of the embryo." []
 is_a: ECAO:2000576 ! ventrolateral spicule granule
 relationship: develops_from ECAO:2000569 ! left ventrolateral skeletogenic mesenchyme cluster
+relationship: part_of ECAO:2000046 ! embryonic endoskeleton
 
 [Term]
 id: ECAO:2000579
@@ -5286,6 +5369,7 @@ name: right ventrolateral triradiate spicule rudiment
 def: "A ventrolateral triradiate spicule rudiment that forms on the right side of embryo. This rudiment elongates its radii between the vegetal pole and the equator of the embryo along and away from the oral wall of the blastocoel." []
 is_a: ECAO:2000579 ! ventrolateral triradiate spicule rudiment
 relationship: develops_from ECAO:2000577 ! right ventrolateral spicule granule
+relationship: part_of ECAO:2000046 ! embryonic endoskeleton
 
 [Term]
 id: ECAO:2000581
@@ -5293,6 +5377,7 @@ name: left ventrolateral triradiate spicule rudiment
 def: "A ventrolateral triradiate spicule rudiment that forms on the left side of embryo. This rudiment elongates its radii between the vegetal pole and the equator of the embryo along and away from the oral wall of the blastocoel." []
 is_a: ECAO:2000579 ! ventrolateral triradiate spicule rudiment
 relationship: develops_from ECAO:2000578 ! left ventrolateral spicule granule
+relationship: part_of ECAO:2000046 ! embryonic endoskeleton
 
 [Term]
 id: ECAO:2000582
@@ -5300,6 +5385,7 @@ name: presumptive non-skeletogenic mesoderm
 def: "An embryonic, larval or adult region that will develop into non-skeletogenic mesoderm and/or mesenchyme derivatives." []
 is_a: ECAO:2000546 ! presumptive mesoderm
 relationship: develops_from ECAO:2000547 ! mesoderm
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000583
@@ -5307,6 +5393,7 @@ name: non-skeletogenic mesoderm
 def: "The subset of the mesoderm germ layer that will give rise to all mesoderm tissue derivatives but the endoskeleton; e.g. muscles, coeloms, pigment cells, blastocoelar cells." []
 is_a: ECAO:2000547 ! mesoderm
 relationship: develops_from ECAO:2000582 ! presumptive non-skeletogenic mesoderm
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000584
@@ -5321,6 +5408,7 @@ name: non-skeletogenic mesenchyme
 def: "All mesenchyme present in the embryo, larva, or adult but that does not constitute the endoskeleton." []
 is_a: ECAO:2000548 ! mesenchyme
 relationship: develops_from ECAO:2000583 ! non-skeletogenic mesoderm
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000586
@@ -5335,6 +5423,7 @@ name: vegetal tier 2 non-skeletogenic mesoderm
 def: "The presumptive embryonic non-skeletogenic mesoderm that derives from the vegetal 2 tier cells and not from the small micromere descendants." []
 is_a: ECAO:2000582 ! presumptive non-skeletogenic mesoderm
 relationship: develops_from ECAO:2000153 ! vegetal tier 2
+relationship: part_of ECAO:2000053 ! vegetal hemisphere
 
 [Term]
 id: ECAO:2000588
@@ -5348,8 +5437,8 @@ relationship: part_of ECAO:2000008 ! embryo
 id: ECAO:2000589
 name: embryonic non-skeletogenic mesenchyme cell
 def: "An embryonic cell that after undergoing an epithelial-to-mesenchymal transition in present in the blastocoel and will give rise to a non-skeletogenic mesenchyme derivative; e.g. pigment cells, blastocoelar cells, globular cells." []
-synonym: "secondary mesenchyme cell" RELATED []
 synonym: "SMC" RELATED []
+synonym: "secondary mesenchyme cell" RELATED []
 is_a: ECAO:2000586 ! non-skeletogenic mesenchyme cell
 relationship: part_of ECAO:2000588 ! embryonic non-skeletogenic mesenchyme
 
@@ -5372,6 +5461,7 @@ id: ECAO:2000592
 name: embryonic mesenchyme cell
 def: "In echinoderms with no embryonic endoskeleton, all embryonic cells that have undergone an epithelial-to-mesenchymal transition and will participate in the elaboration of non-skeletogenic mesoderm derivatives; e.g. pigment cells, blastocoelar cells." []
 is_a: ECAO:2000549 ! mesenchyme cell
+relationship: develops_from ECAO:2000547 ! mesoderm
 relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
@@ -5385,9 +5475,9 @@ relationship: part_of ECAO:2000012 ! larva
 id: ECAO:2000594
 name: oral presumptive non-skeletogenic mesoderm
 def: "The presumptive embryonic non-skeletogenic mesoderm that in the vegetal plate is on the oral side of the embryo." []
+synonym: "ventral presumptive embryonic non-skeletogenic mesoderm" RELATED []
 synonym: "oral non-skeletogenic mesoderm" RELATED []
 synonym: "ventral non-skeletogenic mesoderm" RELATED []
-synonym: "ventral presumptive embryonic non-skeletogenic mesoderm" RELATED []
 is_a: ECAO:2000582 ! presumptive non-skeletogenic mesoderm
 relationship: develops_from ECAO:2000053 ! vegetal hemisphere
 relationship: part_of ECAO:2000492 ! vegetal plate
@@ -5396,9 +5486,9 @@ relationship: part_of ECAO:2000492 ! vegetal plate
 id: ECAO:2000595
 name: aboral presumptive non-skeletogenic mesoderm
 def: "The presumptive embryonic non-skeletogenic mesoderm that in the vegetal plate is on the aboral side of the embryo." []
+synonym: "dorsal presumptive embryonic non-skeletogenic mesoderm" RELATED []
 synonym: "aboral non-skeletogenic mesoderm" RELATED []
 synonym: "dorsal non-skeletogenic mesoderm" RELATED []
-synonym: "dorsal presumptive embryonic non-skeletogenic mesoderm" RELATED []
 is_a: ECAO:2000582 ! presumptive non-skeletogenic mesoderm
 relationship: develops_from ECAO:2000053 ! vegetal hemisphere
 relationship: part_of ECAO:2000492 ! vegetal plate
@@ -5415,8 +5505,8 @@ relationship: part_of ECAO:2000594 ! oral presumptive non-skeletogenic mesoderm
 id: ECAO:2000597
 name: presumptive pigment cell
 def: "A cell that within the aboral presumptive embryonic non-skeletogenic mesoderm will give rise to a pigment cell." []
-synonym: "presumptive immunocyte" RELATED []
 synonym: "presumptive pigmented cell" RELATED []
+synonym: "presumptive immunocyte" RELATED []
 is_a: ECAO:2000582 ! presumptive non-skeletogenic mesoderm
 relationship: develops_from ECAO:2000492 ! vegetal plate
 relationship: part_of ECAO:2000595 ! aboral presumptive non-skeletogenic mesoderm
@@ -5435,6 +5525,7 @@ name: blastocoelar cell
 def: "A class of migratory, non-skeletogenic mesenchyme cell, fibroblastic in appearance, which secrete extracellular matrix and exert immune cell functions." []
 is_a: ECAO:2000598 ! immune cell
 relationship: develops_from ECAO:2000596 ! presumptive blastocoelar cell
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000600
@@ -5443,6 +5534,7 @@ def: "A class of migratory, non-skeletogenic mesenchyme cell that produces visib
 xref: CL:0000147
 is_a: ECAO:2000598 ! immune cell
 relationship: develops_from ECAO:2000597 ! presumptive pigment cell
+relationship: part_of ECAO:2000006 ! multicellular organism
 
 [Term]
 id: ECAO:2000601
@@ -5465,6 +5557,8 @@ id: ECAO:2000603
 name: phagocytic filopodial cell
 def: "The subset of the filopodial cells that are phagocytic and express the immune effector gene 185/333." []
 is_a: ECAO:2000602 ! filopodial cell
+relationship: develops_from ECAO:2000599 ! blastocoelar cell
+relationship: part_of ECAO:2000034 ! larval immune system
 
 [Term]
 id: ECAO:2000604
@@ -5519,8 +5613,8 @@ relationship: part_of ECAO:2000607 ! muscle
 id: ECAO:2000609
 name: sphincter primordium
 def: "An initial constriction within the archenteron marking where a sphincter will form." []
-synonym: "gut constriction" RELATED []
 synonym: "sphincter constriction" RELATED []
+synonym: "gut constriction" RELATED []
 is_a: ECAO:2000532 ! constriction
 relationship: part_of ECAO:2000008 ! embryo
 
@@ -5528,8 +5622,8 @@ relationship: part_of ECAO:2000008 ! embryo
 id: ECAO:2000610
 name: sphincter
 def: "A circular band of muscles that regulates the constriction or relaxation of a natural body passage or orifice for normal physiological functions." []
-synonym: "gastrointestinal sphincter" RELATED []
 synonym: "sphincter muscle" RELATED []
+synonym: "gastrointestinal sphincter" RELATED []
 xref: UBERON:0004590
 is_a: ECAO:2000607 ! muscle
 relationship: part_of ECAO:2000029 ! digestive system
@@ -5538,9 +5632,9 @@ relationship: part_of ECAO:2000029 ! digestive system
 id: ECAO:2000611
 name: pyloric sphincter primordium
 def: "The initial constriction within the archenteron that will develop into the pyloric sphincter and separates the midgut and hindgut." []
-synonym: "midgut-hindgut constriction" RELATED []
-synonym: "pyloric constriction" RELATED []
 synonym: "pyloric sphincter constriction" RELATED []
+synonym: "pyloric constriction" RELATED []
+synonym: "midgut-hindgut constriction" RELATED []
 is_a: ECAO:2000609 ! sphincter primordium
 relationship: part_of ECAO:2000494 ! archenteron
 
@@ -5558,9 +5652,9 @@ relationship: part_of ECAO:2000031 ! larval digestive system
 id: ECAO:2000613
 name: cardiac sphincter primordium
 def: "The initial constriction within the archenteron that will develop into the cardiac sphincter and separates the foregut and the midgut." []
-synonym: "cardiac constriction" RELATED []
 synonym: "cardiac sphincter constriction" RELATED []
 synonym: "foregut-midgut constriction" RELATED []
+synonym: "cardiac constriction" RELATED []
 is_a: ECAO:2000609 ! sphincter primordium
 relationship: part_of ECAO:2000494 ! archenteron
 
@@ -5578,17 +5672,18 @@ relationship: part_of ECAO:2000031 ! larval digestive system
 id: ECAO:2000615
 name: anal sphincter primordium
 def: "The initial constriction at the posterior end of the archenteron (i.e. at the level of the blastopore) that will develop into the anal sphincter." []
-synonym: "anal constriction" RELATED []
 synonym: "anal sphincter contriction" RELATED []
+synonym: "anal constriction" RELATED []
 is_a: ECAO:2000609 ! sphincter primordium
 relationship: develops_from ECAO:2000494 ! archenteron
+relationship: part_of ECAO:2000008 ! embryo
 
 [Term]
 id: ECAO:2000616
 name: anal sphincter
 def: "The sphincter that forms in the lava between the intestine  and the epidermis and encircle the anus." []
-synonym: "anal pore" RELATED []
 synonym: "intestin-ectoderm constriction" RELATED []
+synonym: "anal pore" RELATED []
 xref: UBERON:0004916
 is_a: ECAO:2000610 ! sphincter
 relationship: develops_from ECAO:2000615 ! anal sphincter primordium
@@ -5639,4 +5734,47 @@ def: "A cell that is part of the circumesophageal muscle." []
 synonym: "presumptive circumesophageal muscle cell" RELATED []
 is_a: ECAO:2000608 ! muscle cell
 relationship: part_of ECAO:2000621 ! circumesophageal muscle
+
+[Term]
+id: NCBITaxon:1
+name: root
+
+[Term]
+id: NCBITaxon:46514
+name: Patiria miniata
+is_a: NCBITaxon:1 ! root
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:7632
+name: Eucidaris tribuloides
+is_a: NCBITaxon:1 ! root
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:7654
+name: Lytechinus variegatus
+is_a: NCBITaxon:1 ! root
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:7656
+name: Paracentrotus lividus
+is_a: NCBITaxon:1 ! root
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:7668
+name: Strongylocentrotus purpuratus
+is_a: NCBITaxon:1 ! root
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:species
+name: species
+is_a: taxonomic_rank ! taxonomic rank
+
+[Term]
+id: taxonomic_rank
+name: taxonomic rank
 
