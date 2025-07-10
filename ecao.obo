@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2025-07-09
+data-version: releases/2025-07-10
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 idspace: dc http://purl.org/dc/elements/1.1/ 
@@ -11,7 +11,7 @@ idspace: swrlb http://www.w3.org/2003/11/swrlb#
 idspace: terms http://purl.org/dc/terms/ 
 ontology: ecao
 property_value: dc:title "Echinoderm Anatomy and Development Ontology" xsd:string
-property_value: owl:versionInfo "2025-07-09" xsd:string
+property_value: owl:versionInfo "2025-07-10" xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by/3.0/
 
 [Term]
@@ -147,9 +147,14 @@ name: biological entity
 is_a: BFO:0000004 ! independent continuant
 
 [Term]
+id: ECAO:1000000
+name: Echinoderm anatomy and development
+
+[Term]
 id: ECAO:1000001
 name: developmental stage
 def: "A temporal interval that defines echinoderm life from unfertilized egg to adult stage." []
+is_a: ECAO:1000000 ! Echinoderm anatomy and development
 
 [Term]
 id: ECAO:1000002
@@ -907,6 +912,7 @@ name: anatomy
 def: "A biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species." []
 synonym: "echinoderm anatomical entity" RELATED []
 xref: UBERON:0001062
+is_a: ECAO:1000000 ! Echinoderm anatomy and development
 
 [Term]
 id: ECAO:2000001

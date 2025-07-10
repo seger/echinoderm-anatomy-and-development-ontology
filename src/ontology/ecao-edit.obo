@@ -6,9 +6,14 @@ property_value: http://purl.org/dc/elements/1.1/title "Echinoderm Anatomy and De
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 
 [Term]
+id: ECAO:1000000
+name: Echinoderm anatomy and development
+
+[Term]
 id: ECAO:1000001
 name: developmental stage
 def: "A temporal interval that defines echinoderm life from unfertilized egg to adult stage." []
+is_a: ECAO:1000000 ! Echinoderm anatomy and development
 
 [Term]
 id: ECAO:1000002
@@ -719,6 +724,7 @@ name: anatomy
 def: "A biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species." []
 synonym: "echinoderm anatomical entity" RELATED []
 xref: UBERON:0001062
+is_a: ECAO:1000000 ! Echinoderm anatomy and development
 
 [Term]
 id: ECAO:2000001

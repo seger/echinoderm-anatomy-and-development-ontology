@@ -11,12 +11,12 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecao/ecao-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecao/releases/2025-07-09/ecao-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecao/releases/2025-07-10/ecao-base.owl"/>
         <dc:title>Echinoderm Anatomy and Development Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo>2025-07-09</owl:versionInfo>
+        <owl:versionInfo>2025-07-10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -144,9 +144,19 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECAO_1000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECAO_1000000">
+        <oboInOwl:id>ECAO:1000000</oboInOwl:id>
+        <rdfs:label>Echinoderm anatomy and development</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECAO_1000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECAO_1000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECAO_1000000"/>
         <obo:IAO_0000115>A temporal interval that defines echinoderm life from unfertilized egg to adult stage.</obo:IAO_0000115>
         <oboInOwl:id>ECAO:1000001</oboInOwl:id>
         <rdfs:label>developmental stage</rdfs:label>
@@ -2127,6 +2137,7 @@
     <!-- http://purl.obolibrary.org/obo/ECAO_2000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECAO_2000000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECAO_1000000"/>
         <obo:IAO_0000115>A biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UBERON:0001062</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym>echinoderm anatomical entity</oboInOwl:hasRelatedSynonym>

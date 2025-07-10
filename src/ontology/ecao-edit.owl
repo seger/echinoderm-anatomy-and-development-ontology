@@ -13,6 +13,7 @@ Annotation(<http://purl.org/dc/elements/1.1/title> "Echinoderm Anatomy and Devel
 Annotation(<http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/3.0/>)
 Annotation(<http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion> "1.2")
 
+Declaration(Class(<http://purl.obolibrary.org/obo/ECAO_1000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECAO_1000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECAO_1000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECAO_1000003>))
@@ -769,11 +770,17 @@ AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#has
 #   Classes
 ############################
 
+# Class: <http://purl.obolibrary.org/obo/ECAO_1000000> (Echinoderm anatomy and development)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/ECAO_1000000> "ECAO:1000000")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_1000000> "Echinoderm anatomy and development")
+
 # Class: <http://purl.obolibrary.org/obo/ECAO_1000001> (developmental stage)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECAO_1000001> "A temporal interval that defines echinoderm life from unfertilized egg to adult stage.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/ECAO_1000001> "ECAO:1000001")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_1000001> "developmental stage")
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_1000001> <http://purl.obolibrary.org/obo/ECAO_1000000>)
 
 # Class: <http://purl.obolibrary.org/obo/ECAO_1000002> (life cycle)
 
@@ -1569,6 +1576,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ECAO_2000000> "echinoderm anatomical entity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/ECAO_2000000> "ECAO:2000000")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_2000000> "anatomy")
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000000> <http://purl.obolibrary.org/obo/ECAO_1000000>)
 
 # Class: <http://purl.obolibrary.org/obo/ECAO_2000001> (anatomical structure)
 
