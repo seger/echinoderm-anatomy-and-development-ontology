@@ -17,11 +17,11 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecao.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecao/releases/2025-07-11/ecao.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecao/releases/2025-07-15/ecao.owl"/>
         <dc:title>Echinoderm Anatomy and Development Ontology</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo>2025-07-11</owl:versionInfo>
+        <owl:versionInfo>2025-07-15</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -8296,6 +8296,12 @@ For example, A and B may be gene products and binding of B by A positively regul
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000058"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#develops_from"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000066"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#existence_ends_during"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_1000047"/>
             </owl:Restriction>
@@ -9884,6 +9890,12 @@ For example, A and B may be gene products and binding of B by A positively regul
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#existence_starts_during"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_1000062"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000008"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The portion of the ectoderm that is located between the oral and aboral ectoderm of an embryo or the ventral and dorsal ectoderm of a larva.</obo:IAO_0000115>
@@ -20588,6 +20600,12 @@ For example, A and B may be gene products and binding of B by A positively regul
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000553"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#develops_from"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000550"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#existence_ends_during"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_1000065"/>
             </owl:Restriction>
@@ -21402,7 +21420,7 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- http://purl.obolibrary.org/obo/ECAO_2000583 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECAO_2000583">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000547"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000021"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#develops_from"/>
@@ -21419,6 +21437,12 @@ For example, A and B may be gene products and binding of B by A positively regul
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#existence_starts_during"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_1000062"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000547"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The subset of the mesoderm germ layer that will give rise to all mesoderm tissue derivatives but the endoskeleton; e.g. muscles, coeloms, pigment cells, blastocoelar cells.</obo:IAO_0000115>
@@ -21472,7 +21496,7 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- http://purl.obolibrary.org/obo/ECAO_2000585 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECAO_2000585">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000548"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000021"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#develops_from"/>
@@ -21489,6 +21513,12 @@ For example, A and B may be gene products and binding of B by A positively regul
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#existence_starts_during"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_1000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000548"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>All mesenchyme present in the embryo, larva, or adult but that does not constitute the endoskeleton.</obo:IAO_0000115>
@@ -21566,6 +21596,12 @@ For example, A and B may be gene products and binding of B by A positively regul
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECAO_2000588">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000585"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#develops_from"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000582"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#existence_ends_during"/>
@@ -22648,6 +22684,12 @@ For example, A and B may be gene products and binding of B by A positively regul
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000607"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#develops_from"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000495"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#existence_ends_during"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_1000009"/>
             </owl:Restriction>
@@ -22676,6 +22718,12 @@ For example, A and B may be gene products and binding of B by A positively regul
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECAO_2000622">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000608"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#develops_from"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000495"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#existence_ends_during"/>

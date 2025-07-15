@@ -4192,6 +4192,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/ECAO_2000134> "ECAO:2000134")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_2000134> "polar body")
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000134> <http://purl.obolibrary.org/obo/ECAO_2000058>)
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000134> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#develops_from> <http://purl.obolibrary.org/obo/ECAO_2000066>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000134> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_ends_during> <http://purl.obolibrary.org/obo/ECAO_1000047>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000134> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_starts_during> <http://purl.obolibrary.org/obo/ECAO_1000010>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000134> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000061>))
@@ -5057,6 +5058,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000182> <http://purl.obolibrary
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000182> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#develops_from> <http://purl.obolibrary.org/obo/ECAO_2000163>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000182> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_ends_during> <http://purl.obolibrary.org/obo/ECAO_1000009>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000182> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_starts_during> <http://purl.obolibrary.org/obo/ECAO_1000062>))
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000182> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000008>))
 
 # Class: <http://purl.obolibrary.org/obo/ECAO_2000183> (equatorial ectoderm)
 
@@ -11341,6 +11343,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/ECAO_2000555> "ECAO:2000555")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_2000555> "embryonic skeletogenic mesenchyme")
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000555> <http://purl.obolibrary.org/obo/ECAO_2000553>)
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000555> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#develops_from> <http://purl.obolibrary.org/obo/ECAO_2000550>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000555> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_ends_during> <http://purl.obolibrary.org/obo/ECAO_1000065>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000555> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_starts_during> <http://purl.obolibrary.org/obo/ECAO_1000058>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000555> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000008>))
@@ -11837,7 +11840,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000582> <http://purl.obolibrary
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000582> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#develops_from> <http://purl.obolibrary.org/obo/ECAO_2000547>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000582> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_ends_during> <http://purl.obolibrary.org/obo/ECAO_1000061>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000582> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_starts_during> <http://purl.obolibrary.org/obo/ECAO_1000057>))
-SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000582> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000006>))
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000582> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000008>))
 
 # Class: <http://purl.obolibrary.org/obo/ECAO_2000583> (non-skeletogenic mesoderm)
 
@@ -11850,11 +11853,11 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0002175> <http://purl.obo
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/ECAO_2000583> "echinoderm_anatomy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/ECAO_2000583> "ECAO:2000583")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_2000583> "non-skeletogenic mesoderm")
-SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000583> <http://purl.obolibrary.org/obo/ECAO_2000547>)
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000583> <http://purl.obolibrary.org/obo/ECAO_2000021>)
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000583> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#develops_from> <http://purl.obolibrary.org/obo/ECAO_2000582>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000583> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_ends_during> <http://purl.obolibrary.org/obo/ECAO_1000063>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000583> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_starts_during> <http://purl.obolibrary.org/obo/ECAO_1000062>))
-SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000583> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000006>))
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000583> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000547>))
 
 # Class: <http://purl.obolibrary.org/obo/ECAO_2000584> (non-skeletogenic mesoderm cell)
 
@@ -11883,11 +11886,11 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0002175> <http://purl.obo
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/ECAO_2000585> "echinoderm_anatomy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/ECAO_2000585> "ECAO:2000585")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_2000585> "non-skeletogenic mesenchyme")
-SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000585> <http://purl.obolibrary.org/obo/ECAO_2000548>)
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000585> <http://purl.obolibrary.org/obo/ECAO_2000021>)
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000585> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#develops_from> <http://purl.obolibrary.org/obo/ECAO_2000583>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000585> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_ends_during> <http://purl.obolibrary.org/obo/ECAO_1000009>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000585> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_starts_during> <http://purl.obolibrary.org/obo/ECAO_1000059>))
-SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000585> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000006>))
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000585> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000548>))
 
 # Class: <http://purl.obolibrary.org/obo/ECAO_2000586> (non-skeletogenic mesenchyme cell)
 
@@ -11935,6 +11938,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/ECAO_2000588> "ECAO:2000588")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_2000588> "embryonic non-skeletogenic mesenchyme")
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000588> <http://purl.obolibrary.org/obo/ECAO_2000585>)
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000588> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#develops_from> <http://purl.obolibrary.org/obo/ECAO_2000582>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000588> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_ends_during> <http://purl.obolibrary.org/obo/ECAO_1000065>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000588> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_starts_during> <http://purl.obolibrary.org/obo/ECAO_1000059>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000588> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000008>))
@@ -12545,6 +12549,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/ECAO_2000621> "ECAO:2000621")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_2000621> "circumesophageal muscle")
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000621> <http://purl.obolibrary.org/obo/ECAO_2000607>)
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000621> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#develops_from> <http://purl.obolibrary.org/obo/ECAO_2000495>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000621> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_ends_during> <http://purl.obolibrary.org/obo/ECAO_1000009>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000621> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_starts_during> <http://purl.obolibrary.org/obo/ECAO_1000065>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000621> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000044>))
@@ -12562,6 +12567,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/ECAO_2000622> "ECAO:2000622")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_2000622> "circumesophageal muscle cell")
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000622> <http://purl.obolibrary.org/obo/ECAO_2000608>)
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000622> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#develops_from> <http://purl.obolibrary.org/obo/ECAO_2000495>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000622> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_ends_during> <http://purl.obolibrary.org/obo/ECAO_1000009>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000622> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_starts_during> <http://purl.obolibrary.org/obo/ECAO_1000065>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000622> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000621>))

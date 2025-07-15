@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecao/releases/2025-07-11/ecao-full.owl
+data-version: ecao/releases/2025-07-15/ecao-full.owl
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 idspace: dc http://purl.org/dc/elements/1.1/ 
@@ -11,7 +11,7 @@ idspace: swrlb http://www.w3.org/2003/11/swrlb#
 idspace: terms http://purl.org/dc/terms/ 
 ontology: ecao/ecao-full
 property_value: dc:title "Echinoderm Anatomy and Development Ontology" xsd:string
-property_value: owl:versionInfo "2025-07-11" xsd:string
+property_value: owl:versionInfo "2025-07-15" xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by/3.0/
 
 [Term]
@@ -3203,6 +3203,7 @@ namespace: echinoderm_anatomy
 def: "One of two small cells formed by the first and second meiotic division of oocytes." []
 xref: CL:0002090
 is_a: ECAO:2000058 ! cell
+relationship: develops_from ECAO:2000066 ! primary oocyte
 relationship: existence_ends_during ECAO:1000047 ! stage 1
 relationship: existence_starts_during ECAO:1000010 ! adulthood phase
 relationship: part_of ECAO:2000061 ! female germ cell
@@ -3962,6 +3963,7 @@ is_a: ECAO:2000003 ! anatomical region
 relationship: develops_from ECAO:2000163 ! presumptive ectoderm
 relationship: existence_ends_during ECAO:1000009 ! larval development phase
 relationship: existence_starts_during ECAO:1000062 ! stage 16
+relationship: part_of ECAO:2000008 ! embryo
 property_value: RO:0002175 NCBITaxon:46514
 property_value: RO:0002175 NCBITaxon:7632
 property_value: RO:0002175 NCBITaxon:7654
@@ -9362,6 +9364,7 @@ synonym: "primary mesenchyme" RELATED []
 synonym: "skeletogenic mesenchyme" RELATED []
 synonym: "SM" RELATED []
 is_a: ECAO:2000553 ! skeletogenic mesenchyme
+relationship: develops_from ECAO:2000550 ! presumptive skeletogenic mesoderm
 relationship: existence_ends_during ECAO:1000065 ! stage 19
 relationship: part_of ECAO:2000008 ! embryo
 property_value: RO:0002161 NCBITaxon:46514
@@ -9790,10 +9793,11 @@ id: ECAO:2000583
 name: non-skeletogenic mesoderm
 namespace: echinoderm_anatomy
 def: "The subset of the mesoderm germ layer that will give rise to all mesoderm tissue derivatives but the endoskeleton; e.g. muscles, coeloms, pigment cells, blastocoelar cells." []
-is_a: ECAO:2000547 ! mesoderm
+is_a: ECAO:2000021 ! tissue
 relationship: develops_from ECAO:2000582 ! presumptive non-skeletogenic mesoderm
 relationship: existence_ends_during ECAO:1000063 ! stage 17
 relationship: existence_starts_during ECAO:1000062 ! stage 16
+relationship: part_of ECAO:2000547 ! mesoderm
 property_value: RO:0002175 NCBITaxon:46514
 property_value: RO:0002175 NCBITaxon:7632
 property_value: RO:0002175 NCBITaxon:7654
@@ -9820,10 +9824,11 @@ id: ECAO:2000585
 name: non-skeletogenic mesenchyme
 namespace: echinoderm_anatomy
 def: "All mesenchyme present in the embryo, larva, or adult but that does not constitute the endoskeleton." []
-is_a: ECAO:2000548 ! mesenchyme
+is_a: ECAO:2000021 ! tissue
 relationship: develops_from ECAO:2000583 ! non-skeletogenic mesoderm
 relationship: existence_ends_during ECAO:1000009 ! larval development phase
 relationship: existence_starts_during ECAO:1000059 ! stage 13
+relationship: part_of ECAO:2000548 ! mesenchyme
 property_value: RO:0002175 NCBITaxon:46514
 property_value: RO:0002175 NCBITaxon:7632
 property_value: RO:0002175 NCBITaxon:7654
@@ -9865,6 +9870,7 @@ namespace: echinoderm_anatomy
 def: "The non-skeletogenic mesenchyme that is present in an embryo." []
 synonym: "secondary mesenchyme" RELATED []
 is_a: ECAO:2000585 ! non-skeletogenic mesenchyme
+relationship: develops_from ECAO:2000582 ! presumptive non-skeletogenic mesoderm
 relationship: existence_ends_during ECAO:1000065 ! stage 19
 relationship: part_of ECAO:2000008 ! embryo
 property_value: RO:0002175 NCBITaxon:46514
@@ -10400,6 +10406,7 @@ namespace: echinoderm_anatomy
 def: "Muscle strands that surround the larval esophagus." []
 synonym: "esophagus muscle" RELATED []
 is_a: ECAO:2000607 ! muscle
+relationship: develops_from ECAO:2000495 ! archenteron tip
 relationship: existence_ends_during ECAO:1000009 ! larval development phase
 relationship: part_of ECAO:2000044 ! larval muscular system
 property_value: RO:0002175 NCBITaxon:46514
@@ -10415,6 +10422,7 @@ namespace: echinoderm_anatomy
 def: "A cell that is part of the circumesophageal muscle." []
 synonym: "presumptive circumesophageal muscle cell" RELATED []
 is_a: ECAO:2000608 ! muscle cell
+relationship: develops_from ECAO:2000495 ! archenteron tip
 relationship: existence_ends_during ECAO:1000009 ! larval development phase
 relationship: part_of ECAO:2000621 ! circumesophageal muscle
 property_value: RO:0002175 NCBITaxon:46514
