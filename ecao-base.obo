@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: ecao/releases/2025-07-15/ecao-base.owl
+data-version: ecao/releases/2025-07-28/ecao-base.owl
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: terms http://purl.org/dc/terms/ 
 ontology: ecao/ecao-base
 property_value: dc:title "Echinoderm Anatomy and Development Ontology" xsd:string
 property_value: dc:type IAO:8000001
-property_value: owl:versionInfo "2025-07-15" xsd:string
+property_value: owl:versionInfo "2025-07-28" xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by/3.0/
 
 [Term]
