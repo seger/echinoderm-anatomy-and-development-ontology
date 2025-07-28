@@ -1,7 +1,7 @@
 
-# Echinoderm stage ontology
+# Echinoderm Anatomy and Development Ontology
 
-This is a draft of the ontology of Echinoderm developmental stages. Do not use for curation.
+New version of the ontology of Echinoderm Anatomy and Development (EcAO).
 
 ## Acknowledgements
 
