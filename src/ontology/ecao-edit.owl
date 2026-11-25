@@ -5035,7 +5035,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/ECAO_2000181> "ECAO:2000181")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECAO_2000181> "dorsal ectoderm")
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000181> <http://purl.obolibrary.org/obo/ECAO_2000019>)
-SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000181> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#develops_from> <http://purl.obolibrary.org/obo/ECAO_2000181>))
+SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000181> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#develops_from> <http://purl.obolibrary.org/obo/ECAO_2000164>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000181> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_ends_during> <http://purl.obolibrary.org/obo/ECAO_1000009>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000181> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#existence_starts_during> <http://purl.obolibrary.org/obo/ECAO_1000009>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECAO_2000181> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ecao#part_of> <http://purl.obolibrary.org/obo/ECAO_2000169>))

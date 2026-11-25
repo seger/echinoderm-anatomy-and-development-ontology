@@ -4022,7 +4022,7 @@ synonym: "animal aboral ectoderm" RELATED []
 xref: doi:10.1016/j.ydbio.2012.11.013
 xref: doi:10.1073/pnas.1323105111
 is_a: ECAO:2000019 ! larval region
-relationship: develops_from ECAO:2000181 ! dorsal ectoderm
+relationship: develops_from ECAO:2000164 ! ectoderm
 relationship: existence_ends_during ECAO:1000009 ! larval development phase
 relationship: existence_starts_during ECAO:1000009 ! larval development phase
 relationship: part_of ECAO:2000169 ! larval ectoderm

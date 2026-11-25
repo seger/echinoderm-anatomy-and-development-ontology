@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecao/releases/2025-07-28/ecao-full.owl
+data-version: ecao/releases/2026-11-25/ecao-full.owl
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 idspace: dc http://purl.org/dc/elements/1.1/ 
@@ -11,7 +11,7 @@ idspace: swrlb http://www.w3.org/2003/11/swrlb#
 idspace: terms http://purl.org/dc/terms/ 
 ontology: ecao/ecao-full
 property_value: dc:title "Echinoderm Anatomy and Development Ontology" xsd:string
-property_value: owl:versionInfo "2025-07-28" xsd:string
+property_value: owl:versionInfo "2026-11-25" xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by/3.0/
 
 [Term]
@@ -4220,7 +4220,7 @@ synonym: "animal aboral ectoderm" RELATED []
 xref: doi:10.1016/j.ydbio.2012.11.013
 xref: doi:10.1073/pnas.1323105111
 is_a: ECAO:2000019 ! larval region
-relationship: develops_from ECAO:2000181 ! dorsal ectoderm
+relationship: develops_from ECAO:2000164 ! ectoderm
 relationship: existence_ends_during ECAO:1000009 ! larval development phase
 relationship: existence_starts_during ECAO:1000009 ! larval development phase
 relationship: part_of ECAO:2000169 ! larval ectoderm

@@ -17,11 +17,11 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecao.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecao/releases/2025-07-28/ecao.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecao/releases/2026-11-25/ecao.owl"/>
         <dc:title>Echinoderm Anatomy and Development Ontology</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo>2025-07-28</owl:versionInfo>
+        <owl:versionInfo>2026-11-25</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -11506,7 +11506,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ecao#develops_from"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000181"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECAO_2000164"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
